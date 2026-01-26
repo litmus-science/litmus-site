@@ -56,6 +56,7 @@ function initSmoothScroll() {
  */
 function initWaitlistForm() {
     const form = document.getElementById('waitlist-form');
+    const formspreeEndpoint = 'https://formspree.io/f/xreqelzw';
     
     if (!form) return;
     
@@ -73,9 +74,22 @@ function initWaitlistForm() {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Submitting...';
         
-        // Simulate API call (replace with actual endpoint)
         try {
-            await new Promise(resolve => setTimeout(resolve, 1000));
+            const formData = new FormData();
+            formData.append('email', email);
+            formData.append('role', role);
+
+            const response = await fetch(formspreeEndpoint, {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json'
+                },
+                body: formData
+            });
+            
+            if (!response.ok) {
+                throw new Error('Form submission failed');
+            }
             
             // Success state
             form.innerHTML = `
