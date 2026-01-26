@@ -1,0 +1,56 @@
+# robots.txt for Litmus Science
+
+# Allow all crawlers to index the entire site
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://litmus.science/sitemap.xml
+
+# Crawl delay (optional, adjust if needed)
+# Crawl-delay: 1
+
+# Specific instructions for common bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# AI/LLM crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# Disallow aggressive scrapers (optional)
+# User-agent: AhrefsBot
+# Disallow: /
+
+# User-agent: SemrushBot
+# Disallow: /
