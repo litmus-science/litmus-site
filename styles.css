@@ -258,7 +258,7 @@ button, input, select, textarea {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: calc(80px + var(--space-4xl)) var(--space-lg) var(--space-4xl);
+    padding: calc(80px + var(--space-4xl)) var(--space-3xl) var(--space-4xl);
     overflow: hidden;
 }
 
