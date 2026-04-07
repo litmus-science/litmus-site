@@ -3,74 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Litmus — Programmable Wet Lab Services for AI Drug Discovery</title>
-    <meta name="description" content="Litmus connects AI drug discovery teams to a network of pre-validated labs. Programmable assay services — qPCR, ELISA, CTG, SPR — with JSON/CSV output for immediate model ingestion.">
-    <meta name="keywords" content="AI drug discovery, wet lab automation, CRO platform, programmable assays, qPCR service, ELISA service, lab infrastructure, drug discovery platform, in silico validation">
+    <title>Litmus — Run Experiments Without Building a Lab</title>
+    <meta name="description" content="On-demand access to scientists and lab infrastructure for biotech founders and academic PIs. Move faster than CRO timelines.">
     <link rel="canonical" href="https://litmus.science">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://litmus.science">
-    <meta property="og:title" content="Litmus — Programmable Wet Lab Services for AI Drug Discovery">
-    <meta property="og:description" content="Litmus connects AI drug discovery teams to a network of pre-validated labs. Programmable assay services with JSON/CSV output for immediate model ingestion.">
+    <meta property="og:title" content="Litmus — Run Experiments Without Building a Lab">
+    <meta property="og:description" content="On-demand access to scientists and lab infrastructure for biotech founders and academic PIs.">
     <meta property="og:image" content="https://litmus.science/og-image.jpg">
     <meta property="og:site_name" content="Litmus Science">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://litmus.science">
-    <meta name="twitter:title" content="Litmus — Programmable Wet Lab Services for AI Drug Discovery">
-    <meta name="twitter:description" content="Litmus connects AI drug discovery teams to a network of pre-validated labs. Programmable assay services with JSON/CSV output for immediate model ingestion.">
+    <meta name="twitter:title" content="Litmus — Run Experiments Without Building a Lab">
+    <meta name="twitter:description" content="On-demand access to scientists and lab infrastructure for biotech founders and academic PIs.">
     <meta name="twitter:image" content="https://litmus.science/og-image.jpg">
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "@id": "https://litmus.science/#organization",
-          "name": "Litmus Science",
-          "url": "https://litmus.science",
-          "logo": "https://litmus.science/logo.png",
-          "description": "Litmus is intelligent lab infrastructure — the coordination layer between AI-driven drug discovery and physical labs. Programmable assay services with AI-ready JSON/CSV output.",
-          "sameAs": ["https://github.com/litmus-science"],
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "email": "arun@fulcrum.science",
-            "contactType": "sales"
-          }
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://litmus.science/#website",
-          "url": "https://litmus.science",
-          "name": "Litmus Science",
-          "publisher": { "@id": "https://litmus.science/#organization" }
-        },
-        {
-          "@type": "Service",
-          "@id": "https://litmus.science/#service",
-          "name": "Programmable Wet Lab Assay Services",
-          "provider": { "@id": "https://litmus.science/#organization" },
-          "description": "On-demand wet lab assays — CTG, qPCR, ELISA, SPR, and cell-based — with standardized turnarounds and AI-ready JSON/CSV output for drug discovery pipelines.",
-          "serviceType": "Laboratory Research Services",
-          "areaServed": "Worldwide",
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Assay Menu",
-            "itemListElement": [
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "CTG Cell Viability Assay", "description": "3–5 day turnaround. Automated dose-response curve fitting." } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "qPCR Gene Expression", "description": "2–5 day turnaround. Full metadata tracking, 384-well normalization." } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ELISA Protein Quantification", "description": "3–5 day turnaround. Automated curve fitting; raw and processed output in JSON." } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SPR Surface Plasmon Resonance", "description": "5–7 day turnaround. Kinetic profiling; cleaned CSV for modeling." } }
-            ]
-          }
-        }
-      ]
-    }
-    </script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -80,12 +30,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav" aria-label="Main navigation">
+    <nav class="nav">
         <div class="nav-inner">
             <a href="/" class="logo">
                 <span class="logo-mark"></span>
@@ -93,15 +43,14 @@
             </a>
             <div class="nav-links">
                 <a href="#how-it-works">How It Works</a>
-                <a href="#assays">Assays</a>
-                <a href="#for-who">Who It's For</a>
-                <a href="https://docs.litmus.science" rel="noopener noreferrer">Docs</a>
+                <a href="#for-founders">For Founders</a>
+                <a href="#ip-control">Your IP</a>
+                <a href="https://docs.litmus.science">Docs</a>
             </div>
             <a href="#contact" class="btn btn-nav">Book a Call</a>
         </div>
     </nav>
 
-    <main>
     <!-- Hero -->
     <header class="hero">
         <div class="hero-bg">
@@ -110,35 +59,32 @@
             <div class="gradient-orb orb-3"></div>
         </div>
         <div class="hero-content">
-            <div class="hero-badge">
-                <span class="badge-dot"></span>
-                Intelligent Lab Infrastructure
-            </div>
             <h1 class="hero-title">
-                Science at the<br>
-                <span class="title-accent">Speed of Software.</span>
+                Run experiments<br>
+                <span class="title-accent">without building a lab</span>
             </h1>
             <p class="hero-subtitle">
-                Litmus turns wet-lab assays into programmable services — eliminating the Admin Tax between in silico prediction and physical validation.
+                Litmus gives biotech teams and academic labs on-demand access to scientists and lab infrastructure — so you can move faster without CRO delays.
             </p>
             <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary">Book a Call</a>
+                <a href="#contact" class="btn btn-primary">Submit an Experiment</a>
+                <a href="#contact" class="btn btn-secondary">Book a Call</a>
             </div>
             <div class="hero-stats">
                 <div class="stat-divider"></div>
                 <div class="stat">
-                    <span class="stat-value">Hours</span>
-                    <span class="stat-label">lead to bench</span>
+                    <span class="stat-value">1–3 wks</span>
+                    <span class="stat-label">typical turnaround</span>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat">
-                    <span class="stat-value">4+</span>
-                    <span class="stat-label">core assay types</span>
+                    <span class="stat-value">No</span>
+                    <span class="stat-label">large contracts</span>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat">
-                    <span class="stat-value">JSON/CSV</span>
-                    <span class="stat-label">AI-ready output</span>
+                    <span class="stat-value">Your IP</span>
+                    <span class="stat-label">always</span>
                 </div>
             </div>
         </div>
@@ -156,71 +102,27 @@
     </header>
 
     <!-- Who It's For -->
-    <section id="for-who" class="problem">
+    <section id="for-founders" class="problem">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Who It's For</span>
-                <h2 class="section-title">Built for every node in the AI drug discovery stack</h2>
+                <span class="section-tag">Who Litmus Is For</span>
+                <h2 class="section-title">Built for founders and PIs who move fast</h2>
             </div>
-            <div class="audience-tabs">
-                <div class="tab-buttons">
-                    <button class="tab-btn active" data-tab="biotech">Early-Stage Biotech</button>
-                    <button class="tab-btn" data-tab="pharma">Pharma &amp; AI Teams</button>
-                    <button class="tab-btn" data-tab="labs">Lab Partners</button>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>Biotech Founders</h3>
+                    <p>Run experiments without hiring a full team. Move faster than traditional CRO timelines. Execute small, iterative studies without large contracts.</p>
+                    <span class="problem-tag">Seed-stage ready</span>
                 </div>
-                <div class="tab-panels">
-                    <div class="tab-panel active" id="tab-biotech">
-                        <div class="audience-card">
-                            <div class="audience-pain">
-                                <span class="pain-label">Core Pain</span>
-                                <p>Wet lab work is an operational tax — every experiment requires hiring, contracts, and weeks of coordination before science can begin.</p>
-                            </div>
-                            <div class="audience-value">
-                                <span class="value-label">Core Value</span>
-                                <p>Elastic R&amp;D capacity on demand. Run qPCR, ELISA, and cell-based assays without equipment purchases or headcount.</p>
-                            </div>
-                            <ul class="audience-features">
-                                <li>No large upfront contracts</li>
-                                <li>Route experiments to pre-validated labs in hours</li>
-                                <li>Iterate as fast as your in silico predictions</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="tab-panel" id="tab-pharma">
-                        <div class="audience-card">
-                            <div class="audience-pain">
-                                <span class="pain-label">Core Pain</span>
-                                <p>The Admin Tax — manual scoping, email chains, format mismatches — blocks your AI models from closing the in silico → physical loop.</p>
-                            </div>
-                            <div class="audience-value">
-                                <span class="value-label">Core Value</span>
-                                <p>Agent-ready data returns in structured JSON/CSV, designed for immediate ingestion by your models. Hours, not weeks.</p>
-                            </div>
-                            <ul class="audience-features">
-                                <li>API-first integration with your discovery pipeline</li>
-                                <li>Intelligent Manifests pre-verify samples before shipment</li>
-                                <li>Results push directly back to your computational environment</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="tab-panel" id="tab-labs">
-                        <div class="audience-card">
-                            <div class="audience-pain">
-                                <span class="pain-label">Core Pain</span>
-                                <p>Underutilized bench capacity and manual intake workflows. Onboarding new sponsors takes weeks of back-and-forth.</p>
-                            </div>
-                            <div class="audience-value">
-                                <span class="value-label">Core Value</span>
-                                <p>Become a Digital Twin Alpha Node. Fill white space in your schedule with pre-qualified demand routed directly to your capabilities.</p>
-                            </div>
-                            <ul class="audience-features">
-                                <li>SOPs digitized into machine-readable work orders</li>
-                                <li>Intelligent demand routing matches your capacity</li>
-                                <li>Standardized data export with full metadata</li>
-                            </ul>
-                            <a href="/join/" class="btn btn-primary" style="margin-top: var(--space-xl); width: fit-content;">Join as a Lab Partner →</a>
-                        </div>
-                    </div>
+                <div class="problem-card">
+                    <h3>Academic PIs</h3>
+                    <p>Access external lab capacity on demand. Run pilot experiments quickly before grants or publications. Supplement your lab without adding overhead.</p>
+                    <span class="problem-tag">No co-authorship required</span>
+                </div>
+                <div class="problem-card">
+                    <h3>Why Not CROs?</h3>
+                    <p>Traditional CROs require weeks to start, large upfront contracts, and rigid workflows. Litmus is flexible, per-experiment, and designed for iteration — not bulk orders.</p>
+                    <span class="problem-tag">No $10–50K minimums</span>
                 </div>
             </div>
         </div>
@@ -231,48 +133,44 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">How It Works</span>
-                <h2 class="section-title">The agentic loop, closed</h2>
+                <h2 class="section-title">From description to results in weeks, not months</h2>
             </div>
             <div class="steps">
                 <div class="step">
                     <div class="step-number">01</div>
                     <div class="step-content">
-                        <h3>Route</h3>
-                        <p>Discovery agents search a live assay menu — qPCR, CTG, ELISA, SPR — with standardized lead times and pricing. No RFQ required.</p>
+                        <h3>Submit</h3>
+                        <p>Describe your experiment, hypothesis, or protocol in plain English. No programming required — just tell us what you want to test and why.</p>
                     </div>
                     <div class="step-visual">
                         <div class="code-block">
-                            <span class="code-comment"># Search live assay menu</span>
-                            <span class="code-line"><span class="code-key">assay</span>: "ELISA"</span>
-                            <span class="code-line"><span class="code-key">turnaround</span>: "3–5 days"</span>
-                            <span class="code-line"><span class="code-key">output_format</span>: "JSON"</span>
+                            <span class="code-comment"># Your experiment</span>
+                            <span class="code-line"><span class="code-key">question</span>: "Does compound X inhibit enzyme Y?"</span>
+                            <span class="code-line"><span class="code-key">method</span>: enzyme_inhibition_assay</span>
+                            <span class="code-line"><span class="code-key">turnaround</span>: 5–7 days</span>
                         </div>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">02</div>
                     <div class="step-content">
-                        <h3>Coordinate</h3>
-                        <p>Intelligent Manifests pre-verify sample volumes and controls. Briefs are automatically translated into bench-ready work orders — zero failed runs from submission errors.</p>
+                        <h3>Match &amp; Package</h3>
+                        <p>Litmus identifies the right scientist and lab for your experiment and prepares a full execution plan with standardized workflows and clear acceptance criteria.</p>
                     </div>
                     <div class="step-visual">
                         <div class="request-preview">
                             <div class="request-header">
-                                <span class="request-type">Intelligent Manifest</span>
-                                <span class="request-price">Verified</span>
+                                <span class="request-type">Enzyme Assay</span>
+                                <span class="request-price">$340</span>
                             </div>
                             <div class="request-body">
                                 <div class="request-row">
-                                    <span class="request-label">Sample volume</span>
-                                    <span class="request-value">✓ Sufficient</span>
+                                    <span class="request-label">Protocol</span>
+                                    <span class="request-value">IC50 determination</span>
                                 </div>
                                 <div class="request-row">
-                                    <span class="request-label">Controls</span>
-                                    <span class="request-value">✓ Pre-verified</span>
-                                </div>
-                                <div class="request-row">
-                                    <span class="request-label">Work order</span>
-                                    <span class="request-value">→ Lab-ready</span>
+                                    <span class="request-label">Turnaround</span>
+                                    <span class="request-value">5–7 days</span>
                                 </div>
                             </div>
                         </div>
@@ -282,20 +180,20 @@
                     <div class="step-number">03</div>
                     <div class="step-content">
                         <h3>Execute</h3>
-                        <p>Validated orders route to the optimal Alpha Node lab. Pre-vetted facilities run standardized protocols with full documentation and escrow protection.</p>
+                        <p>Experiments are run in vetted labs with standardized workflows and full documentation. Payment is held in escrow until you approve the results.</p>
                     </div>
                     <div class="step-visual">
                         <div class="result-preview">
                             <div class="result-status">
                                 <span class="status-indicator"></span>
-                                Running at Alpha Node
+                                Completed
                             </div>
                             <div class="result-data">
-                                <span class="result-label">Protocol</span>
-                                <span class="result-value" style="font-size: 1rem;">ELISA — Protein Quant</span>
+                                <span class="result-label">IC50</span>
+                                <span class="result-value">2.4 μM</span>
                             </div>
                             <div class="result-meta">
-                                Escrow protected · Full documentation
+                                Raw data • Photos • Lab notes
                             </div>
                         </div>
                     </div>
@@ -303,16 +201,15 @@
                 <div class="step">
                     <div class="step-number">04</div>
                     <div class="step-content">
-                        <h3>Return</h3>
-                        <p>High-fidelity data in structured JSON/CSV pushes directly back to your computational environment — ready for immediate model ingestion. No manual processing.</p>
+                        <h3>Results Delivered</h3>
+                        <p>Receive structured, documented results quickly — ready for analysis, your next iteration, grant applications, or publication. Typical turnaround: 1–3 weeks depending on experiment type.</p>
                     </div>
                     <div class="step-visual">
                         <div class="code-block">
-                            <span class="code-comment"># AI-ready output</span>
-                            <span class="code-line"><span class="code-key">status</span>: "complete"</span>
-                            <span class="code-line"><span class="code-key">result</span>: { curve: [...] }</span>
-                            <span class="code-line"><span class="code-key">format</span>: "JSON/CSV"</span>
-                            <span class="code-line"><span class="code-key">metadata</span>: { ... }</span>
+                            <span class="code-comment"># Structured output</span>
+                            <span class="code-line"><span class="code-key">status</span>: complete</span>
+                            <span class="code-line"><span class="code-key">result</span>: IC50 = 2.4 μM</span>
+                            <span class="code-line"><span class="code-key">artifacts</span>: data, photos, notes</span>
                         </div>
                     </div>
                 </div>
@@ -320,127 +217,133 @@
         </div>
     </section>
 
-    <!-- Assay Menu -->
-    <section id="assays" class="operators">
+    <!-- What You Can Run -->
+    <section class="operators">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Assay Menu</span>
-                <h2 class="section-title">Standardized. Programmable. AI-Ready.</h2>
+            <div class="operators-grid">
+                <div class="operators-content">
+                    <span class="section-tag">What You Can Run</span>
+                    <h2 class="section-title">Experiments across the discovery stack</h2>
+                    <p class="operators-lead">
+                        From chemistry iteration to assay development, Litmus covers the key experimental workflows seed-stage biotechs and academic labs need most.
+                    </p>
+                    <ul class="operators-benefits">
+                        <li>
+                            <span class="benefit-check">✓</span>
+                            <span><strong>Medicinal chemistry iteration</strong> — rapid synthesis and assay cycles across labs</span>
+                        </li>
+                        <li>
+                            <span class="benefit-check">✓</span>
+                            <span><strong>Protein expression &amp; validation</strong> — outsource expression, purification, and QC</span>
+                        </li>
+                        <li>
+                            <span class="benefit-check">✓</span>
+                            <span><strong>Assay development &amp; screening</strong> — small-batch or high-throughput experiments</span>
+                        </li>
+                        <li>
+                            <span class="benefit-check">✓</span>
+                            <span><strong>Pilot studies</strong> — validate ideas before committing significant resources</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Submit an Experiment</a>
+                </div>
+                <div class="operators-requirements">
+                    <h4>Built for Speed and Scale</h4>
+                    <div class="requirement">
+                        <div>
+                            <strong>Network of vetted scientists</strong>
+                            <p>Access to lab infrastructure without building your own team</p>
+                        </div>
+                    </div>
+                    <div class="requirement">
+                        <div>
+                            <strong>Standardized execution workflows</strong>
+                            <p>Designed for rapid iteration and reproducibility</p>
+                        </div>
+                    </div>
+                    <div class="requirement">
+                        <div>
+                            <strong>AI-compatible by design</strong>
+                            <p>Integrate with AI systems that generate hypotheses for faster iteration cycles at scale</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="assay-table-wrapper">
-                <table class="assay-table">
-                    <thead>
-                        <tr>
-                            <th>Assay</th>
-                            <th>Turnaround</th>
-                            <th>AI-Readiness</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><a href="assays/ctg.html" style="color: var(--white);"><strong>CTG (Cell Viability)</strong></a></td>
-                            <td><span class="turnaround">3–5 days</span></td>
-                            <td>Automated dose-response curve fitting</td>
-                        </tr>
-                        <tr>
-                            <td><a href="assays/qpcr.html" style="color: var(--white);"><strong>qPCR (Gene Expression)</strong></a></td>
-                            <td><span class="turnaround">2–5 days</span></td>
-                            <td>Full metadata tracking, 384-well normalization</td>
-                        </tr>
-                        <tr>
-                            <td><a href="assays/elisa.html" style="color: var(--white);"><strong>ELISA (Protein Quant)</strong></a></td>
-                            <td><span class="turnaround">3–5 days</span></td>
-                            <td>Automated curve fitting; raw + processed in JSON</td>
-                        </tr>
-                        <tr>
-                            <td><a href="assays/spr.html" style="color: var(--white);"><strong>SPR (Surface Plasmon)</strong></a></td>
-                            <td><span class="turnaround">5–7 days</span></td>
-                            <td>Kinetic profiling; cleaned .csv for modeling</td>
-                        </tr>
-                        <tr>
-                            <td><a href="assays/cell-based.html" style="color: var(--white);"><strong>Cell-Based</strong></a></td>
-                            <td><span class="turnaround">Custom</span></td>
-                            <td>Programmable protocols, high-content imaging</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p class="assay-note">All assays return structured JSON/CSV with full metadata. <a href="#contact" style="color: var(--base-teal);">Request a custom assay →</a></p>
         </div>
     </section>
 
-    <!-- Agent-Ready / Digital Twin -->
-    <section class="agent-ready">
+    <!-- IP Control -->
+    <section id="ip-control" class="open-science">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Agent-Ready Infrastructure</span>
-                <h2 class="section-title">The Digital Twin lab network</h2>
-            </div>
-            <div class="agent-grid">
-                <div class="agent-intro">
-                    <p class="agent-lead">Litmus builds a Digital Twin of each partner lab — SOPs digitized into machine-readable assets, enabling AI agents to search assay capabilities and route work orders without human intermediaries.</p>
+            <div class="open-science-content">
+                <span class="section-tag">Your IP, Your Choice</span>
+                <h2 class="section-title">You control how your data is used — always</h2>
+                <p>
+                    Litmus gives you full control over your research data. Choose the privacy level that fits 
+                    your commercial or scientific goals. Nothing is shared without your explicit consent.
+                </p>
+                <div class="privacy-options">
+                    <div class="privacy-option">
+                        <div class="privacy-header">
+                            <h4>Private</h4>
+                            <span class="privacy-price">Default</span>
+                        </div>
+                        <p>For commercial or sensitive work. Your data stays yours, permanently.</p>
+                    </div>
+                    <div class="privacy-option">
+                        <div class="privacy-header">
+                            <h4>Delayed Release</h4>
+                            <span class="privacy-price">Moderate discount</span>
+                        </div>
+                        <p>Private for 6–12 months, then published. Contribute to open science while protecting your timeline for patents or publication.</p>
+                    </div>
+                    <div class="privacy-option">
+                        <div class="privacy-header">
+                            <h4>Open Access</h4>
+                            <span class="privacy-price">Lowest cost</span>
+                        </div>
+                        <p>Results immediately public. Contribute to shared scientific knowledge.</p>
+                    </div>
+                </div>
+                <div class="open-source-callout">
+                    <h3>Open source infrastructure</h3>
+                    <p>
+                        Our tools are open source too. Use the Litmus MCP server to let AI agents
+                        design and submit experiments programmatically. Browse the docs, contribute,
+                        or build your own integrations.
+                    </p>
                     <div class="open-source-links">
-                        <a href="https://docs.litmus.science" class="btn btn-outline-green" rel="noopener noreferrer">Documentation</a>
-                        <a href="https://github.com/litmus-science/litmus-mcp" class="btn btn-outline-green" rel="noopener noreferrer">MCP Server</a>
-                    </div>
-                </div>
-                <div class="agent-features">
-                    <div class="agent-feature">
-                        <span class="feature-number">01</span>
-                        <div>
-                            <strong>Lab SOPs as machine-readable assets</strong>
-                            <p>Every partner lab's protocols are digitized and queryable by discovery agents directly.</p>
-                        </div>
-                    </div>
-                    <div class="agent-feature">
-                        <span class="feature-number">02</span>
-                        <div>
-                            <strong>Real-time capacity search</strong>
-                            <p>Agents query available capacity, turnaround, and equipment across the Alpha Node network.</p>
-                        </div>
-                    </div>
-                    <div class="agent-feature">
-                        <span class="feature-number">03</span>
-                        <div>
-                            <strong>Auto-translated work orders</strong>
-                            <p>Orders are automatically matched to each lab's specific equipment profile and SOP library.</p>
-                        </div>
-                    </div>
-                    <div class="agent-feature">
-                        <span class="feature-number">04</span>
-                        <div>
-                            <strong>Closed learning loop</strong>
-                            <p>Data flows back into your AI's training environment without manual extraction or reformatting.</p>
-                        </div>
+                        <a href="https://docs.litmus.science" class="btn btn-outline-green">Documentation</a>
+                        <a href="https://github.com/litmus-science/litmus-mcp" class="btn btn-outline-green">MCP Server</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Value Props -->
+    <!-- Trust & Quality -->
     <section class="trust">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Why Litmus</span>
-                <h2 class="section-title">Infrastructure designed for the AI era</h2>
+                <span class="section-tag">Trust &amp; Quality</span>
+                <h2 class="section-title">Rigorous verification at every layer</h2>
             </div>
             <div class="trust-grid">
                 <div class="trust-item">
-                    <h4>AI-Ready Data</h4>
-                    <p>Results in structured JSON/CSV with full metadata. Designed for immediate ingestion by models — not messy Excel sheets requiring manual cleanup.</p>
+                    <h4>Vetted Lab Network</h4>
+                    <p>Every scientist is verified: identity, institutional affiliation, authorization documentation, and competency assessment.</p>
                 </div>
                 <div class="trust-item">
-                    <h4>Intelligent Manifests</h4>
-                    <p>Sample volumes and controls pre-verified before shipment. Zero failed runs from submission errors — every order arrives bench-ready.</p>
+                    <h4>Documentation Standards</h4>
+                    <p>Timestamped photos and videos, lab notebook entries, raw data files with full metadata.</p>
                 </div>
                 <div class="trust-item">
-                    <h4>Elastic R&amp;D Capacity</h4>
-                    <p>Route demand to a network of pre-validated Alpha Node labs. No equipment purchases, no long-term contracts, no headcount.</p>
+                    <h4>Escrow Protection</h4>
+                    <p>Payment held until you approve results. Clear acceptance criteria minimize disputes before work begins.</p>
                 </div>
                 <div class="trust-item">
-                    <h4>Latency-to-Loop</h4>
-                    <p>From lead to bench in hours. Eliminate the manual scoping cycle that breaks the in silico → physical feedback loop entirely.</p>
+                    <h4>Reproducibility Checks</h4>
+                    <p>Random subset re-run by different operators to independently verify results.</p>
                 </div>
             </div>
         </div>
@@ -450,26 +353,23 @@
     <section id="contact" class="waitlist">
         <div class="container">
             <div class="waitlist-content">
-                <h2>Close the loop.</h2>
-                <p>Tell us what you're building — we'll route your first experiment through the network and show you what AI-ready data looks like in practice.</p>
+                <h2>Start running experiments this week</h2>
+                <p>Submit your first experiment or talk to us about your workflow — we'll help you get up and running quickly. No large contracts, no long lead times.</p>
                 <form class="waitlist-form" id="waitlist-form">
                     <div class="form-row">
                         <input type="email" placeholder="your@email.com" required id="email-input" name="email">
                         <select id="role-select" name="role">
-                            <option value="biotech">Early-stage biotech</option>
-                            <option value="pharma">Pharma / AI team</option>
-                            <option value="lab">Lab partner / CRO</option>
+                            <option value="founder">Biotech founder</option>
+                            <option value="pi">Academic PI</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-large">Book a Call</button>
+                    <button type="submit" class="btn btn-primary btn-large">Submit an Experiment</button>
                 </form>
                 <p class="waitlist-note">Or <a href="mailto:arun@fulcrum.science" style="color: inherit; text-decoration: underline;">email us directly</a> to book a call. No spam, ever.</p>
             </div>
         </div>
     </section>
-
-    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -480,20 +380,19 @@
                         <span class="logo-mark"></span>
                         <span class="logo-text">Litmus</span>
                     </a>
-                    <p>The coordination layer between AI-driven drug discovery and physical labs.</p>
+                    <p>On-demand lab execution for biotech teams and academic labs.</p>
                 </div>
                 <div class="footer-links">
                     <h5>Platform</h5>
                     <a href="#how-it-works">How It Works</a>
-                    <a href="#assays">Assay Menu</a>
-                    <a href="#for-who">Who It's For</a>
-                    <a href="/join/">Join as a Lab Partner</a>
+                    <a href="#for-founders">For Founders &amp; PIs</a>
+                    <a href="#ip-control">IP &amp; Privacy</a>
                 </div>
                 <div class="footer-links">
                     <h5>Developers</h5>
-                    <a href="https://docs.litmus.science" rel="noopener noreferrer">Documentation</a>
-                    <a href="https://github.com/litmus-science/litmus-mcp" rel="noopener noreferrer">MCP Server</a>
-                    <a href="https://github.com/litmus-science" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://docs.litmus.science">Documentation</a>
+                    <a href="https://github.com/litmus-science/litmus-mcp">MCP Server</a>
+                    <a href="https://github.com/litmus-science">GitHub</a>
                 </div>
                 <div class="footer-links">
                     <h5>Legal</h5>

@@ -99,8 +99,8 @@ function initWaitlistForm() {
                         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
                         <polyline points="22 4 12 14.01 9 11.01"/>
                     </svg>
-                    <h3 style="color: var(--white); font-size: 1.5rem; margin-bottom: 0.5rem;">You're on the list!</h3>
-                    <p style="color: var(--gray-200);">We'll reach out to <strong>${email}</strong> when we're ready.</p>
+                    <h3 style="color: var(--white); font-size: 1.5rem; margin-bottom: 0.5rem;">We'll be in touch soon.</h3>
+                    <p style="color: var(--gray-200);">Expect a reply to <strong>${email}</strong> within 1–2 business days.</p>
                 </div>
             `;
             
