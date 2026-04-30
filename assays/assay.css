@@ -1,0 +1,333 @@
+/* ============================================
+   Assay Pages — Additional Styles
+   ============================================ */
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 0.85rem;
+    color: var(--gray-300);
+    padding-bottom: var(--space-xl);
+}
+
+.breadcrumb a {
+    color: var(--gray-300);
+    transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+    color: var(--white);
+}
+
+.breadcrumb-sep {
+    color: var(--gray-400);
+    font-size: 0.7rem;
+}
+
+/* ============================================
+   Assay Hero
+   ============================================ */
+
+.assay-page-hero {
+    background: var(--base-blue);
+    padding: calc(80px + var(--space-3xl)) 0 var(--space-4xl);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.assay-page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(230, 57, 70, 0.06) 0%, rgba(42, 157, 143, 0.06) 100%);
+    pointer-events: none;
+}
+
+.assay-page-hero .container {
+    position: relative;
+}
+
+.assay-type-tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--base-teal);
+    margin-bottom: var(--space-md);
+    display: block;
+}
+
+.assay-page-title {
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    letter-spacing: -0.02em;
+    color: var(--white);
+    margin-bottom: var(--space-lg);
+    max-width: 700px;
+}
+
+.assay-page-subtitle {
+    font-size: 1.15rem;
+    color: var(--gray-200);
+    max-width: 600px;
+    margin-bottom: var(--space-2xl);
+    line-height: 1.65;
+}
+
+.assay-hero-stats {
+    display: flex;
+    gap: var(--space-2xl);
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.assay-hero-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.assay-hero-stat .stat-value {
+    font-family: var(--font-mono);
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.assay-hero-stat .stat-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray-300);
+}
+
+.hero-stat-divider {
+    width: 1px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ============================================
+   Specs Section
+   ============================================ */
+
+.specs-section {
+    padding: var(--space-4xl) 0;
+    background: var(--off-white);
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-3xl);
+}
+
+.spec-card {
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    border-radius: 12px;
+    padding: var(--space-xl);
+}
+
+.spec-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray-300);
+    margin-bottom: var(--space-sm);
+}
+
+.spec-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: var(--space-xs);
+}
+
+.spec-detail {
+    font-size: 0.85rem;
+    color: var(--gray-400);
+    line-height: 1.5;
+}
+
+/* ============================================
+   AI Output Section
+   ============================================ */
+
+.ai-output-section {
+    padding: var(--space-4xl) 0;
+}
+
+.ai-output-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4xl);
+    align-items: center;
+}
+
+.ai-output-content h3 {
+    font-size: 1.75rem;
+    margin-bottom: var(--space-lg);
+}
+
+.ai-output-content p {
+    color: var(--gray-400);
+    margin-bottom: var(--space-xl);
+    line-height: 1.7;
+}
+
+.ai-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.ai-bullets li {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+    font-size: 0.95rem;
+    color: var(--gray-500);
+}
+
+.ai-bullet-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--base-teal);
+    border-radius: 50%;
+    margin-top: 8px;
+    flex-shrink: 0;
+}
+
+/* ============================================
+   Use Cases Section
+   ============================================ */
+
+.use-cases-section {
+    padding: var(--space-4xl) 0;
+    background: var(--off-white);
+}
+
+.use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+.use-case-card {
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    border-radius: 12px;
+    padding: var(--space-xl);
+    transition: all 0.3s var(--ease-out);
+}
+
+.use-case-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.use-case-card h4 {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+
+.use-case-card p {
+    font-size: 0.9rem;
+    color: var(--gray-400);
+    line-height: 1.55;
+}
+
+/* ============================================
+   Related Assays
+   ============================================ */
+
+.related-section {
+    padding: var(--space-4xl) 0;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+}
+
+.related-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    padding: var(--space-xl);
+    text-decoration: none;
+    transition: all 0.3s var(--ease-out);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.related-card:hover {
+    border-color: var(--base-teal);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.related-card-name {
+    font-weight: 600;
+    color: var(--black);
+    font-size: 0.95rem;
+}
+
+.related-card-turnaround {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--base-teal);
+}
+
+.related-card-desc {
+    font-size: 0.85rem;
+    color: var(--gray-400);
+    margin-top: var(--space-xs);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .specs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ai-output-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .use-cases-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .assay-hero-stats {
+        gap: var(--space-lg);
+    }
+
+    .hero-stat-divider {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .related-grid {
+        grid-template-columns: 1fr;
+    }
+}

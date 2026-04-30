@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qPCR Gene Expression Service — Outsource qPCR Assays | Litmus</title>
+    <meta name="description" content="Outsource qPCR assays to Litmus. 2–5 day turnaround, 384-well normalization, full Cq raw data in JSON/CSV. Gene expression profiling built for AI drug discovery.">
+    <meta name="keywords" content="qPCR service, outsource qPCR, qPCR assay CRO, gene expression service, RT-qPCR service, mRNA quantification, qPCR drug discovery">
+    <link rel="canonical" href="https://litmus.science/assays/qpcr.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://litmus.science/assays/qpcr.html">
+    <meta property="og:title" content="qPCR Gene Expression Service | Litmus">
+    <meta property="og:description" content="Outsource qPCR assays to Litmus. 2–5 day turnaround, 384-well normalization, full Cq data in JSON/CSV.">
+    <meta property="og:image" content="https://litmus.science/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "qPCR Gene Expression Service",
+      "provider": { "@type": "Organization", "name": "Litmus Science", "url": "https://litmus.science" },
+      "description": "Outsource qPCR gene expression assays with 2–5 day turnaround. 384-well plates, ΔΔCt method, full Cq raw data delivered in JSON/CSV.",
+      "serviceType": "Laboratory Assay Service",
+      "areaServed": "Worldwide",
+      "url": "https://litmus.science/assays/qpcr.html"
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="assay.css">
+</head>
+<body>
+    <nav class="nav" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="../" class="logo">
+                <span class="logo-mark"></span>
+                <span class="logo-text">Litmus</span>
+            </a>
+            <div class="nav-links">
+                <a href="../#how-it-works">How It Works</a>
+                <a href="./">Assays</a>
+                <a href="../#for-who">Who It's For</a>
+                <a href="https://docs.litmus.science" rel="noopener noreferrer">Docs</a>
+            </div>
+            <a href="../#contact" class="btn btn-nav">Book a Call</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="assay-page-hero">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="../">Litmus</a>
+                    <span class="breadcrumb-sep">›</span>
+                    <a href="./">Assay Menu</a>
+                    <span class="breadcrumb-sep">›</span>
+                    <span>qPCR</span>
+                </div>
+                <span class="assay-type-tag">Quantitative Polymerase Chain Reaction</span>
+                <h1 class="assay-page-title">qPCR Gene Expression, Outsourced.</h1>
+                <p class="assay-page-subtitle">Relative and absolute mRNA quantification with 384-well throughput — full Cq raw data and ΔΔCt results delivered in JSON/CSV for computational analysis.</p>
+                <div class="assay-hero-stats">
+                    <div class="assay-hero-stat">
+                        <span class="stat-value">2–5 days</span>
+                        <span class="stat-label">turnaround</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="assay-hero-stat">
+                        <span class="stat-value">384-well</span>
+                        <span class="stat-label">plate format</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="assay-hero-stat">
+                        <span class="stat-value">ΔΔCt</span>
+                        <span class="stat-label">method</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="specs-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Specifications</span>
+                    <h2 class="section-title">What you submit. What you get back.</h2>
+                </div>
+                <div class="specs-grid">
+                    <div class="spec-card">
+                        <div class="spec-label">Turnaround</div>
+                        <div class="spec-value">2–5 business days</div>
+                        <div class="spec-detail">From RNA/sample receipt. Primer design adds 1–2 days if customer-supplied sequences not provided.</div>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-label">Sample Requirements</div>
+                        <div class="spec-value">RNA ≥10 ng/µL, RIN ≥7</div>
+                        <div class="spec-detail">Total RNA, purified cDNA, or cell pellets accepted. Primer design included or submit your own sequences.</div>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-label">Output Format</div>
+                        <div class="spec-value">JSON + CSV</div>
+                        <div class="spec-detail">Raw Cq values per well, ΔCt and ΔΔCt calculations, fold-change with error bars, reference gene stability scores.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ai-output-section">
+            <div class="container">
+                <div class="ai-output-grid">
+                    <div class="ai-output-content">
+                        <span class="section-tag">AI-Readiness</span>
+                        <h3>Gene expression data your models can ingest directly</h3>
+                        <p>qPCR data from Litmus is delivered pre-normalized and structured. Multiple reference genes, full plate layout metadata, and normalized fold-change values arrive in a single JSON payload — no manual Cq export or Excel formula work required.</p>
+                        <ul class="ai-bullets">
+                            <li><span class="ai-bullet-dot"></span>Raw Cq values for every well in the plate layout</li>
+                            <li><span class="ai-bullet-dot"></span>ΔΔCt and fold-change calculated with multiple reference genes</li>
+                            <li><span class="ai-bullet-dot"></span>Reference gene stability scoring (geNorm/NormFinder)</li>
+                            <li><span class="ai-bullet-dot"></span>Amplification efficiency per primer pair</li>
+                            <li><span class="ai-bullet-dot"></span>384-well plate map included for spatial normalization</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="code-block">
+                            <span class="code-comment"># qPCR result payload</span>
+                            <span class="code-line"><span class="code-key">assay</span>: "qPCR"</span>
+                            <span class="code-line"><span class="code-key">targets</span>: ["GAPDH", "MYC", "TP53"]</span>
+                            <span class="code-line"><span class="code-key">samples</span>: [</span>
+                            <span class="code-line">&nbsp;&nbsp;{ <span class="code-key">id</span>: "T1",</span>
+                            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-key">cq</span>: { <span class="code-key">MYC</span>: 24.3, <span class="code-key">TP53</span>: 27.1 },</span>
+                            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-key">fold_change</span>: { <span class="code-key">MYC</span>: 3.4 } },</span>
+                            <span class="code-line">&nbsp;&nbsp;...</span>
+                            <span class="code-line">]</span>
+                            <span class="code-line"><span class="code-key">reference_genes</span>: ["GAPDH", "ACTB"]</span>
+                            <span class="code-line"><span class="code-key">efficiency</span>: { <span class="code-key">MYC</span>: 0.98 }</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="use-cases-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Use Cases</span>
+                    <h2 class="section-title">Who orders qPCR assays from Litmus</h2>
+                </div>
+                <div class="use-cases-grid">
+                    <div class="use-case-card">
+                        <h4>Mechanism of Action Validation</h4>
+                        <p>Confirm that a compound modulates the expected transcriptional targets before advancing to more expensive in vivo studies.</p>
+                    </div>
+                    <div class="use-case-card">
+                        <h4>Biomarker Discovery &amp; Signature Profiling</h4>
+                        <p>Profile a panel of candidate gene biomarkers across treatment conditions to identify robust pharmacodynamic signatures.</p>
+                    </div>
+                    <div class="use-case-card">
+                        <h4>Pathway &amp; Transcription Factor Analysis</h4>
+                        <p>Measure downstream gene expression changes to map which pathways a compound activates or suppresses in your cell model.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Assay Menu</span>
+                    <h2 class="section-title">Other assays on the network</h2>
+                </div>
+                <div class="related-grid">
+                    <a href="elisa.html" class="related-card">
+                        <span class="related-card-name">ELISA</span>
+                        <span class="related-card-turnaround">3–5 days</span>
+                        <span class="related-card-desc">Protein quantification with automated 4PL curve fitting</span>
+                    </a>
+                    <a href="ctg.html" class="related-card">
+                        <span class="related-card-name">CTG Cell Viability</span>
+                        <span class="related-card-turnaround">3–5 days</span>
+                        <span class="related-card-desc">IC50 determination with automated dose-response fitting</span>
+                    </a>
+                    <a href="spr.html" class="related-card">
+                        <span class="related-card-name">SPR</span>
+                        <span class="related-card-turnaround">5–7 days</span>
+                        <span class="related-card-desc">Binding kinetics: kon, koff, KD measurement</span>
+                    </a>
+                    <a href="cell-based.html" class="related-card">
+                        <span class="related-card-name">Cell-Based</span>
+                        <span class="related-card-turnaround">Custom</span>
+                        <span class="related-card-desc">Programmable protocols with high-content imaging</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="waitlist">
+            <div class="container">
+                <div class="waitlist-content">
+                    <h2>Ready to run your qPCR?</h2>
+                    <p>Tell us your targets, sample type, and throughput — we'll handle primer design, plating, and data delivery.</p>
+                    <form class="waitlist-form" id="waitlist-form">
+                        <div class="form-row">
+                            <input type="email" placeholder="your@email.com" required id="email-input" name="email">
+                            <select id="role-select" name="role">
+                                <option value="biotech">Early-stage biotech</option>
+                                <option value="pharma">Pharma / AI team</option>
+                                <option value="lab">Lab partner / CRO</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">Book a Call</button>
+                    </form>
+                    <p class="waitlist-note">Or <a href="mailto:arun@fulcrum.science" style="color: inherit; text-decoration: underline;">email us directly</a>. No spam, ever.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../" class="logo">
+                        <span class="logo-mark"></span>
+                        <span class="logo-text">Litmus</span>
+                    </a>
+                    <p>The coordination layer between AI-driven drug discovery and physical labs.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Assays</h5>
+                    <a href="elisa.html">ELISA</a>
+                    <a href="qpcr.html">qPCR</a>
+                    <a href="ctg.html">CTG</a>
+                    <a href="spr.html">SPR</a>
+                    <a href="cell-based.html">Cell-Based</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Developers</h5>
+                    <a href="https://docs.litmus.science" rel="noopener noreferrer">Documentation</a>
+                    <a href="https://github.com/litmus-science/litmus-mcp" rel="noopener noreferrer">MCP Server</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Legal</h5>
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Litmus Science. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>
