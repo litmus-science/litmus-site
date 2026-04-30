@@ -1186,6 +1186,257 @@ button, input, select, textarea {
 }
 
 /* ============================================
+   Audience Tabs
+   ============================================ */
+
+.audience-tabs {
+    margin-top: var(--space-2xl);
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid var(--gray-200);
+    margin-bottom: var(--space-2xl);
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: var(--space-md) var(--space-xl);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--gray-400);
+    cursor: pointer;
+    margin-bottom: -1px;
+    transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+    color: var(--black);
+}
+
+.tab-btn.active {
+    color: var(--black);
+    border-bottom-color: var(--base-teal);
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+.audience-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    border-radius: 16px;
+    padding: var(--space-2xl);
+}
+
+.audience-pain,
+.audience-value {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.pain-label,
+.value-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray-300);
+    margin-bottom: var(--space-xs);
+}
+
+.value-label {
+    color: var(--base-teal);
+}
+
+.audience-pain p,
+.audience-value p {
+    color: var(--gray-500);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.audience-features {
+    grid-column: 1 / -1;
+    list-style: none;
+    display: flex;
+    gap: var(--space-md);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--gray-100);
+    flex-wrap: wrap;
+}
+
+.audience-features li {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--base-teal);
+    padding: var(--space-xs) var(--space-md);
+    background: rgba(42, 157, 143, 0.08);
+    border-radius: 100px;
+}
+
+/* ============================================
+   Assay Table
+   ============================================ */
+
+.assay-table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: var(--space-lg);
+}
+
+.assay-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.assay-table thead tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.assay-table th {
+    text-align: left;
+    padding: var(--space-md) var(--space-lg);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray-300);
+    font-weight: 400;
+}
+
+.assay-table td {
+    padding: var(--space-md) var(--space-lg);
+    color: var(--gray-200);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.assay-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.assay-table tbody tr:hover td {
+    background: rgba(255, 255, 255, 0.04);
+    transition: background 0.15s ease;
+}
+
+.assay-table strong {
+    color: var(--white);
+    font-weight: 500;
+}
+
+.turnaround {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--base-teal);
+    white-space: nowrap;
+}
+
+.assay-note {
+    font-size: 0.9rem;
+    color: var(--gray-300);
+}
+
+/* ============================================
+   Agent-Ready / Digital Twin
+   ============================================ */
+
+.agent-ready {
+    padding: var(--space-4xl) 0;
+    background: var(--off-white);
+}
+
+.agent-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4xl);
+    align-items: start;
+}
+
+.agent-lead {
+    font-size: 1.1rem;
+    color: var(--gray-400);
+    line-height: 1.7;
+    margin-bottom: var(--space-2xl);
+}
+
+.agent-features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.agent-feature {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: flex-start;
+}
+
+.feature-number {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--base-teal);
+    padding-top: 3px;
+    flex-shrink: 0;
+}
+
+.agent-feature strong {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: var(--space-xs);
+}
+
+.agent-feature p {
+    font-size: 0.9rem;
+    color: var(--gray-400);
+    line-height: 1.5;
+}
+
+/* ============================================
+   Responsive — new sections
+   ============================================ */
+
+@media (max-width: 768px) {
+    .audience-card {
+        grid-template-columns: 1fr;
+    }
+
+    .audience-features {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    .tab-buttons {
+        flex-wrap: wrap;
+    }
+
+    .tab-btn {
+        padding: var(--space-sm) var(--space-lg);
+    }
+
+    .agent-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
    Animations on Scroll
    ============================================ */
 

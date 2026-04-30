@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initWaitlistForm();
     initScrollAnimations();
+    initAudienceTabs();
 });
 
 /**
@@ -115,10 +116,31 @@ function initWaitlistForm() {
 }
 
 /**
+ * Audience tab switching
+ */
+function initAudienceTabs() {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const target = btn.dataset.tab;
+
+            tabBtns.forEach(b => b.classList.remove('active'));
+            tabPanels.forEach(p => p.classList.remove('active'));
+
+            btn.classList.add('active');
+            const panel = document.getElementById(`tab-${target}`);
+            if (panel) panel.classList.add('active');
+        });
+    });
+}
+
+/**
  * Scroll-triggered animations
  */
 function initScrollAnimations() {
-    const animatedElements = document.querySelectorAll('.problem-card, .step, .privacy-option, .trust-item');
+    const animatedElements = document.querySelectorAll('.step, .trust-item, .agent-feature, .audience-card');
     
     const observerOptions = {
         root: null,
