@@ -1,95 +1,97 @@
 # Litmus Science
 
-> AI Wet Lab Validation Marketplace
+> Intelligent Lab Infrastructure for AI Drug Discovery
 
 ## Overview
 
-Litmus is a marketplace platform connecting scientific ideas to the lab capacity needed to test them. We enable anyone to run real wet lab experiments starting at $200, making scientific validation accessible beyond traditional CROs, cloud labs, and academic collaborations.
+Litmus is the coordination layer between AI-driven drug discovery and physical labs. We turn wet-lab assays into programmable services — eliminating the Admin Tax between in silico prediction and physical validation. Discovery teams can route experiments to a network of pre-validated Alpha Node labs and receive results in structured JSON/CSV, ready for immediate model ingestion.
 
-## Key Information
+## Positioning
 
-- **Minimum Experiment Cost**: $200
-- **Safety Levels**: BSL-1/2
-- **Default Policy**: Open science - results publicly shared
-- **Platform Model**: Marketplace connecting Requesters with qualified lab Operators
-- **Payment**: Escrow-based system with payment held until result approval
+Litmus is not a traditional CRO or marketplace. It is intelligent infrastructure: a programmable interface that connects AI agents directly to lab capacity, with machine-readable data flowing back into the discovery loop.
 
-## How It Works
+## Who It's For
 
-1. **Learn**: We teach users how to go from curiosity to testable hypothesis using AI tools and structured protocols
-2. **Submit**: Users post experiments using standardized templates with instant pricing guidance
-3. **Validate**: Qualified operators execute experiments with full documentation; payment held in escrow
+**Early-Stage Biotech / Discovery Teams**
+- Core pain: Wet lab work is an operational tax — hiring, contracts, and coordination delay the science
+- Core value: Elastic R&D capacity on demand, no headcount or equipment purchases required
 
-## For Requesters
+**Pharma / AI Drug Discovery Teams**
+- Core pain: The Admin Tax (manual scoping, email chains, format mismatches) breaks the in silico → physical feedback loop
+- Core value: Agent-ready data in JSON/CSV; from lead to bench in hours, not weeks
 
-- Post experiment requests with clear protocols and acceptance criteria
-- Get instant pricing based on complexity, materials, and privacy tier
-- Choose privacy level: Open Access (default), Delayed Release (+10-20%), or Premium Private (+25-50%)
-- Approve results before payment is released from escrow
+**Lab Partners / CROs**
+- Core pain: Underutilized bench capacity and manual intake workflows
+- Core value: Become a Digital Twin Alpha Node — receive pre-qualified, standardized demand routed to your capabilities
 
-## For Operators
+## Assay Menu
 
-**Requirements:**
-- Verified institutional affiliation and active lab access
-- PI approval or facility agreement for external work
-- Demonstrated competency in claimed techniques
-- Compliance with safety regulations and institutional policies
+| Assay | Turnaround | AI-Readiness |
+|-------|------------|--------------|
+| CTG (Cell Viability) | 3–5 days | Automated dose-response curve fitting |
+| qPCR (Gene Expression) | 2–5 days | Full metadata tracking, 384-well normalization |
+| ELISA (Protein Quant) | 3–5 days | Automated curve fitting; raw + processed in JSON |
+| SPR (Surface Plasmon) | 5–7 days | Kinetic profiling; cleaned .csv for modeling |
+| Cell-Based | Custom | Programmable protocols, high-content imaging |
 
-**Benefits:**
-- Flexible hours - claim jobs that fit your schedule
-- Supplemental income at competitive rates
-- Build reputation with specialty badges
-- Contribute to open science while earning
+All assays return structured JSON/CSV with full metadata.
 
-## Open Science Commitment
+## How It Works (Agentic Loop)
 
-By default, all experiment requests and results are public to:
-- Build a shared corpus of validated scientific data
-- Enable reproducibility and prevent duplicate work
-- Benefit the entire scientific community
+1. **Route** — Discovery agents search a live assay menu with standardized lead times and pricing. No RFQ required.
+2. **Coordinate** — Intelligent Manifests pre-verify sample volumes and controls. Briefs are auto-translated into bench-ready work orders.
+3. **Execute** — Validated orders route to the optimal Alpha Node lab. Escrow-protected, fully documented.
+4. **Return** — High-fidelity data in JSON/CSV pushes directly back to the computational environment. No manual processing.
 
-Privacy tiers available for patent/publication timing or commercial R&D.
+## Key Differentiators
 
-## Trust & Quality
+- **AI-Ready Data**: Results in structured JSON/CSV with full metadata — not Excel sheets
+- **Intelligent Manifests**: Sample volumes and controls pre-verified before shipment; zero failed runs
+- **Elastic R&D Capacity**: Pre-validated Alpha Node lab network; no equipment purchases or contracts
+- **Latency-to-Loop**: Lead to bench in hours; eliminates the manual scoping cycle
+- **Digital Twin Network**: Each partner lab's SOPs are digitized as machine-readable assets, queryable by AI agents
 
-- **Operator Verification**: Identity confirmation, institutional affiliation, authorization documentation, competency assessment
-- **Documentation Standards**: Timestamped photos/videos, lab notebook entries, raw data with metadata
-- **Escrow Protection**: Payment held until requester approves results
-- **Spot-Check Duplicates**: Random experiments re-run by different operators for reproducibility verification
+## Digital Twin Infrastructure
+
+Litmus builds a Digital Twin of each partner lab — SOPs digitized into machine-readable assets. This enables:
+- AI agents to search for assay capabilities and available capacity directly
+- Work orders automatically translated to match each lab's specific equipment profile
+- Data flowing back into the AI's learning loop without manual processing
+
+## Developer Integration
+
+- MCP Server: https://github.com/litmus-science/litmus-mcp
+- Documentation: https://docs.litmus.science
+- Enables AI agents to search assay capabilities and route experiments programmatically
 
 ## Contact
 
 - Website: https://litmus.science
-- Early Access: Join waitlist at https://litmus.science#waitlist
+- Email: arun@fulcrum.science
+- Book a call: https://litmus.science/#contact
 
 ## Site Structure
 
-- `/` - Homepage with platform overview
-- `/#how-it-works` - Detailed workflow explanation
-- `/#for-scientists` - Information for lab operators
-- `/#open-science` - Open science commitment and privacy tiers
-- `/#waitlist` - Early access application
-- `/privacy.html` - Privacy Policy
-- `/terms.html` - Terms of Service
+- `/` — Homepage with platform overview
+- `/#for-who` — Audience segmentation (biotech, pharma/AI, lab partners)
+- `/#how-it-works` — Agentic loop workflow
+- `/#assays` — Assay menu with turnarounds and AI-readiness
+- `/#agent-ready` — Digital Twin lab network
+- `/#contact` — Book a call
+- `/privacy.html` — Privacy Policy
+- `/terms.html` — Terms of Service
 
-## Technology Stack
+## Technology
 
-- Frontend: HTML, CSS (custom design system), JavaScript
-- Design: Editorial aesthetic with litmus paper-inspired gradients (pH color scale)
+- Frontend: HTML, CSS, JavaScript (static site)
+- Design: Editorial aesthetic with litmus paper-inspired pH color scale
 - Typography: Instrument Serif (display), DM Sans (body), DM Mono (code)
-- Color Palette: Acid red (#E63946) → Base blue (#264653) gradient
 
 ## Legal
 
 - Privacy Policy: https://litmus.science/privacy.html
 - Terms of Service: https://litmus.science/terms.html
-- Open science data licensing applies by default
-- GDPR/privacy rights: Contact privacy@litmus.science
-
-## Status
-
-Currently accepting early access applications for both experiment requesters and lab operators.
 
 ---
 
-Last updated: January 25, 2026
+Last updated: April 2026

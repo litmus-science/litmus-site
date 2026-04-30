@@ -3,24 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Litmus — Programmable Interface for Laboratory R&D</title>
-    <meta name="description" content="Litmus turns wet-lab assays into programmable services — the coordination layer between AI-driven drug discovery and physical labs.">
+    <title>Litmus — Programmable Wet Lab Services for AI Drug Discovery</title>
+    <meta name="description" content="Litmus connects AI drug discovery teams to a network of pre-validated labs. Programmable assay services — qPCR, ELISA, CTG, SPR — with JSON/CSV output for immediate model ingestion.">
+    <meta name="keywords" content="AI drug discovery, wet lab automation, CRO platform, programmable assays, qPCR service, ELISA service, lab infrastructure, drug discovery platform, in silico validation">
     <link rel="canonical" href="https://litmus.science">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://litmus.science">
-    <meta property="og:title" content="Litmus — Programmable Interface for Laboratory R&D">
-    <meta property="og:description" content="Litmus turns wet-lab assays into programmable services — eliminating the Admin Tax between in silico prediction and physical validation.">
+    <meta property="og:title" content="Litmus — Programmable Wet Lab Services for AI Drug Discovery">
+    <meta property="og:description" content="Litmus connects AI drug discovery teams to a network of pre-validated labs. Programmable assay services with JSON/CSV output for immediate model ingestion.">
     <meta property="og:image" content="https://litmus.science/og-image.jpg">
     <meta property="og:site_name" content="Litmus Science">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://litmus.science">
-    <meta name="twitter:title" content="Litmus — Programmable Interface for Laboratory R&D">
-    <meta name="twitter:description" content="Litmus turns wet-lab assays into programmable services — eliminating the Admin Tax between in silico prediction and physical validation.">
+    <meta name="twitter:title" content="Litmus — Programmable Wet Lab Services for AI Drug Discovery">
+    <meta name="twitter:description" content="Litmus connects AI drug discovery teams to a network of pre-validated labs. Programmable assay services with JSON/CSV output for immediate model ingestion.">
     <meta name="twitter:image" content="https://litmus.science/og-image.jpg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://litmus.science/#organization",
+          "name": "Litmus Science",
+          "url": "https://litmus.science",
+          "logo": "https://litmus.science/logo.png",
+          "description": "Litmus is intelligent lab infrastructure — the coordination layer between AI-driven drug discovery and physical labs. Programmable assay services with AI-ready JSON/CSV output.",
+          "sameAs": ["https://github.com/litmus-science"],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "arun@fulcrum.science",
+            "contactType": "sales"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://litmus.science/#website",
+          "url": "https://litmus.science",
+          "name": "Litmus Science",
+          "publisher": { "@id": "https://litmus.science/#organization" }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://litmus.science/#service",
+          "name": "Programmable Wet Lab Assay Services",
+          "provider": { "@id": "https://litmus.science/#organization" },
+          "description": "On-demand wet lab assays — CTG, qPCR, ELISA, SPR, and cell-based — with standardized turnarounds and AI-ready JSON/CSV output for drug discovery pipelines.",
+          "serviceType": "Laboratory Research Services",
+          "areaServed": "Worldwide",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Assay Menu",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "CTG Cell Viability Assay", "description": "3–5 day turnaround. Automated dose-response curve fitting." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "qPCR Gene Expression", "description": "2–5 day turnaround. Full metadata tracking, 384-well normalization." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ELISA Protein Quantification", "description": "3–5 day turnaround. Automated curve fitting; raw and processed output in JSON." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SPR Surface Plasmon Resonance", "description": "5–7 day turnaround. Kinetic profiling; cleaned CSV for modeling." } }
+            ]
+          }
+        }
+      ]
+    }
+    </script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -35,7 +85,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav">
+    <nav class="nav" aria-label="Main navigation">
         <div class="nav-inner">
             <a href="/" class="logo">
                 <span class="logo-mark"></span>
@@ -45,12 +95,13 @@
                 <a href="#how-it-works">How It Works</a>
                 <a href="#assays">Assays</a>
                 <a href="#for-who">Who It's For</a>
-                <a href="https://docs.litmus.science">Docs</a>
+                <a href="https://docs.litmus.science" rel="noopener noreferrer">Docs</a>
             </div>
             <a href="#contact" class="btn btn-nav">Book a Call</a>
         </div>
     </nav>
 
+    <main>
     <!-- Hero -->
     <header class="hero">
         <div class="hero-bg">
@@ -328,8 +379,8 @@
                 <div class="agent-intro">
                     <p class="agent-lead">Litmus builds a Digital Twin of each partner lab — SOPs digitized into machine-readable assets, enabling AI agents to search assay capabilities and route work orders without human intermediaries.</p>
                     <div class="open-source-links">
-                        <a href="https://docs.litmus.science" class="btn btn-outline-green">Documentation</a>
-                        <a href="https://github.com/litmus-science/litmus-mcp" class="btn btn-outline-green">MCP Server</a>
+                        <a href="https://docs.litmus.science" class="btn btn-outline-green" rel="noopener noreferrer">Documentation</a>
+                        <a href="https://github.com/litmus-science/litmus-mcp" class="btn btn-outline-green" rel="noopener noreferrer">MCP Server</a>
                     </div>
                 </div>
                 <div class="agent-features">
@@ -417,6 +468,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -436,9 +489,9 @@
                 </div>
                 <div class="footer-links">
                     <h5>Developers</h5>
-                    <a href="https://docs.litmus.science">Documentation</a>
-                    <a href="https://github.com/litmus-science/litmus-mcp">MCP Server</a>
-                    <a href="https://github.com/litmus-science">GitHub</a>
+                    <a href="https://docs.litmus.science" rel="noopener noreferrer">Documentation</a>
+                    <a href="https://github.com/litmus-science/litmus-mcp" rel="noopener noreferrer">MCP Server</a>
+                    <a href="https://github.com/litmus-science" rel="noopener noreferrer">GitHub</a>
                 </div>
                 <div class="footer-links">
                     <h5>Legal</h5>
