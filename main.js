@@ -63,35 +63,33 @@ function initWaitlistForm() {
     
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
+
         const emailInput = document.getElementById('email-input');
         const roleSelect = document.getElementById('role-select');
         const submitBtn = form.querySelector('button[type="submit"]');
-        
+
         const email = emailInput.value;
         const role = roleSelect.value;
-        
+        const originalText = submitBtn.textContent;
+
         // Disable form during submission
         submitBtn.disabled = true;
         submitBtn.textContent = 'Submitting...';
-        
-        try {
-            const formData = new FormData();
-            formData.append('email', email);
-            formData.append('role', role);
 
+        try {
             const response = await fetch(formspreeEndpoint, {
                 method: 'POST',
                 headers: {
-                    Accept: 'application/json'
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
                 },
-                body: formData
+                body: JSON.stringify({ email, role })
             });
-            
+
             if (!response.ok) {
                 throw new Error('Form submission failed');
             }
-            
+
             // Success state
             form.innerHTML = `
                 <div class="success-message">
@@ -103,14 +101,11 @@ function initWaitlistForm() {
                     <p style="color: var(--gray-200);">Expect a reply to <strong>${email}</strong> within 1–2 business days.</p>
                 </div>
             `;
-            
-            // Log for demo purposes
-            console.log('Waitlist signup:', { email, role });
-            
+
         } catch (error) {
             submitBtn.disabled = false;
-            submitBtn.textContent = 'Request Access';
-            alert('Something went wrong. Please try again.');
+            submitBtn.textContent = originalText;
+            alert('Something went wrong. Please try again or email us directly.');
         }
     });
 }
