@@ -355,6 +355,16 @@ button, input, select, textarea {
     50% { opacity: 0.6; transform: scale(0.9); }
 }
 
+.hero-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--base-teal);
+    margin-bottom: var(--space-md);
+    animation: fadeUp 1s var(--ease-out) 0.1s both;
+}
+
 .hero-title {
     font-size: clamp(3rem, 8vw, 5.5rem);
     letter-spacing: -0.03em;
