@@ -383,6 +383,16 @@ button, input, select, textarea {
     background-clip: text;
 }
 
+.hero-value-props {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--base-teal);
+    max-width: 680px;
+    margin-bottom: var(--space-md);
+    animation: fadeUp 1s var(--ease-out) 0.25s both;
+}
+
 .hero-subtitle {
     font-size: 1.25rem;
     color: var(--gray-400);
