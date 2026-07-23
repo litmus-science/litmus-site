@@ -397,8 +397,33 @@ button, input, select, textarea {
     font-size: 1.25rem;
     color: var(--gray-400);
     max-width: 680px;
+    margin-bottom: var(--space-lg);
+    animation: fadeUp 1s var(--ease-out) 0.25s both;
+}
+
+.hero-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    list-style: none;
+    max-width: 680px;
     margin-bottom: var(--space-2xl);
     animation: fadeUp 1s var(--ease-out) 0.3s both;
+}
+
+.hero-highlights li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--gray-400);
+}
+
+.highlight-check {
+    color: var(--base-teal);
+    font-weight: 700;
 }
 
 .hero-cta {
@@ -501,6 +526,39 @@ button, input, select, textarea {
 .section-title {
     font-size: clamp(2rem, 5vw, 3rem);
     letter-spacing: -0.02em;
+}
+
+/* ============================================
+   Lab Network Logos
+   ============================================ */
+
+.lab-logos {
+    padding: var(--space-xl) 0 var(--space-2xl);
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.lab-logos-label {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray-300);
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.lab-logos-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3xl);
+}
+
+.lab-logo {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--gray-400);
 }
 
 /* ============================================
@@ -871,53 +929,9 @@ button, input, select, textarea {
 
 .open-science p {
     font-size: 1.15rem;
-    color: var(--gray-400);
+    font-weight: 500;
+    color: var(--gray-500);
     margin-bottom: var(--space-3xl);
-}
-
-.privacy-options {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
-}
-
-.privacy-option {
-    background: var(--white);
-    border: 1px solid var(--gray-200);
-    border-radius: 12px;
-    padding: var(--space-xl);
-    transition: all 0.3s var(--ease-out);
-}
-
-.privacy-option:hover {
-    border-color: var(--base-teal);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
-}
-
-.privacy-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: var(--space-md);
-}
-
-.privacy-header h4 {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-.privacy-price {
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    color: var(--base-teal);
-}
-
-.privacy-option p {
-    font-size: 0.9rem;
-    color: var(--gray-400);
-    margin-bottom: 0;
 }
 
 .open-source-callout {
@@ -938,14 +952,8 @@ button, input, select, textarea {
 .open-source-callout p {
     font-size: 1rem;
     color: var(--gray-500);
-    margin-bottom: var(--space-xl);
+    margin-bottom: 0;
     max-width: 600px;
-}
-
-.open-source-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-md);
 }
 
 /* ============================================
@@ -1166,10 +1174,6 @@ button, input, select, textarea {
     
     .stat-divider {
         display: none;
-    }
-    
-    .privacy-options {
-        grid-template-columns: 1fr;
     }
     
     .trust-grid {
