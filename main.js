@@ -90,6 +90,10 @@ function initWaitlistForm() {
                 throw new Error('Form submission failed');
             }
 
+            if (window.posthog) {
+                posthog.identify(email, { email, role });
+            }
+
             // Success state
             form.innerHTML = `
                 <div class="success-message">
