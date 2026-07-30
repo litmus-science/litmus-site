@@ -1,0 +1,97 @@
+# Litmus
+
+> R&D Enablement Software — a copilot for experimental design, validation, and execution through a vetted lab network.
+
+## Overview
+
+Litmus turns scientific questions into executable research programs. Describe a hypothesis and the copilot drafts a rigorous experimental plan (models, endpoints, controls, powering), pressure-tests feasibility and statistical rigor before anything runs, then routes execution through a vetted network of outsourced labs. Results return structured, and the copilot proposes the next experiment — closing the loop from data back to hypothesis.
+
+## Who It's For
+
+**Virtual Biotechs**
+- Validate platform hypotheses and run many experiments in parallel without building a full biology team.
+
+**Academic Researchers**
+- Grant-friendly workflows built around funding and publication timelines. Delayed Release or Open Access IP tiers keep costs down while meeting grant and reporting requirements.
+
+**Program Managers**
+- Centralizes quotes, protocols, and status across every lab so one person can manage what used to take a team.
+
+**AI Agents**
+- A lab in the loop. AI agents can design and submit real experiments through Litmus using the open-source Litmus MCP server.
+
+## How It Works
+
+1. **Design** — Describe the scientific question. The copilot drafts a rigorous plan: models, endpoints, controls, and powering.
+2. **Validate** — Feasibility, cost, and statistical rigor are pressure-tested before anything runs, catching underpowered designs early.
+3. **Execute** — The study runs through the right labs in the vetted network, with standardized workflows and full documentation.
+4. **Interpret** — Results return structured. The copilot analyzes them and proposes the next experiment.
+
+## Vetted Lab Network
+
+One point of contact across all preclinical assay types:
+- **In Vivo** — Efficacy, PK/PD, and translational studies
+- **Structural Biology** — Crystallography and specialized characterization
+- **Protein Science** — Expression, purification, and analytics
+- **Molecular & Bioanalytical** — qPCR, ELISA, LC-MS, and related assays
+
+Compare quotes from labs including Gingko Cloud Lab, Sword Bio, and iHisto.
+
+## Assay Menu
+
+All assays return structured JSON/CSV output built for computational modeling.
+
+| Assay | Turnaround | Output |
+|-------|------------|--------|
+| ELISA (Protein Quantification) | 3–5 days | 4PL curve fitting, raw + processed JSON/CSV |
+| qPCR (Gene Expression) | 2–5 days | 384-well, ΔΔCt method, full Cq raw data |
+| CTG (Cell Viability) | 3–5 days | Automated dose-response fitting, IC50 with 95% CI |
+| SPR (Binding Kinetics) | 5–7 days | Label-free kon/koff/KD, sensorgram + kinetic fit CSV |
+| Cell-Based (Phenotypic & Imaging) | Custom | High-content imaging, multiplexed endpoint readouts |
+
+## Data Privacy
+
+Litmus does not store, sell, or share research data. Protocols, results, and IP stay private and belong to the customer by default, with no exceptions.
+
+## Developer Integration
+
+- MCP Server: https://github.com/litmus-science/litmus-mcp
+- Documentation: https://docs.litmus.science
+- Enables AI agents to design and submit experiments programmatically
+
+## Contact
+
+- Website: https://litmus.science
+- Email: arun@fulcrum.science
+- Get a quote: https://litmus.science/#contact
+
+## Site Structure
+
+- `/` — Homepage: platform overview, how it works, who it's for
+- `/#how-it-works` — Design/Validate/Execute/Interpret workflow
+- `/#for-founders` — Audience segmentation (virtual biotechs, academic researchers, program managers, AI agents)
+- `/#ip-control` — Data privacy and IP control
+- `/#contact` — Get a quote / waitlist
+- `/assays/` — Assay menu overview
+- `/assays/elisa.html` — ELISA protein quantification
+- `/assays/qpcr.html` — qPCR gene expression
+- `/assays/ctg.html` — CTG cell viability
+- `/assays/spr.html` — SPR binding kinetics
+- `/assays/cell-based.html` — Cell-based phenotypic & imaging assays
+- `/join-network/` — Lab partner network application
+- `/privacy.html` — Privacy Policy
+- `/terms.html` — Terms of Service
+
+## Technology
+
+- Frontend: HTML, CSS, JavaScript (static site); `/join-network/` is a separate bundled JS app
+- Typography: Instrument Serif (display), DM Sans (body), DM Mono (code)
+
+## Legal
+
+- Privacy Policy: https://litmus.science/privacy.html
+- Terms of Service: https://litmus.science/terms.html
+
+---
+
+Last updated: 2026-07-23
