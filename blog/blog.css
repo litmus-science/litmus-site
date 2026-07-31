@@ -1,0 +1,196 @@
+/* Blog — listing + article styles, built on top of styles.css and assay.css tokens */
+
+.blog-hero {
+    position: relative;
+    padding: calc(80px + var(--space-3xl)) 0 var(--space-3xl);
+    overflow: hidden;
+}
+
+.blog-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at top, rgba(42, 157, 143, 0.08), transparent 60%);
+    pointer-events: none;
+}
+
+.blog-hero .container {
+    position: relative;
+}
+
+.blog-page-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    line-height: 1.1;
+    color: var(--primary);
+    margin: var(--space-md) 0;
+}
+
+.blog-page-subtitle {
+    font-size: 1.125rem;
+    color: var(--gray-400);
+    max-width: 640px;
+    line-height: 1.6;
+}
+
+/* Post grid (listing page) */
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-xl);
+    padding: var(--space-2xl) 0 var(--space-4xl);
+}
+
+.post-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-xl);
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: border-color 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+}
+
+.post-card:hover {
+    border-color: var(--base-teal);
+    transform: translateY(-2px);
+}
+
+.post-card-tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--base-teal);
+}
+
+.post-card-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    line-height: 1.25;
+    color: var(--primary);
+}
+
+.post-card-desc {
+    font-size: 0.95rem;
+    color: var(--gray-400);
+    line-height: 1.6;
+}
+
+.post-card-meta {
+    margin-top: auto;
+    padding-top: var(--space-sm);
+    font-size: 0.8rem;
+    color: var(--gray-300);
+}
+
+/* Article (post) page */
+.article-hero {
+    padding: calc(80px + var(--space-2xl)) 0 var(--space-xl);
+}
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--gray-300);
+    margin-bottom: var(--space-md);
+}
+
+.article-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.15;
+    color: var(--primary);
+    margin-bottom: var(--space-md);
+}
+
+.article-dek {
+    font-size: 1.15rem;
+    color: var(--gray-400);
+    line-height: 1.6;
+    max-width: 680px;
+}
+
+.article-body {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-lg) var(--space-4xl);
+}
+
+.article-body h2 {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    color: var(--primary);
+    margin-top: var(--space-3xl);
+    margin-bottom: var(--space-md);
+}
+
+.article-body h3 {
+    font-size: 1.25rem;
+    color: var(--primary);
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-sm);
+}
+
+.article-body p {
+    color: var(--gray-400);
+    line-height: 1.75;
+    margin-bottom: var(--space-lg);
+}
+
+.article-body ul,
+.article-body ol {
+    color: var(--gray-400);
+    line-height: 1.75;
+    margin-bottom: var(--space-lg);
+    padding-left: var(--space-xl);
+}
+
+.article-body li {
+    margin-bottom: var(--space-sm);
+}
+
+.article-body a {
+    color: var(--base-teal);
+    text-decoration: underline;
+}
+
+.article-body a:hover {
+    color: var(--primary);
+}
+
+.article-body strong {
+    color: var(--primary);
+}
+
+.article-cta {
+    max-width: 680px;
+    margin: 0 auto var(--space-4xl);
+    padding: var(--space-xl);
+    background: var(--off-white);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.article-cta h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: var(--space-sm);
+}
+
+.article-cta p {
+    color: var(--gray-400);
+    margin-bottom: var(--space-lg);
+}
+
+@media (max-width: 768px) {
+    .post-grid {
+        grid-template-columns: 1fr;
+    }
+}
