@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qPCR Outsourcing 101: What to Vet Before You Send Samples | Litmus</title>
+    <meta name="description" content="What to check before you outsource qPCR gene expression testing — RNA quality, reference gene validation, primer efficiency, and raw Cq data delivery.">
+    <meta name="keywords" content="qPCR CRO, outsource qPCR, gene expression outsourcing, qPCR vendor selection, RT-qPCR contract research">
+    <link rel="canonical" href="https://litmus.science/blog/choosing-a-qpcr-cro.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://litmus.science/blog/choosing-a-qpcr-cro.html">
+    <meta property="og:title" content="qPCR Outsourcing 101: What to Vet Before You Send Samples">
+    <meta property="og:description" content="What to check before you outsource qPCR gene expression testing — RNA quality, reference gene validation, primer efficiency, and raw Cq data delivery.">
+    <meta property="og:image" content="https://litmus.science/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "qPCR Outsourcing 101: What to Vet Before You Send Samples",
+      "description": "What to check before you outsource qPCR gene expression testing — RNA quality, reference gene validation, primer efficiency, and raw Cq data delivery.",
+      "author": { "@type": "Organization", "name": "Litmus Science" },
+      "publisher": { "@type": "Organization", "name": "Litmus Science", "url": "https://litmus.science" },
+      "datePublished": "2026-07-31",
+      "dateModified": "2026-07-31",
+      "mainEntityOfPage": "https://litmus.science/blog/choosing-a-qpcr-cro.html",
+      "image": "https://litmus.science/og-image.jpg"
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../assays/assay.css">
+    <link rel="stylesheet" href="blog.css">
+
+    <!-- PostHog -->
+    <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="Ji Yi init fn mn Hr pn bn cn capture calculateEventProperties Sn register register_once register_for_session unregister unregister_for_session Tn getFeatureFlag getFeatureFlagPayload getFeatureFlagResult getAllFeatureFlags isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Mn identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset shutdown setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Cn xn createPersonProfile setInternalOrTestUser In hn Pn opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing debug Ur Rt getPageViewId captureTraceFeedback captureTraceMetric an".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_nZhKrouLkHbYRecJDDeFK7peLpZfRDAdRfxhQRt4RWfY', {
+        api_host: 'https://us.i.posthog.com',
+        defaults: '2026-05-30',
+        person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+    })
+    </script>
+</head>
+<body>
+    <nav class="nav" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="../" class="logo">
+                <span class="logo-mark"></span>
+                <span class="logo-text">Litmus</span>
+            </a>
+            <div class="nav-links">
+                <a href="../#how-it-works">How It Works</a>
+                <a href="../assays/">Assays</a>
+                <a href="./">Blog</a>
+                <a href="https://docs.litmus.science" rel="noopener noreferrer">Docs</a>
+            </div>
+            <a href="../#contact" class="btn btn-nav">Book a Call</a>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <section class="article-hero">
+                <div class="container">
+                    <div class="breadcrumb">
+                        <a href="../">Litmus</a>
+                        <span class="breadcrumb-sep">›</span>
+                        <a href="./">Blog</a>
+                        <span class="breadcrumb-sep">›</span>
+                        <span>qPCR Outsourcing 101</span>
+                    </div>
+                    <div class="article-meta">
+                        <span>CRO Guide</span>
+                        <span>·</span>
+                        <span>2026-07-31</span>
+                        <span>·</span>
+                        <span>6 min read</span>
+                    </div>
+                    <h1 class="article-title">qPCR Outsourcing 101: What to Vet Before You Send Samples</h1>
+                    <p class="article-dek">qPCR looks simple on the surface — amplify, quantify, compare. The failure modes live in the details most vendors don't volunteer: RNA quality, reference gene choice, and primer efficiency. Here's what to check first.</p>
+                </div>
+            </section>
+
+            <div class="article-body">
+                <p>qPCR is often the first assay teams outsource, because it feels low-risk: it's a standard, well-understood method with decades of literature behind it. That familiarity is exactly why bad data slips through unnoticed — a fold-change number looks just as confident whether the underlying Cq values are clean or the reference gene was wrong for your model.</p>
+
+                <p>Here's what actually determines whether qPCR results are trustworthy, and what to ask before you ship RNA.</p>
+
+                <p class="pull-quote">"A fold-change number looks just as confident whether the underlying Cq values are clean or the reference gene was wrong for your model."</p>
+
+                <h2 class="step-heading"><span class="step-number">1</span>Get RNA quality metrics back, not just "the assay ran"</h2>
+                <p>Degraded or low-purity RNA doesn't always fail outright — it often just produces noisier, less reproducible Cq values that look plausible in isolation. A CRO that skips quality control on incoming samples is passing that risk straight to your data.</p>
+                <p>Ask directly: <em>"Will you report RIN (RNA Integrity Number) and concentration for every sample before running the assay, and will you flag samples that fall below spec?"</em> A RIN below 7 (or a 260/280 ratio outside 1.8–2.1) should trigger a conversation before the plate is run — not get buried in an appendix afterward.</p>
+
+                <h2 class="step-heading"><span class="step-number">2</span>Ask how reference genes are chosen — and validated</h2>
+                <p>The ΔΔCt method assumes your reference gene (GAPDH, ACTB, or similar) is stable across every condition you're testing. That assumption breaks constantly — many "housekeeping" genes shift under stress, treatment, or disease conditions, which silently distorts every fold-change calculated against them.</p>
+                <p>A rigorous CRO validates reference gene stability computationally (geNorm or NormFinder are the standard tools) using two or more candidate reference genes, rather than assuming one gene is stable because it usually is. If a vendor can't describe how they picked — or validated — your reference gene, that's worth pausing on before you commit a full experiment to it.</p>
+
+                <div class="callout-card">
+                    <span class="callout-label">What good looks like</span>
+                    <ul>
+                        <li>Reference gene stability scored with geNorm or NormFinder, not assumed</li>
+                        <li>At least two reference genes used for normalization, not one</li>
+                        <li>Stability scores reported alongside the fold-change results, not just referenced internally</li>
+                    </ul>
+                </div>
+
+                <h2 class="step-heading"><span class="step-number">3</span>Confirm primer efficiency is validated per pair</h2>
+                <p>The ΔΔCt calculation assumes ~100% amplification efficiency for every primer pair. Real efficiency typically falls in a 90–110% range, and outside that band the fold-change math becomes measurably wrong — more so the larger the fold-change. This is especially easy to miss with custom or newly designed primers that haven't been validated against a standard curve.</p>
+                <p>Ask whether primer efficiency is validated with a dilution series before your samples are run, and ask to see the efficiency value for each target in your final data — not just a pass/fail note.</p>
+
+                <h2 class="step-heading"><span class="step-number">4</span>Insist on raw Cq values, not summaries</h2>
+                <p>A results table showing "3.4x upregulated" is not something you can audit, reanalyze, or combine with future runs. You need the raw Cq value for every well, per target, per sample — plus the ΔCt and ΔΔCt calculations that got you to the final number. Without raw Cq data, you can't catch outlier wells, can't re-normalize against a different reference gene later, and can't merge this run with a future one for a combined analysis.</p>
+
+                <div class="code-block">
+                    <span class="code-comment"># What a raw Cq payload should look like</span>
+                    <span class="code-line"><span class="code-key">assay</span>: "qPCR"</span>
+                    <span class="code-line"><span class="code-key">targets</span>: ["GAPDH", "MYC", "TP53"]</span>
+                    <span class="code-line"><span class="code-key">samples</span>: [</span>
+                    <span class="code-line">&nbsp;&nbsp;{ <span class="code-key">id</span>: "T1",</span>
+                    <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-key">cq</span>: { <span class="code-key">MYC</span>: 24.3, <span class="code-key">TP53</span>: 27.1 },</span>
+                    <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-key">fold_change</span>: { <span class="code-key">MYC</span>: 3.4 } },</span>
+                    <span class="code-line">&nbsp;&nbsp;...</span>
+                    <span class="code-line">]</span>
+                    <span class="code-line"><span class="code-key">reference_genes</span>: ["GAPDH", "ACTB"]</span>
+                    <span class="code-line"><span class="code-key">efficiency</span>: { <span class="code-key">MYC</span>: 0.98 }</span>
+                </div>
+
+                <h2 class="step-heading"><span class="step-number">5</span>For large plates, ask about normalization</h2>
+                <p>384-well plates increase throughput, but they also increase exposure to edge effects and thermal gradients across the plate — real sources of well-to-well variation that have nothing to do with your biology. If your study spans more than one plate, plate-to-plate normalization matters for the same reason: without it, "difference between conditions" can just mean "difference between plates run on different days."</p>
+
+                <h2>The short version</h2>
+                <p>A good qPCR CRO will, without prompting: report RNA quality metrics before running the assay, validate reference gene stability with two or more candidates, confirm primer efficiency per target, hand back raw Cq data alongside fold-change, and normalize across plates and wells as standard practice. If any of these require a follow-up email to get an answer, expect the same friction on every future run.</p>
+            </div>
+
+            <div class="article-cta">
+                <h3>Skip the vendor vetting.</h3>
+                <p>Litmus routes qPCR assays through a pre-vetted lab network with geNorm/NormFinder reference gene validation, per-primer efficiency scoring, and full raw Cq data delivered in JSON/CSV — as the baseline, not the upsell.</p>
+                <a href="https://platform.litmus.science/intake" class="btn btn-primary">Start Your Experiment</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../" class="logo">
+                        <span class="logo-mark"></span>
+                        <span class="logo-text">Litmus</span>
+                    </a>
+                    <p>R&amp;D enablement software for teams.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Platform</h5>
+                    <a href="../#how-it-works">How It Works</a>
+                    <a href="../#for-founders">For Founders &amp; PIs</a>
+                    <a href="../#ip-control">IP &amp; Privacy</a>
+                    <a href="https://litmus.science/join-network/">Join the Network</a>
+                    <a href="/blog/">Blog</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Developers</h5>
+                    <a href="https://docs.litmus.science" rel="noopener noreferrer">Documentation</a>
+                    <a href="https://github.com/litmus-science/litmus-mcp" rel="noopener noreferrer">MCP Server</a>
+                    <a href="https://github.com/litmus-science" rel="noopener noreferrer">GitHub</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Legal</h5>
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Litmus Science. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>
