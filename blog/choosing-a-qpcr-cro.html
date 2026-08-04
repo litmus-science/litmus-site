@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Choose a CRO for ELISA Testing: A Buyer's Guide | Litmus</title>
-    <meta name="description" content="What to check before you outsource ELISA testing — turnaround claims, curve-fitting methodology, data formats, and the questions that separate a good ELISA CRO from a slow one.">
-    <meta name="keywords" content="ELISA CRO, outsource ELISA testing, ELISA contract research organization, choosing an ELISA lab, ELISA vendor selection">
-    <link rel="canonical" href="https://litmus.science/blog/choosing-an-elisa-cro.html">
+    <title>qPCR Outsourcing 101: What to Vet Before You Send Samples | Litmus</title>
+    <meta name="description" content="What to check before you outsource qPCR gene expression testing — RNA quality, reference gene validation, primer efficiency, and raw Cq data delivery.">
+    <meta name="keywords" content="qPCR CRO, outsource qPCR, gene expression outsourcing, qPCR vendor selection, RT-qPCR contract research">
+    <link rel="canonical" href="https://litmus.science/blog/choosing-a-qpcr-cro.html">
 
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://litmus.science/blog/choosing-an-elisa-cro.html">
-    <meta property="og:title" content="How to Choose a CRO for ELISA Testing: A Buyer's Guide">
-    <meta property="og:description" content="What to check before you outsource ELISA testing — turnaround claims, curve-fitting methodology, data formats, and the questions that separate a good ELISA CRO from a slow one.">
+    <meta property="og:url" content="https://litmus.science/blog/choosing-a-qpcr-cro.html">
+    <meta property="og:title" content="qPCR Outsourcing 101: What to Vet Before You Send Samples">
+    <meta property="og:description" content="What to check before you outsource qPCR gene expression testing — RNA quality, reference gene validation, primer efficiency, and raw Cq data delivery.">
     <meta property="og:image" content="https://litmus.science/og-image.jpg">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "How to Choose a CRO for ELISA Testing: A Buyer's Guide",
-      "description": "What to check before you outsource ELISA testing — turnaround claims, curve-fitting methodology, data formats, and the questions that separate a good ELISA CRO from a slow one.",
+      "headline": "qPCR Outsourcing 101: What to Vet Before You Send Samples",
+      "description": "What to check before you outsource qPCR gene expression testing — RNA quality, reference gene validation, primer efficiency, and raw Cq data delivery.",
       "author": { "@type": "Organization", "name": "Litmus Science" },
       "publisher": { "@type": "Organization", "name": "Litmus Science", "url": "https://litmus.science" },
-      "datePublished": "2026-07-30",
-      "dateModified": "2026-07-30",
-      "mainEntityOfPage": "https://litmus.science/blog/choosing-an-elisa-cro.html",
+      "datePublished": "2026-07-31",
+      "dateModified": "2026-07-31",
+      "mainEntityOfPage": "https://litmus.science/blog/choosing-a-qpcr-cro.html",
       "image": "https://litmus.science/og-image.jpg"
     }
     </script>
@@ -73,58 +73,58 @@
                         <span class="breadcrumb-sep">›</span>
                         <a href="./">Blog</a>
                         <span class="breadcrumb-sep">›</span>
-                        <span>ELISA CRO Buyer's Guide</span>
+                        <span>qPCR Outsourcing 101</span>
                     </div>
                     <div class="article-meta">
                         <span>CRO Guide</span>
                         <span>·</span>
-                        <span>2026-07-30</span>
+                        <span>2026-07-31</span>
                         <span>·</span>
                         <span>6 min read</span>
                     </div>
-                    <h1 class="article-title">How to Choose a CRO for ELISA Testing: A Buyer's Guide</h1>
-                    <p class="article-dek">ELISA is one of the most commonly outsourced assays in preclinical research — and one of the easiest to get a disappointing result from. Here's what actually separates a reliable ELISA CRO from a slow or sloppy one.</p>
+                    <h1 class="article-title">qPCR Outsourcing 101: What to Vet Before You Send Samples</h1>
+                    <p class="article-dek">qPCR looks simple on the surface — amplify, quantify, compare. The failure modes live in the details most vendors don't volunteer: RNA quality, reference gene choice, and primer efficiency. Here's what to check first.</p>
                 </div>
             </section>
 
             <div class="article-body">
-                <p>If you've outsourced an ELISA before, you know the failure modes: a two-week turnaround quietly becomes five, the "raw data" you get back is a PDF of a standard curve, and nobody can tell you what the lower limit of quantification actually was. None of that shows up in a vendor's marketing page. It shows up after you've already shipped samples.</p>
+                <p>qPCR is often the first assay teams outsource, because it feels low-risk: it's a standard, well-understood method with decades of literature behind it. That familiarity is exactly why bad data slips through unnoticed — a fold-change number looks just as confident whether the underlying Cq values are clean or the reference gene was wrong for your model.</p>
 
-                <p>Here's what to check before you commit — not after.</p>
+                <p>Here's what actually determines whether qPCR results are trustworthy, and what to ask before you ship RNA.</p>
 
-                <h2>1. Ask how the standard curve is fit, not just whether it is</h2>
-                <p>Almost every CRO will tell you they do "curve fitting." Far fewer will tell you it's a proper 4-parameter logistic (4PL) fit rather than a linear or point-to-point interpolation forced onto a sigmoidal response. A linear fit on ELISA data — especially near the top and bottom of the curve, where sandwich ELISA saturates — will quietly distort your concentrations exactly where dose-response and potency comparisons matter most.</p>
-                <p>Ask directly: <em>"Is the standard curve fit with a 4PL model, and can I see the fitted parameters (a, b, c, d) and R² for each plate?"</em> A CRO that can answer this in one sentence has done this before. A CRO that needs to check with the lab has not.</p>
+                <h2>1. Get RNA quality metrics back, not just "the assay ran"</h2>
+                <p>Degraded or low-purity RNA doesn't always fail outright — it often just produces noisier, less reproducible Cq values that look plausible in isolation. A CRO that skips quality control on incoming samples is passing that risk straight to your data.</p>
+                <p>Ask directly: <em>"Will you report RIN (RNA Integrity Number) and concentration for every sample before running the assay, and will you flag samples that fall below spec?"</em> A RIN below 7 (or a 260/280 ratio outside 1.8–2.1) should trigger a conversation before the plate is run — not get buried in an appendix afterward.</p>
+
+                <h2>2. Ask how reference genes are chosen — and whether that choice is validated</h2>
+                <p>The ΔΔCt method assumes your reference gene (GAPDH, ACTB, or similar) is stable across every condition you're testing. That assumption breaks constantly — many "housekeeping" genes shift under stress, treatment, or disease conditions, which silently distorts every fold-change calculated against them.</p>
+                <p>A rigorous CRO validates reference gene stability computationally (geNorm or NormFinder are the standard tools) using two or more candidate reference genes, rather than assuming one gene is stable because it usually is. If a vendor can't describe how they picked — or validated — your reference gene, that's worth pausing on before you commit a full experiment to it.</p>
 
                 <h3>What good looks like</h3>
                 <ul>
-                    <li>4PL (or 5PL where appropriate) curve fitting applied automatically, per plate</li>
-                    <li>R² reported per curve, with a stated rejection threshold (commonly R² ≥ 0.98–0.99)</li>
-                    <li>LOD and LOQ calculated and flagged on the actual data, not just quoted from the kit insert</li>
+                    <li>Reference gene stability scored with geNorm or NormFinder, not assumed</li>
+                    <li>At least two reference genes used for normalization, not one</li>
+                    <li>Stability scores reported alongside the fold-change results, not just referenced internally</li>
                 </ul>
 
-                <h2>2. Get the sample requirements in writing before you ship anything</h2>
-                <p>Sample volume, matrix (serum, plasma, supernatant, lysate), and freeze-thaw tolerance vary by target and kit. A CRO that quotes a turnaround without first confirming your sample type and volume is quoting blind. This is where "3–5 days" turns into "3–5 days once we get a usable sample," which is a very different promise.</p>
-                <p>Before shipping, you should have written confirmation of: minimum volume per well, acceptable matrices, and whether your samples need dilution, extraction, or a freeze-thaw cycle the vendor didn't mention up front.</p>
+                <h2>3. Confirm primer efficiency is validated per primer pair</h2>
+                <p>The ΔΔCt calculation assumes ~100% amplification efficiency for every primer pair. Real efficiency typically falls in a 90–110% range, and outside that band the fold-change math becomes measurably wrong — more so the larger the fold-change. This is especially easy to miss with custom or newly designed primers that haven't been validated against a standard curve.</p>
+                <p>Ask whether primer efficiency is validated with a dilution series before your samples are run, and ask to see the efficiency value for each target in your final data — not just a pass/fail note.</p>
 
-                <h2>3. Insist on raw data, not just a summary</h2>
-                <p>A PDF report with a bar chart is not a deliverable you can build on. If you're feeding results into any kind of downstream model — dose-response modeling, cross-study comparison, an internal database — you need the raw OD values alongside the processed concentrations, in a structured format (JSON or CSV), not screenshotted out of plate-reader software.</p>
-                <p>Minimum bar for a data package: raw OD per well, fitted curve parameters, calculated concentrations, LOD/LOQ, and plate metadata (antibody lot, operator, run date). If a vendor can't produce that as a matter of course, budget extra time to re-request it — or to redo the analysis yourself from a screenshot.</p>
+                <h2>4. Insist on raw Cq values, not just fold-change summaries</h2>
+                <p>A results table showing "3.4x upregulated" is not something you can audit, reanalyze, or combine with future runs. You need the raw Cq value for every well, per target, per sample — plus the ΔCt and ΔΔCt calculations that got you to the final number. Without raw Cq data, you can't catch outlier wells, can't re-normalize against a different reference gene later, and can't merge this run with a future one for a combined analysis.</p>
 
-                <h2>4. Multi-plate studies need interplate normalization — ask if it's automatic</h2>
-                <p>Any study running more than one plate has interplate variability. If normalization isn't applied consistently across plates, your "difference" between conditions run on different days may just be plate-to-plate drift. This is a common, quiet source of irreproducible ELISA data — and a good CRO will normalize as standard practice, not as a paid add-on you have to request.</p>
-
-                <h2>5. Clarify turnaround as "sample receipt to data delivery," not "assay start"</h2>
-                <p>A quoted 3–5 day turnaround is only meaningful if you know what starts the clock. Some vendors measure from when the assay is physically run — after an unstated queue time for sample receiving, kit ordering, or scheduling. Ask for the turnaround measured from sample receipt to final data delivery, and get it in writing if it affects your program timeline.</p>
+                <h2>5. For large plates, ask about spatial and plate-to-plate normalization</h2>
+                <p>384-well plates increase throughput, but they also increase exposure to edge effects and thermal gradients across the plate — real sources of well-to-well variation that have nothing to do with your biology. If your study spans more than one plate, plate-to-plate normalization matters for the same reason: without it, "difference between conditions" can just mean "difference between plates run on different days."</p>
 
                 <h2>The short version</h2>
-                <p>A good ELISA CRO will, without prompting: confirm your 4PL fit methodology, nail down sample requirements before shipment, hand back raw + processed data in a structured format, normalize across plates automatically, and quote turnaround from receipt to delivery. If you have to ask twice for any of these, that's a preview of what the rest of the engagement will look like.</p>
+                <p>A good qPCR CRO will, without prompting: report RNA quality metrics before running the assay, validate reference gene stability with two or more candidates, confirm primer efficiency per target, hand back raw Cq data alongside fold-change, and normalize across plates and wells as standard practice. If any of these require a follow-up email to get an answer, expect the same friction on every future run.</p>
             </div>
 
             <div class="article-cta">
                 <h3>Skip the vendor vetting.</h3>
-                <p>Litmus routes ELISA assays through a pre-vetted lab network with standardized 4PL curve fitting, structured JSON/CSV output, and 3–5 day turnaround as the baseline — not the upsell.</p>
-                <a href="../assays/elisa.html" class="btn btn-primary">See the ELISA assay spec</a>
+                <p>Litmus routes qPCR assays through a pre-vetted lab network with geNorm/NormFinder reference gene validation, per-primer efficiency scoring, and full raw Cq data delivered in JSON/CSV — as the baseline, not the upsell.</p>
+                <a href="../assays/qpcr.html" class="btn btn-primary">See the qPCR assay spec</a>
             </div>
         </article>
     </main>
