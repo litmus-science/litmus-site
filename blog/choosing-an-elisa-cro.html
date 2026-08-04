@@ -92,29 +92,48 @@
 
                 <p>Here's what to check before you commit — not after.</p>
 
-                <h2>1. Ask how the standard curve is fit, not just whether it is</h2>
+                <p class="pull-quote">"None of that shows up in a vendor's marketing page. It shows up after you've already shipped samples."</p>
+
+                <h2 class="step-heading"><span class="step-number">1</span>Ask how the standard curve is fit, not just whether it is</h2>
                 <p>Almost every CRO will tell you they do "curve fitting." Far fewer will tell you it's a proper 4-parameter logistic (4PL) fit rather than a linear or point-to-point interpolation forced onto a sigmoidal response. A linear fit on ELISA data — especially near the top and bottom of the curve, where sandwich ELISA saturates — will quietly distort your concentrations exactly where dose-response and potency comparisons matter most.</p>
                 <p>Ask directly: <em>"Is the standard curve fit with a 4PL model, and can I see the fitted parameters (a, b, c, d) and R² for each plate?"</em> A CRO that can answer this in one sentence has done this before. A CRO that needs to check with the lab has not.</p>
 
-                <h3>What good looks like</h3>
-                <ul>
-                    <li>4PL (or 5PL where appropriate) curve fitting applied automatically, per plate</li>
-                    <li>R² reported per curve, with a stated rejection threshold (commonly R² ≥ 0.98–0.99)</li>
-                    <li>LOD and LOQ calculated and flagged on the actual data, not just quoted from the kit insert</li>
-                </ul>
+                <div class="callout-card">
+                    <span class="callout-label">What good looks like</span>
+                    <ul>
+                        <li>4PL (or 5PL where appropriate) curve fitting applied automatically, per plate</li>
+                        <li>R² reported per curve, with a stated rejection threshold (commonly R² ≥ 0.98–0.99)</li>
+                        <li>LOD and LOQ calculated and flagged on the actual data, not just quoted from the kit insert</li>
+                    </ul>
+                </div>
 
-                <h2>2. Get the sample requirements in writing before you ship anything</h2>
+                <h2 class="step-heading"><span class="step-number">2</span>Get sample requirements in writing before you ship</h2>
                 <p>Sample volume, matrix (serum, plasma, supernatant, lysate), and freeze-thaw tolerance vary by target and kit. A CRO that quotes a turnaround without first confirming your sample type and volume is quoting blind. This is where "3–5 days" turns into "3–5 days once we get a usable sample," which is a very different promise.</p>
                 <p>Before shipping, you should have written confirmation of: minimum volume per well, acceptable matrices, and whether your samples need dilution, extraction, or a freeze-thaw cycle the vendor didn't mention up front.</p>
 
-                <h2>3. Insist on raw data, not just a summary</h2>
+                <h2 class="step-heading"><span class="step-number">3</span>Insist on raw data, not just a summary</h2>
                 <p>A PDF report with a bar chart is not a deliverable you can build on. If you're feeding results into any kind of downstream model — dose-response modeling, cross-study comparison, an internal database — you need the raw OD values alongside the processed concentrations, in a structured format (JSON or CSV), not screenshotted out of plate-reader software.</p>
                 <p>Minimum bar for a data package: raw OD per well, fitted curve parameters, calculated concentrations, LOD/LOQ, and plate metadata (antibody lot, operator, run date). If a vendor can't produce that as a matter of course, budget extra time to re-request it — or to redo the analysis yourself from a screenshot.</p>
 
-                <h2>4. Multi-plate studies need interplate normalization — ask if it's automatic</h2>
+                <div class="code-block">
+                    <span class="code-comment"># What a raw ELISA payload should look like</span>
+                    <span class="code-line"><span class="code-key">assay</span>: "ELISA"</span>
+                    <span class="code-line"><span class="code-key">target</span>: "IL-6"</span>
+                    <span class="code-line"><span class="code-key">samples</span>: [</span>
+                    <span class="code-line">&nbsp;&nbsp;{ <span class="code-key">id</span>: "S1", <span class="code-key">conc_pg_mL</span>: 142.3,</span>
+                    <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-key">od</span>: 0.847, <span class="code-key">in_range</span>: true },</span>
+                    <span class="code-line">&nbsp;&nbsp;...</span>
+                    <span class="code-line">]</span>
+                    <span class="code-line"><span class="code-key">curve_params</span>: { <span class="code-key">a</span>: 0.08, <span class="code-key">b</span>: 1.21,</span>
+                    <span class="code-line">&nbsp;&nbsp;<span class="code-key">c</span>: 118.4, <span class="code-key">d</span>: 2.94 }</span>
+                    <span class="code-line"><span class="code-key">lod_pg_mL</span>: 3.9</span>
+                    <span class="code-line"><span class="code-key">r_squared</span>: 0.9991</span>
+                </div>
+
+                <h2 class="step-heading"><span class="step-number">4</span>Ask whether interplate normalization is automatic</h2>
                 <p>Any study running more than one plate has interplate variability. If normalization isn't applied consistently across plates, your "difference" between conditions run on different days may just be plate-to-plate drift. This is a common, quiet source of irreproducible ELISA data — and a good CRO will normalize as standard practice, not as a paid add-on you have to request.</p>
 
-                <h2>5. Clarify turnaround as "sample receipt to data delivery," not "assay start"</h2>
+                <h2 class="step-heading"><span class="step-number">5</span>Clarify turnaround as "receipt to delivery," not "assay start"</h2>
                 <p>A quoted 3–5 day turnaround is only meaningful if you know what starts the clock. Some vendors measure from when the assay is physically run — after an unstated queue time for sample receiving, kit ordering, or scheduling. Ask for the turnaround measured from sample receipt to final data delivery, and get it in writing if it affects your program timeline.</p>
 
                 <h2>The short version</h2>
