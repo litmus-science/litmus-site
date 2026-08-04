@@ -189,8 +189,75 @@
     margin-bottom: var(--space-lg);
 }
 
+/* Numbered step headings */
+.article-body h2.step-heading {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-top: var(--space-3xl);
+    margin-bottom: var(--space-md);
+}
+
+.step-number {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    color: var(--white);
+    background: var(--base-teal);
+    width: 2.25rem;
+    height: 2.25rem;
+    min-width: 2.25rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Callout / checklist card */
+.callout-card {
+    background: var(--off-white);
+    border-left: 3px solid var(--base-teal);
+    border-radius: 8px;
+    padding: var(--space-lg) var(--space-xl);
+    margin: var(--space-lg) 0 var(--space-2xl);
+}
+
+.callout-card .callout-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--base-teal);
+    margin-bottom: var(--space-sm);
+}
+
+.callout-card ul {
+    margin-bottom: 0;
+}
+
+/* Pull quote */
+.pull-quote {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.65rem;
+    line-height: 1.4;
+    color: var(--primary);
+    border-left: 3px solid var(--accent);
+    padding: var(--space-xs) 0 var(--space-xs) var(--space-lg);
+    margin: var(--space-2xl) 0;
+}
+
+/* Inline code-block example within article prose */
+.article-body .code-block {
+    margin: var(--space-lg) 0 var(--space-2xl);
+}
+
 @media (max-width: 768px) {
     .post-grid {
         grid-template-columns: 1fr;
+    }
+
+    .article-body h2.step-heading {
+        align-items: flex-start;
     }
 }

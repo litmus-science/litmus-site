@@ -92,29 +92,47 @@
 
                 <p>Here's what actually determines whether qPCR results are trustworthy, and what to ask before you ship RNA.</p>
 
-                <h2>1. Get RNA quality metrics back, not just "the assay ran"</h2>
+                <p class="pull-quote">"A fold-change number looks just as confident whether the underlying Cq values are clean or the reference gene was wrong for your model."</p>
+
+                <h2 class="step-heading"><span class="step-number">1</span>Get RNA quality metrics back, not just "the assay ran"</h2>
                 <p>Degraded or low-purity RNA doesn't always fail outright — it often just produces noisier, less reproducible Cq values that look plausible in isolation. A CRO that skips quality control on incoming samples is passing that risk straight to your data.</p>
                 <p>Ask directly: <em>"Will you report RIN (RNA Integrity Number) and concentration for every sample before running the assay, and will you flag samples that fall below spec?"</em> A RIN below 7 (or a 260/280 ratio outside 1.8–2.1) should trigger a conversation before the plate is run — not get buried in an appendix afterward.</p>
 
-                <h2>2. Ask how reference genes are chosen — and whether that choice is validated</h2>
+                <h2 class="step-heading"><span class="step-number">2</span>Ask how reference genes are chosen — and validated</h2>
                 <p>The ΔΔCt method assumes your reference gene (GAPDH, ACTB, or similar) is stable across every condition you're testing. That assumption breaks constantly — many "housekeeping" genes shift under stress, treatment, or disease conditions, which silently distorts every fold-change calculated against them.</p>
                 <p>A rigorous CRO validates reference gene stability computationally (geNorm or NormFinder are the standard tools) using two or more candidate reference genes, rather than assuming one gene is stable because it usually is. If a vendor can't describe how they picked — or validated — your reference gene, that's worth pausing on before you commit a full experiment to it.</p>
 
-                <h3>What good looks like</h3>
-                <ul>
-                    <li>Reference gene stability scored with geNorm or NormFinder, not assumed</li>
-                    <li>At least two reference genes used for normalization, not one</li>
-                    <li>Stability scores reported alongside the fold-change results, not just referenced internally</li>
-                </ul>
+                <div class="callout-card">
+                    <span class="callout-label">What good looks like</span>
+                    <ul>
+                        <li>Reference gene stability scored with geNorm or NormFinder, not assumed</li>
+                        <li>At least two reference genes used for normalization, not one</li>
+                        <li>Stability scores reported alongside the fold-change results, not just referenced internally</li>
+                    </ul>
+                </div>
 
-                <h2>3. Confirm primer efficiency is validated per primer pair</h2>
+                <h2 class="step-heading"><span class="step-number">3</span>Confirm primer efficiency is validated per pair</h2>
                 <p>The ΔΔCt calculation assumes ~100% amplification efficiency for every primer pair. Real efficiency typically falls in a 90–110% range, and outside that band the fold-change math becomes measurably wrong — more so the larger the fold-change. This is especially easy to miss with custom or newly designed primers that haven't been validated against a standard curve.</p>
                 <p>Ask whether primer efficiency is validated with a dilution series before your samples are run, and ask to see the efficiency value for each target in your final data — not just a pass/fail note.</p>
 
-                <h2>4. Insist on raw Cq values, not just fold-change summaries</h2>
+                <h2 class="step-heading"><span class="step-number">4</span>Insist on raw Cq values, not summaries</h2>
                 <p>A results table showing "3.4x upregulated" is not something you can audit, reanalyze, or combine with future runs. You need the raw Cq value for every well, per target, per sample — plus the ΔCt and ΔΔCt calculations that got you to the final number. Without raw Cq data, you can't catch outlier wells, can't re-normalize against a different reference gene later, and can't merge this run with a future one for a combined analysis.</p>
 
-                <h2>5. For large plates, ask about spatial and plate-to-plate normalization</h2>
+                <div class="code-block">
+                    <span class="code-comment"># What a raw Cq payload should look like</span>
+                    <span class="code-line"><span class="code-key">assay</span>: "qPCR"</span>
+                    <span class="code-line"><span class="code-key">targets</span>: ["GAPDH", "MYC", "TP53"]</span>
+                    <span class="code-line"><span class="code-key">samples</span>: [</span>
+                    <span class="code-line">&nbsp;&nbsp;{ <span class="code-key">id</span>: "T1",</span>
+                    <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-key">cq</span>: { <span class="code-key">MYC</span>: 24.3, <span class="code-key">TP53</span>: 27.1 },</span>
+                    <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-key">fold_change</span>: { <span class="code-key">MYC</span>: 3.4 } },</span>
+                    <span class="code-line">&nbsp;&nbsp;...</span>
+                    <span class="code-line">]</span>
+                    <span class="code-line"><span class="code-key">reference_genes</span>: ["GAPDH", "ACTB"]</span>
+                    <span class="code-line"><span class="code-key">efficiency</span>: { <span class="code-key">MYC</span>: 0.98 }</span>
+                </div>
+
+                <h2 class="step-heading"><span class="step-number">5</span>For large plates, ask about normalization</h2>
                 <p>384-well plates increase throughput, but they also increase exposure to edge effects and thermal gradients across the plate — real sources of well-to-well variation that have nothing to do with your biology. If your study spans more than one plate, plate-to-plate normalization matters for the same reason: without it, "difference between conditions" can just mean "difference between plates run on different days."</p>
 
                 <h2>The short version</h2>
