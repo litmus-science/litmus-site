@@ -57,7 +57,7 @@ function initSmoothScroll() {
  */
 function initWaitlistForm() {
     const form = document.getElementById('waitlist-form');
-    const formspreeEndpoint = 'https://formspree.io/f/xreqelzw';
+    const formspreeEndpoint = 'https://formspree.io/f/myegzjgp';
     
     if (!form) return;
     
