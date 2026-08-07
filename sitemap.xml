@@ -55,6 +55,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://litmus.science/blog/lab-in-the-loop-for-ai-scientists.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://litmus.science/blog/choosing-an-elisa-cro.html</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
