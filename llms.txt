@@ -78,6 +78,10 @@ Litmus does not store, sell, or share research data. Protocols, results, and IP 
 - `/assays/ctg.html` — CTG cell viability
 - `/assays/spr.html` — SPR binding kinetics
 - `/assays/cell-based.html` — Cell-based phenotypic & imaging assays
+- `/blog/` — Blog: guides on outsourcing assays, CRO vendor vetting, and AI-driven research execution
+- `/blog/choosing-an-elisa-cro.html` — ELISA CRO buyer's guide
+- `/blog/choosing-a-qpcr-cro.html` — qPCR outsourcing buyer's guide
+- `/blog/lab-in-the-loop-for-ai-scientists.html` — Litmus as the execution layer for AI-driven research
 - `/join-network/` — Lab partner network application
 - `/privacy.html` — Privacy Policy
 - `/terms.html` — Terms of Service
@@ -94,4 +98,4 @@ Litmus does not store, sell, or share research data. Protocols, results, and IP 
 
 ---
 
-Last updated: 2026-07-23
+Last updated: 2026-08-07

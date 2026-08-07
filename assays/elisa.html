@@ -27,6 +27,18 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Litmus", "item": "https://litmus.science/" },
+        { "@type": "ListItem", "position": 2, "name": "Assay Menu", "item": "https://litmus.science/assays/" },
+        { "@type": "ListItem", "position": 3, "name": "ELISA", "item": "https://litmus.science/assays/elisa.html" }
+      ]
+    }
+    </script>
+
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,6 +66,7 @@
             <div class="nav-links">
                 <a href="../#how-it-works">How It Works</a>
                 <a href="./">Assays</a>
+                <a href="../blog/">Blog</a>
                 <a href="../#for-who">Who It's For</a>
                 <a href="https://docs.litmus.science" rel="noopener noreferrer">Docs</a>
             </div>
@@ -180,6 +193,22 @@
         <section class="related-section">
             <div class="container">
                 <div class="section-header">
+                    <span class="section-tag">From the Blog</span>
+                    <h2 class="section-title">Vetting an ELISA vendor?</h2>
+                </div>
+                <div class="related-grid">
+                    <a href="../blog/choosing-an-elisa-cro.html" class="related-card">
+                        <span class="related-card-name">CRO Guide</span>
+                        <span class="related-card-turnaround">6 min read</span>
+                        <span class="related-card-desc">How to Choose a CRO for ELISA Testing: A Buyer's Guide — curve-fitting methodology, data formats, and the questions that separate a good ELISA CRO from a slow one.</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-section">
+            <div class="container">
+                <div class="section-header">
                     <span class="section-tag">Assay Menu</span>
                     <h2 class="section-title">Other assays on the network</h2>
                 </div>
@@ -251,6 +280,7 @@
                 </div>
                 <div class="footer-links">
                     <h5>Developers</h5>
+                    <a href="../blog/">Blog</a>
                     <a href="https://docs.litmus.science" rel="noopener noreferrer">Documentation</a>
                     <a href="https://github.com/litmus-science/litmus-mcp" rel="noopener noreferrer">MCP Server</a>
                 </div>
