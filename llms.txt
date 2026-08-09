@@ -1,6 +1,6 @@
 # Litmus
 
-> R&D Enablement Software — a copilot for experimental design, validation, and execution through a vetted lab network.
+> Lab Execution for AI-Driven Science — a copilot for experimental design, validation, and execution through a vetted lab network.
 
 ## Overview
 
@@ -110,4 +110,4 @@ Litmus does not store, sell, or share research data. Protocols, results, and IP 
 
 ---
 
-Last updated: 2026-08-07
+Last updated: 2026-08-09
