@@ -258,16 +258,8 @@ button, input, select, textarea {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: calc(80px + var(--space-4xl)) 0 var(--space-4xl);
+    padding: calc(80px + var(--space-4xl)) var(--space-3xl) var(--space-4xl);
     overflow: hidden;
-}
-
-.hero-inner {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--space-lg);
 }
 
 .hero-bg {
