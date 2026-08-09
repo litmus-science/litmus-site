@@ -56,7 +56,7 @@ Monthly SaaS subscription, no annual contract, cancel anytime.
 | Plan | Price | For |
 |------|-------|-----|
 | Free | $0/mo | Individuals exploring the platform — MCP Server & Python SDK access, 1 active experiment at a time, standard execution via the pre-approved CRO umbrella network |
-| Developer / Starter | $299/mo | Individual computational chemists, small AI biotechs, academic spinoffs — full MCP Server & Python SDK access, unlimited active experiments, automated PDF-to-JSON parsing, standard execution via the pre-approved CRO umbrella network |
+| Developer / Starter | $299/mo | Individual computational chemists, small AI biotechs, academic spinoffs — MCP Server & Python SDK access, unlimited active experiments, standard execution via the pre-approved CRO umbrella network, single unified umbrella MSA & consolidated billing, agent guardrails & spend controls |
 
 Full details: https://litmus.science/pricing/
 
