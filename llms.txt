@@ -49,6 +49,17 @@ All assays return structured JSON/CSV output built for computational modeling.
 | SPR (Binding Kinetics) | 5–7 days | Label-free kon/koff/KD, sensorgram + kinetic fit CSV |
 | Cell-Based (Phenotypic & Imaging) | Custom | High-content imaging, multiplexed endpoint readouts |
 
+## Pricing
+
+Monthly SaaS subscription, no annual contract, cancel anytime.
+
+| Plan | Price | For |
+|------|-------|-----|
+| Free | $0/mo | Individuals exploring the platform — MCP Server & Python SDK access, 1 active experiment at a time, standard execution via the pre-approved CRO umbrella network |
+| Developer / Starter | $299/mo | Individual computational chemists, small AI biotechs, academic spinoffs — full MCP Server & Python SDK access, unlimited active experiments, automated PDF-to-JSON parsing, standard execution via the pre-approved CRO umbrella network |
+
+Full details: https://litmus.science/pricing/
+
 ## Data Privacy
 
 Litmus does not store, sell, or share research data. Protocols, results, and IP stay private and belong to the customer by default, with no exceptions.
@@ -72,6 +83,7 @@ Litmus does not store, sell, or share research data. Protocols, results, and IP 
 - `/#for-founders` — Audience segmentation (virtual biotechs, academic researchers, program managers, AI agents)
 - `/#ip-control` — Data privacy and IP control
 - `/#contact` — Get a quote / waitlist
+- `/pricing/` — Pricing: Free ($0/mo) and Developer/Starter ($299/mo) plans
 - `/assays/` — Assay menu overview
 - `/assays/elisa.html` — ELISA protein quantification
 - `/assays/qpcr.html` — qPCR gene expression
