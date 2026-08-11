@@ -166,6 +166,15 @@ button, input, select, textarea {
     letter-spacing: -0.02em;
 }
 
+/* .logo-text-main/.logo-text-sub render inline as plain "Litmus Science" by
+   default. Between 769-1024px the nav gets tight (six links + CTA), so the
+   nav logo switches to a stacked "Litmus / SCIENCE" lockup instead. */
+.logo-text-sub {
+    font: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+}
+
 .nav-links {
     display: flex;
     gap: var(--space-xl);
@@ -1143,6 +1152,32 @@ button, input, select, textarea {
 /* ============================================
    Responsive Design
    ============================================ */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .nav .logo-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.05;
+    }
+
+    .nav .logo-text-main {
+        font-size: 1.35rem;
+    }
+
+    .nav .logo-text-sub {
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        color: var(--gray-300);
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+    }
+
+    .nav .logo-mark {
+        width: 34px;
+        height: 34px;
+        border-radius: 5px;
+    }
+}
 
 @media (max-width: 1024px) {
     .hero-visual {
