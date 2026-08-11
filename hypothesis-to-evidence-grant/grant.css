@@ -10,28 +10,80 @@
     text-decoration: none;
 }
 
-.award-section {
+/* Wide, grid-based section layout used throughout this page instead of
+   the narrow 680px .article-body prose column. */
+.grant-section {
     padding: var(--space-4xl) 0;
+}
+
+.grant-section.shaded {
     background: var(--off-white);
 }
 
-.award-section .section-header {
-    text-align: left;
-    max-width: 680px;
-    margin-left: auto;
-    margin-right: auto;
+.grant-section .section-header {
+    max-width: 760px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
-.award-grid {
+.grant-section-subtitle {
+    font-size: 1.05rem;
+    color: var(--gray-400);
+    line-height: 1.6;
+    margin-top: var(--space-sm);
+}
+
+/* Narrower centered column, for short narrative sections (the intro,
+   the closing CTA) that shouldn't stretch to the full container width. */
+.grant-narrow {
+    max-width: 760px;
+}
+
+.grant-narrow h2 {
+    font-size: 2rem;
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-md);
+}
+
+.grant-narrow p {
+    color: var(--gray-400);
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+}
+
+.grant-note {
+    max-width: 760px;
+    color: var(--gray-400);
+    margin-top: var(--space-xl);
+}
+
+.grant-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
-    max-width: 900px;
-    margin: 0 auto;
 }
 
-@media (max-width: 768px) {
-    .award-grid {
+/* Card content: numbered obligation/process cards put a .step-number badge
+   before the heading; eligibility cards put a <ul> instead of a <p>. */
+.grant-grid .use-case-card .step-number {
+    display: inline-flex;
+    margin-bottom: var(--space-md);
+}
+
+.grant-grid .use-case-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-size: 0.9rem;
+    color: var(--gray-400);
+    line-height: 1.6;
+}
+
+.grant-grid .use-case-card li {
+    margin-bottom: var(--space-xs);
+}
+
+@media (max-width: 900px) {
+    .grant-grid {
         grid-template-columns: 1fr;
     }
 }
