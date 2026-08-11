@@ -10,6 +10,29 @@
     text-decoration: none;
 }
 
+/* Primary CTA inside the hero, right below the subheader. .btn-primary's
+   default background (var(--primary)) is the same dark navy as this hero,
+   so it needs its own on-dark treatment here. */
+.hero-apply-cta {
+    margin: var(--space-lg) 0 var(--space-2xl);
+}
+
+.hero-apply-cta .btn-primary {
+    background: var(--base-teal);
+    color: var(--white);
+}
+
+.hero-apply-cta .btn-primary:hover {
+    background: var(--acid-orange);
+    color: var(--black);
+}
+
+.hero-apply-note {
+    margin-top: var(--space-sm);
+    color: var(--gray-200);
+    font-size: 0.9rem;
+}
+
 /* Wide, grid-based section layout used throughout this page instead of
    the narrow 680px .article-body prose column. */
 .grant-section {
