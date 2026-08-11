@@ -84,6 +84,7 @@ Litmus does not store, sell, or share research data. Protocols, results, and IP 
 - `/#ip-control` — Data privacy and IP control
 - `/#contact` — Get a quote / waitlist
 - `/pricing/` — Pricing: Free ($0/mo) and Developer/Starter ($299/mo) plans
+- `/hypothesis-to-evidence-grant/` — Grant program built with K-Dense: up to $5,000 in funded wet-lab execution for researchers taking a computational prediction to a wet-lab result
 - `/assays/` — Assay menu overview
 - `/assays/elisa.html` — ELISA protein quantification
 - `/assays/qpcr.html` — qPCR gene expression
@@ -110,4 +111,4 @@ Litmus does not store, sell, or share research data. Protocols, results, and IP 
 
 ---
 
-Last updated: 2026-08-09
+Last updated: 2026-08-11

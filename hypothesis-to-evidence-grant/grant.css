@@ -1,0 +1,11 @@
+/* Hypothesis-to-Evidence Grant page — built entirely on styles.css, assay.css, and blog.css. */
+
+.article-body sub {
+    font-size: 0.7em;
+}
+
+/* .article-body a { text-decoration: underline } would otherwise bleed
+   onto CTA buttons placed inside the article body. */
+.article-body a.btn {
+    text-decoration: none;
+}
