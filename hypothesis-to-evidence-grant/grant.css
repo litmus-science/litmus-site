@@ -1,0 +1,143 @@
+/* Hypothesis-to-Evidence Grant page — built entirely on styles.css, assay.css, and blog.css. */
+
+.article-body sub {
+    font-size: 0.7em;
+}
+
+/* .article-body a { text-decoration: underline } would otherwise bleed
+   onto CTA buttons placed inside the article body. */
+.article-body a.btn {
+    text-decoration: none;
+}
+
+/* Primary CTA inside the hero, right below the subheader. .btn-primary's
+   default background (var(--primary)) is the same dark navy as this hero,
+   so it needs its own on-dark treatment here. */
+.hero-apply-cta {
+    margin: var(--space-lg) 0 var(--space-2xl);
+}
+
+.hero-apply-cta .btn-primary {
+    background: var(--base-teal);
+    color: var(--white);
+}
+
+.hero-apply-cta .btn-primary:hover {
+    background: var(--acid-orange);
+    color: var(--black);
+}
+
+.hero-apply-note {
+    margin-top: var(--space-sm);
+    color: var(--gray-200);
+    font-size: 0.9rem;
+}
+
+/* Wide, grid-based section layout used throughout this page instead of
+   the narrow 680px .article-body prose column. */
+.grant-section {
+    padding: var(--space-4xl) 0;
+}
+
+.grant-section.shaded {
+    background: var(--off-white);
+}
+
+.grant-section .section-header {
+    max-width: 760px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.grant-section-subtitle {
+    font-size: 1.05rem;
+    color: var(--gray-400);
+    line-height: 1.6;
+    margin-top: var(--space-sm);
+}
+
+/* Narrower centered column, for short narrative sections (the intro,
+   the closing CTA) that shouldn't stretch to the full container width. */
+.grant-narrow {
+    max-width: 760px;
+}
+
+.grant-narrow h2 {
+    font-size: 2rem;
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-md);
+}
+
+.grant-narrow p {
+    color: var(--gray-400);
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+}
+
+.grant-note {
+    max-width: 760px;
+    color: var(--gray-400);
+    margin-top: var(--space-xl);
+}
+
+.grant-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+}
+
+/* Card content: numbered obligation/process cards put a .step-number badge
+   before the heading; eligibility cards put a <ul> instead of a <p>. */
+.grant-grid .use-case-card .step-number {
+    display: inline-flex;
+    margin-bottom: var(--space-md);
+}
+
+.grant-grid .use-case-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-size: 0.9rem;
+    color: var(--gray-400);
+    line-height: 1.6;
+}
+
+.grant-grid .use-case-card li {
+    margin-bottom: var(--space-xs);
+}
+
+@media (max-width: 900px) {
+    .grant-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* The closing "Ready to apply?" section — full-bleed dark gradient band,
+   same treatment as the site's other high-contrast CTA sections (e.g. the
+   homepage contact section), so it pops instead of floating as a boxed
+   card on white. */
+.grant-cta-band {
+    background: linear-gradient(135deg, var(--base-blue) 0%, #1a3a47 100%);
+    text-align: center;
+}
+
+.grant-cta-band h3 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: var(--space-sm);
+}
+
+.grant-cta-band p {
+    color: var(--gray-200);
+    margin: 0 auto var(--space-lg);
+}
+
+.grant-cta-band .btn-primary {
+    background: var(--base-teal);
+    color: var(--white);
+}
+
+.grant-cta-band .btn-primary:hover {
+    background: var(--acid-orange);
+    color: var(--black);
+}
