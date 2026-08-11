@@ -111,29 +111,33 @@
     }
 }
 
-/* The closing "Ready to apply?" box — default .article-cta (off-white on
-   white here) barely registers. Give it the same dark gradient treatment
-   as the site's other high-contrast CTA sections (e.g. the homepage
-   contact section), so it actually pops. */
-.grant-section .article-cta {
+/* The closing "Ready to apply?" section — full-bleed dark gradient band,
+   same treatment as the site's other high-contrast CTA sections (e.g. the
+   homepage contact section), so it pops instead of floating as a boxed
+   card on white. */
+.grant-cta-band {
     background: linear-gradient(135deg, var(--base-blue) 0%, #1a3a47 100%);
-    padding: var(--space-2xl);
+    text-align: center;
 }
 
-.grant-section .article-cta h3 {
+.grant-cta-band h3 {
+    font-family: var(--font-display);
+    font-size: 2rem;
     color: var(--white);
+    margin-bottom: var(--space-sm);
 }
 
-.grant-section .article-cta p {
+.grant-cta-band p {
     color: var(--gray-200);
+    margin: 0 auto var(--space-lg);
 }
 
-.grant-section .article-cta .btn-primary {
+.grant-cta-band .btn-primary {
     background: var(--base-teal);
     color: var(--white);
 }
 
-.grant-section .article-cta .btn-primary:hover {
+.grant-cta-band .btn-primary:hover {
     background: var(--acid-orange);
     color: var(--black);
 }
