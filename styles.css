@@ -267,7 +267,7 @@ button, input, select, textarea {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: calc(80px + var(--space-4xl));
+    padding-top: var(--space-4xl);
     padding-right: var(--space-3xl);
     padding-bottom: var(--space-4xl);
     /* Matches .container's left content edge (max-width: 1200px + var(--space-lg) padding) so hero text lines up with section headings below it. */
@@ -549,9 +549,8 @@ button, input, select, textarea {
    ============================================ */
 
 .grant-banner {
-    padding: var(--space-md) 0;
-    background: var(--off-white);
-    border-bottom: 1px solid var(--gray-100);
+    margin-top: 72px;
+    background: var(--base-teal);
 }
 
 .grant-banner-link {
@@ -562,40 +561,28 @@ button, input, select, textarea {
     flex-wrap: wrap;
     text-align: center;
     padding: var(--space-sm) var(--space-lg);
-    border-radius: 999px;
-    border: 1px solid var(--gray-200);
-    background: var(--white);
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: background 0.2s ease;
 }
 
 .grant-banner-link:hover {
-    border-color: var(--base-teal);
-    box-shadow: 0 2px 12px rgba(42, 157, 143, 0.15);
-}
-
-.grant-banner-tag {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--base-teal);
-    white-space: nowrap;
+    background: rgba(0, 0, 0, 0.08);
 }
 
 .grant-banner-text {
     font-size: 0.9rem;
-    color: var(--gray-500);
+    color: var(--white);
 }
 
 .grant-banner-text strong {
-    color: var(--black);
+    color: var(--white);
 }
 
 .grant-banner-cta {
     font-family: var(--font-mono);
     font-size: 0.85rem;
     font-weight: 500;
-    color: var(--primary);
+    color: var(--white);
+    text-decoration: underline;
     white-space: nowrap;
 }
 
@@ -1291,18 +1278,24 @@ button, input, select, textarea {
     .hero-cta {
         flex-direction: column;
     }
-    
+
     .btn {
         width: 100%;
     }
-    
+
     .step {
         grid-template-columns: 1fr;
         gap: var(--space-md);
     }
-    
+
     .step-number {
         font-size: 2.5rem;
+    }
+
+    /* Below ~480px the nav logo text wraps to two lines, growing the
+       fixed nav's height — match that here so the banner stays flush. */
+    .grant-banner {
+        margin-top: 110px;
     }
 }
 
