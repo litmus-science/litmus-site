@@ -545,6 +545,61 @@ button, input, select, textarea {
 }
 
 /* ============================================
+   Grant Banner
+   ============================================ */
+
+.grant-banner {
+    padding: var(--space-md) 0;
+    background: var(--off-white);
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.grant-banner-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    text-align: center;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: 999px;
+    border: 1px solid var(--gray-200);
+    background: var(--white);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grant-banner-link:hover {
+    border-color: var(--base-teal);
+    box-shadow: 0 2px 12px rgba(42, 157, 143, 0.15);
+}
+
+.grant-banner-tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--base-teal);
+    white-space: nowrap;
+}
+
+.grant-banner-text {
+    font-size: 0.9rem;
+    color: var(--gray-500);
+}
+
+.grant-banner-text strong {
+    color: var(--black);
+}
+
+.grant-banner-cta {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--primary);
+    white-space: nowrap;
+}
+
+/* ============================================
    Lab Network Logos
    ============================================ */
 
