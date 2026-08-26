@@ -204,6 +204,148 @@
 }
 
 /* ============================================
+   Scope Checklist Section (JTBD / request pages)
+   ============================================ */
+
+.scope-section {
+    padding: var(--space-4xl) 0;
+}
+
+.scope-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4xl);
+    align-items: start;
+}
+
+.scope-content h3 {
+    font-size: 1.75rem;
+    margin-bottom: var(--space-lg);
+}
+
+.scope-content p {
+    color: var(--gray-400);
+    margin-bottom: var(--space-xl);
+    line-height: 1.7;
+}
+
+.scope-checklist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    background: var(--off-white);
+    border-radius: 12px;
+    padding: var(--space-xl);
+}
+
+.scope-checklist li {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+    font-size: 0.95rem;
+    color: var(--gray-500);
+}
+
+.scope-checklist .highlight-check {
+    flex-shrink: 0;
+}
+
+/* ============================================
+   Comparison Table (JTBD / decision pages)
+   ============================================ */
+
+.comparison-section {
+    padding: var(--space-4xl) 0;
+    background: var(--off-white);
+}
+
+.comparison-table {
+    border: 1px solid var(--gray-100);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--white);
+}
+
+.comparison-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.comparison-row + .comparison-row {
+    border-top: 1px solid var(--gray-100);
+}
+
+.comparison-row.comparison-header {
+    background: var(--base-blue);
+}
+
+.comparison-row.comparison-header .comparison-cell {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.comparison-cell {
+    padding: var(--space-lg) var(--space-xl);
+    font-size: 0.95rem;
+    color: var(--gray-500);
+    line-height: 1.5;
+}
+
+.comparison-cell:first-child {
+    border-right: 1px solid var(--gray-100);
+}
+
+.comparison-row.comparison-header .comparison-cell:first-child {
+    border-right-color: rgba(255, 255, 255, 0.15);
+}
+
+.comparison-cell strong {
+    color: var(--black);
+}
+
+.comparison-verdict {
+    margin-top: var(--space-xl);
+    background: var(--white);
+    border-left: 3px solid var(--base-teal);
+    border-radius: 8px;
+    padding: var(--space-lg) var(--space-xl);
+}
+
+.comparison-verdict .callout-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--base-teal);
+    margin-bottom: var(--space-sm);
+}
+
+/* ============================================
+   Direct CTA Section (JTBD / request pages)
+   ============================================ */
+
+.request-cta .btn-primary {
+    background: var(--base-teal);
+}
+
+.request-cta .btn-primary:hover {
+    background: var(--acid-orange);
+    color: var(--black);
+}
+
+.request-cta-note {
+    margin-top: var(--space-md);
+    font-size: 0.85rem;
+    color: var(--gray-300);
+}
+
+/* ============================================
    Use Cases Section
    ============================================ */
 
@@ -311,6 +453,23 @@
 
     .ai-output-grid {
         grid-template-columns: 1fr;
+    }
+
+    .scope-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-row {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-cell:first-child {
+        border-right: none;
+        border-bottom: 1px solid var(--gray-100);
+    }
+
+    .comparison-row.comparison-header .comparison-cell:first-child {
+        border-bottom-color: rgba(255, 255, 255, 0.15);
     }
 
     .use-cases-grid {

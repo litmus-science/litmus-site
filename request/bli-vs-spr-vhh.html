@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLI vs. SPR for VHH Binding Kinetics: Which to Run? | Litmus</title>
+    <meta name="description" content="BLI vs SPR for VHH and nanobody binding kinetics — throughput, sensitivity, sample consumption, and when each makes sense. Includes a recommendation and a path to a scoped SPR quote.">
+    <meta name="keywords" content="BLI vs SPR, BLI vs SPR VHH, nanobody binding kinetics, VHH kinetics assay, bio-layer interferometry vs SPR, VHH affinity measurement">
+    <link rel="canonical" href="https://litmus.science/request/bli-vs-spr-vhh.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://litmus.science/request/bli-vs-spr-vhh.html">
+    <meta property="og:title" content="BLI vs. SPR for VHH Binding Kinetics: Which to Run? | Litmus">
+    <meta property="og:description" content="BLI vs SPR for VHH and nanobody binding kinetics — throughput, sensitivity, sample consumption, and when each makes sense.">
+    <meta property="og:image" content="https://litmus.science/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Should I use BLI or SPR for VHH binding kinetics?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For early-stage screening of large VHH panels, BLI's throughput and disposable biosensors make it efficient for rank-ordering clones. Once you've narrowed to a shortlist, SPR's higher sensitivity and resolution make it the better choice for rigorous kon/koff/KD data, which matters most for affinity maturation and SAR-driven decisions on small analytes like VHHs."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Litmus", "item": "https://litmus.science/" },
+        { "@type": "ListItem", "position": 2, "name": "BLI vs SPR for VHHs", "item": "https://litmus.science/request/bli-vs-spr-vhh.html" }
+      ]
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../assays/assay.css">
+
+    <!-- PostHog -->
+    <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="Ji Yi init fn mn Hr pn bn cn capture calculateEventProperties Sn register register_once register_for_session unregister unregister_for_session Tn getFeatureFlag getFeatureFlagPayload getFeatureFlagResult getAllFeatureFlags isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Mn identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset shutdown setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Cn xn createPersonProfile setInternalOrTestUser In hn Pn opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing debug Ur Rt getPageViewId captureTraceFeedback captureTraceMetric an".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_nZhKrouLkHbYRecJDDeFK7peLpZfRDAdRfxhQRt4RWfY', {
+        api_host: 'https://us.i.posthog.com',
+        defaults: '2026-05-30',
+        person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+    })
+    </script>
+</head>
+<body>
+    <nav class="nav" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="../" class="logo">
+                <span class="logo-mark"></span>
+                <span class="logo-text"><span class="logo-text-main">Litmus</span> <span class="logo-text-sub">Science</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="../#how-it-works">How It Works</a>
+                <a href="../assays/">Assays</a>
+                <a href="../pricing/">Pricing</a>
+                <a href="../blog/">Blog</a>
+                <a href="https://docs.litmus.science" rel="noopener noreferrer">Docs</a>
+            </div>
+            <a href="https://platform.litmus.science/intake?utm_source=litmus_site&amp;utm_medium=nav&amp;utm_campaign=bli-vs-spr-vhh" class="btn btn-nav">Start Your Quote</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="assay-page-hero">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="../">Litmus</a>
+                    <span class="breadcrumb-sep">›</span>
+                    <span>BLI vs SPR for VHHs</span>
+                </div>
+                <span class="assay-type-tag">Binding Kinetics &middot; Nanobodies</span>
+                <h1 class="assay-page-title">BLI vs. SPR for VHH Binding Kinetics: Which to Run?</h1>
+                <p class="assay-page-subtitle">VHHs (nanobodies) are small — typically 12&ndash;15 kDa — which makes precise kinetic resolution harder on any platform. Here's how the two main techniques compare, and when each one is the right call.</p>
+                <div class="assay-hero-stats">
+                    <div class="assay-hero-stat">
+                        <span class="stat-value">~15 kDa</span>
+                        <span class="stat-label">typical VHH size</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="assay-hero-stat">
+                        <span class="stat-value">SPR</span>
+                        <span class="stat-label">what Litmus runs</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="comparison-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">The Comparison</span>
+                    <h2 class="section-title">BLI and SPR, side by side</h2>
+                </div>
+                <div class="comparison-table">
+                    <div class="comparison-row comparison-header">
+                        <div class="comparison-cell">Bio-Layer Interferometry (BLI)</div>
+                        <div class="comparison-cell">Surface Plasmon Resonance (SPR)</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell"><strong>Throughput:</strong> High — disposable biosensors run in parallel with no microfluidics, good for screening large VHH panels quickly.</div>
+                        <div class="comparison-cell"><strong>Throughput:</strong> Lower — injections typically run serially over a single flow cell, better suited to a shortlist than a full screen.</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell"><strong>Sensitivity:</strong> Less sensitive to bulk refractive index shifts, but resolution can suffer on very small analytes or weak binders.</div>
+                        <div class="comparison-cell"><strong>Sensitivity:</strong> Higher resolution for sub-nanomolar affinities and fast kinetics — generally the more precise read on a small VHH.</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell"><strong>Sample use:</strong> Lower reagent consumption per run given disposable tips — useful when VHH supply is limited.</div>
+                        <div class="comparison-cell"><strong>Sample use:</strong> Slightly higher consumption from regeneration cycles, though modern chips need only micrograms.</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell"><strong>Surface reuse:</strong> Disposable biosensors avoid regeneration entirely — no carryover risk between samples.</div>
+                        <div class="comparison-cell"><strong>Surface reuse:</strong> Requires regeneration optimization on a reusable chip, adding method-development time up front.</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell"><strong>Best for:</strong> Primary screening of large VHH panels, where speed and throughput matter more than resolution.</div>
+                        <div class="comparison-cell"><strong>Best for:</strong> Confirmatory kinetics on a shortlist, or any decision that depends on kon/koff — not just KD.</div>
+                    </div>
+                </div>
+                <div class="comparison-verdict">
+                    <span class="callout-label">The Litmus Take</span>
+                    <p>VHHs' small size makes precise kinetic resolution harder on either platform, but once you've narrowed to a shortlist, SPR's sensitivity generally makes it the better choice for the kon/koff/KD data that drives affinity maturation and SAR decisions. BLI stays useful upstream if you already have panel-scale screening to do first. Litmus's network runs SPR for this kind of confirmatory kinetics work.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Next Step</span>
+                    <h2 class="section-title">Ready for SPR on your shortlist?</h2>
+                </div>
+                <div class="related-grid">
+                    <a href="spr-assay-quote.html" class="related-card">
+                        <span class="related-card-name">Get an SPR Assay Quote</span>
+                        <span class="related-card-turnaround">5–7 days</span>
+                        <span class="related-card-desc">Scope your request — target, analyte, and expected affinity range</span>
+                    </a>
+                    <a href="../assays/spr.html" class="related-card">
+                        <span class="related-card-name">SPR Assay Service</span>
+                        <span class="related-card-turnaround">5–7 days</span>
+                        <span class="related-card-desc">Full spec sheet, AI-ready output format, and use cases</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="waitlist request-cta">
+            <div class="container">
+                <div class="waitlist-content">
+                    <h2>Have a VHH shortlist ready?</h2>
+                    <p>Start your request in the Litmus platform — tell us your target and analyte, and a qualified lab will confirm surface chemistry and turnaround.</p>
+                    <a href="https://platform.litmus.science/intake?utm_source=litmus_site&amp;utm_medium=request_page&amp;utm_campaign=bli-vs-spr-vhh" class="btn btn-primary btn-large">Get an SPR Quote &rarr;</a>
+                    <p class="request-cta-note">Or <a href="mailto:arun@fulcrum.science" style="color: inherit; text-decoration: underline;">email us directly</a>. No spam, ever.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../" class="logo">
+                        <span class="logo-mark"></span>
+                        <span class="logo-text"><span class="logo-text-main">Litmus</span> <span class="logo-text-sub">Science</span></span>
+                    </a>
+                    <p>The coordination layer between AI-driven drug discovery and physical labs.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Assays</h5>
+                    <a href="../assays/elisa.html">ELISA</a>
+                    <a href="../assays/qpcr.html">qPCR</a>
+                    <a href="../assays/ctg.html">CTG</a>
+                    <a href="../assays/spr.html">SPR</a>
+                    <a href="../assays/cell-based.html">Cell-Based</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Developers</h5>
+                    <a href="../pricing/">Pricing</a>
+                    <a href="../blog/">Blog</a>
+                    <a href="https://docs.litmus.science" rel="noopener noreferrer">Documentation</a>
+                    <a href="https://github.com/litmus-science/litmus-mcp" rel="noopener noreferrer">MCP Server</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Legal</h5>
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Litmus Science. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>
