@@ -94,6 +94,7 @@ Litmus does not store, sell, or share research data. Protocols, results, and IP 
 - `/blog/` — Blog: guides on outsourcing assays, CRO vendor vetting, and AI-driven research execution
 - `/blog/choosing-an-elisa-cro.html` — ELISA CRO buyer's guide
 - `/blog/choosing-a-qpcr-cro.html` — qPCR outsourcing buyer's guide
+- `/blog/give-your-ai-agent-a-wet-lab.html` — How an AI agent submits a real experiment via the MCP server (intake.draft_from_text, intake.validate, routing.match_labs, intake.submit)
 - `/blog/lab-in-the-loop-for-ai-scientists.html` — Litmus as the execution layer for AI-driven research
 - `/request/spr-assay-quote.html` — Scoped SPR assay quote request
 - `/request/bli-vs-spr-vhh.html` — BLI vs SPR comparison for VHH/nanobody binding kinetics
@@ -113,4 +114,4 @@ Litmus does not store, sell, or share research data. Protocols, results, and IP 
 
 ---
 
-Last updated: 2026-08-12
+Last updated: 2026-09-09

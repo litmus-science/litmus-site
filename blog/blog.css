@@ -252,6 +252,16 @@
     margin: var(--space-lg) 0 var(--space-2xl);
 }
 
+/* Inline code snippets within article prose (not a full code-block) */
+.article-body code {
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    background: var(--off-white);
+    border: 1px solid var(--gray-100);
+    border-radius: 4px;
+    padding: 0.1em 0.4em;
+}
+
 @media (max-width: 768px) {
     .post-grid {
         grid-template-columns: 1fr;

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Give Your AI Agent a Wet Lab | Litmus</title>
+    <meta name="description" content="A practical walkthrough of how an AI agent goes from a research question to a real, running experiment through Litmus's MCP server — the four tool calls between design and data.">
+    <meta name="keywords" content="AI agent wet lab, MCP server experiment submission, AI agent lab execution, Claude MCP biology, submit experiment via API, autonomous AI scientist tools">
+    <link rel="canonical" href="https://litmus.science/blog/give-your-ai-agent-a-wet-lab.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://litmus.science/blog/give-your-ai-agent-a-wet-lab.html">
+    <meta property="og:title" content="How to Give Your AI Agent a Wet Lab">
+    <meta property="og:description" content="A practical walkthrough of how an AI agent goes from a research question to a real, running experiment through Litmus's MCP server — the four tool calls between design and data.">
+    <meta property="og:image" content="https://litmus.science/og-image.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://litmus.science/blog/give-your-ai-agent-a-wet-lab.html">
+    <meta name="twitter:title" content="How to Give Your AI Agent a Wet Lab">
+    <meta name="twitter:description" content="A practical walkthrough of how an AI agent goes from a research question to a real, running experiment through Litmus's MCP server — the four tool calls between design and data.">
+    <meta name="twitter:image" content="https://litmus.science/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How to Give Your AI Agent a Wet Lab",
+      "description": "A practical walkthrough of how an AI agent goes from a research question to a real, running experiment through Litmus's MCP server — the four tool calls between design and data.",
+      "author": { "@type": "Organization", "name": "Litmus Science" },
+      "publisher": { "@type": "Organization", "name": "Litmus Science", "url": "https://litmus.science" },
+      "datePublished": "2026-09-09",
+      "dateModified": "2026-09-09",
+      "mainEntityOfPage": "https://litmus.science/blog/give-your-ai-agent-a-wet-lab.html",
+      "image": "https://litmus.science/og-image.jpg"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Litmus", "item": "https://litmus.science/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://litmus.science/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Give Your AI Agent a Wet Lab", "item": "https://litmus.science/blog/give-your-ai-agent-a-wet-lab.html" }
+      ]
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../assays/assay.css">
+    <link rel="stylesheet" href="blog.css">
+
+    <!-- PostHog -->
+    <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="Ji Yi init fn mn Hr pn bn cn capture calculateEventProperties Sn register register_once register_for_session unregister unregister_for_session Tn getFeatureFlag getFeatureFlagPayload getFeatureFlagResult getAllFeatureFlags isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Mn identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset shutdown setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Cn xn createPersonProfile setInternalOrTestUser In hn Pn opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing debug Ur Rt getPageViewId captureTraceFeedback captureTraceMetric an".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_nZhKrouLkHbYRecJDDeFK7peLpZfRDAdRfxhQRt4RWfY', {
+        api_host: 'https://us.i.posthog.com',
+        defaults: '2026-05-30',
+        person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+    })
+    </script>
+</head>
+<body>
+    <nav class="nav" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="../" class="logo">
+                <span class="logo-mark"></span>
+                <span class="logo-text"><span class="logo-text-main">Litmus</span> <span class="logo-text-sub">Science</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="../#how-it-works">How It Works</a>
+                <a href="../assays/">Assays</a>
+                <a href="../pricing/">Pricing</a>
+                <a href="./">Blog</a>
+                <a href="https://docs.litmus.science" rel="noopener noreferrer">Docs</a>
+            </div>
+            <a href="../#contact" class="btn btn-nav">Book a Call</a>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <section class="article-hero">
+                <div class="container">
+                    <div class="breadcrumb">
+                        <a href="../">Litmus</a>
+                        <span class="breadcrumb-sep">›</span>
+                        <a href="./">Blog</a>
+                        <span class="breadcrumb-sep">›</span>
+                        <span>Give Your AI Agent a Wet Lab</span>
+                    </div>
+                    <div class="article-meta">
+                        <span>Developers</span>
+                        <span>·</span>
+                        <span>2026-09-09</span>
+                        <span>·</span>
+                        <span>7 min read</span>
+                    </div>
+                    <h1 class="article-title">How to Give Your AI Agent a Wet Lab</h1>
+                    <p class="article-dek">Your agent can design a rigorous assay in seconds. Here's exactly what happens in the four calls between that design and a real, running experiment.</p>
+                </div>
+            </section>
+
+            <div class="article-body">
+                <p>Ask a reasoning model to design an experiment and it will hand you something plausible in seconds — an assay type, a set of controls, a target concentration range. That output is not an experiment. It's a draft that no lab can act on yet, and the gap between the two is exactly what most "AI agent + biology" demos skip over.</p>
+
+                <p>Litmus closes that gap with an open <a href="https://github.com/litmus-science/litmus-mcp" target="_blank" rel="noopener noreferrer">MCP server</a> that any agent — Claude, ChatGPT, or your own reasoning loop — can call directly. This is a walkthrough of what actually happens between an agent deciding what it wants to test and a lab receiving a sample.</p>
+
+                <p class="pull-quote">"Designing the experiment is the easy part. Submitting one a lab can act on is the part that usually gets skipped."</p>
+
+                <h2 class="step-heading"><span class="step-number">1</span>An experiment is a spec, not a sentence</h2>
+                <p>"Test whether compound X inhibits target Y" isn't submittable — it's missing the parts a lab actually needs to quote and run the work. Before anything gets routed anywhere, an experiment needs:</p>
+
+                <div class="callout-card">
+                    <span class="callout-label">What turns a question into a spec</span>
+                    <ul>
+                        <li><strong>Acceptance criteria</strong> — a metric, an operator, and a threshold (e.g. <code>IC50 lte 10 µM</code>), plus the statistical requirements that make the result meaningful</li>
+                        <li><strong>Budget constraints</strong> — a maximum spend and how flexible it is (strict, or flexible by 10/25/50%)</li>
+                        <li><strong>Turnaround constraints</strong> — a target number of days and a priority (standard, expedited, urgent)</li>
+                        <li><strong>Privacy terms</strong> — open, delayed 6 or 12 months, or fully private, each with its own pricing</li>
+                    </ul>
+                </div>
+
+                <p>An agent that only produces the first sentence hasn't designed an experiment — it's produced a research idea. The MCP server's job is turning that idea into the structured spec above, automatically.</p>
+
+                <h2 class="step-heading"><span class="step-number">2</span>The four calls a connected agent makes</h2>
+                <p>Once an agent is authenticated against the Litmus MCP server, going from a plain-language question to a submitted experiment is four tool calls:</p>
+
+                <div class="code-block">
+                    <span class="code-comment"># Simplified — see the docs for exact tool schemas</span>
+                    <span class="code-line"><span class="code-key">intake.draft_from_text</span>(</span>
+                    <span class="code-line">&nbsp;&nbsp;"Test IC50 of compound X against target Y, CTG readout"</span>
+                    <span class="code-line">) -&gt; draft</span>
+                    <span class="code-line"></span>
+                    <span class="code-line"><span class="code-key">intake.validate</span>(draft) -&gt; { valid: true, warnings: [] }</span>
+                    <span class="code-line"></span>
+                    <span class="code-line"><span class="code-key">routing.match_labs</span>(draft) -&gt; [</span>
+                    <span class="code-line">&nbsp;&nbsp;{ lab: "...", turnaround_days: 4, cost_estimate_usd: 1200 }, ...</span>
+                    <span class="code-line">]</span>
+                    <span class="code-line"></span>
+                    <span class="code-line"><span class="code-key">intake.submit</span>(draft) -&gt; { experiment_id: "exp_...", status: "open" }</span>
+                </div>
+
+                <p><code>intake.draft_from_text</code> does the work described in step one — turning a plain-language request into the structured spec, filling in acceptance criteria and constraints an agent didn't think to specify. <code>intake.validate</code> catches problems before they cost anything: insufficient replicates, missing controls, statistically underpowered designs. <code>routing.match_labs</code> returns real turnaround and cost estimates from the qualified network. <code>intake.submit</code> is the only call that actually spends money or reserves lab time.</p>
+
+                <h2 class="step-heading"><span class="step-number">3</span>What happens after <code>intake.submit</code></h2>
+                <p>A submitted experiment moves through a fixed lifecycle: <strong>Open → Claimed → In Progress → Results Submitted → Approved / Disputed</strong>. Your agent doesn't need to babysit any of it — it polls or receives a webhook when the state changes, and the only decision it has to make comes at the end, when results land against the acceptance criteria it defined in step one.</p>
+
+                <div class="code-block">
+                    <span class="code-comment"># Results returned in the shape the acceptance criteria expect</span>
+                    <span class="code-line"><span class="code-key">experiment_id</span>: "exp_2291"</span>
+                    <span class="code-line"><span class="code-key">assay</span>: "CTG"</span>
+                    <span class="code-line"><span class="code-key">result</span>: { <span class="code-key">IC50_uM</span>: 6.8, <span class="code-key">ci95</span>: [5.9, 7.7] }</span>
+                    <span class="code-line"><span class="code-key">acceptance_criteria_met</span>: true</span>
+                    <span class="code-line"><span class="code-key">raw_data_csv</span>: "s3://.../2291_dose_response.csv"</span>
+                </div>
+
+                <p>Because the result references the criteria the agent set going in, it can decide on its own whether to approve, dispute, or move straight to the next design round — no human re-reading a PDF to figure out whether the run actually worked.</p>
+
+                <h2 class="step-heading"><span class="step-number">4</span>Two different integration paths</h2>
+                <p>Everything above describes an agent — Claude, ChatGPT, your own reasoning system — calling the MCP server directly with its own credentials. That's the right path if you're building or running the agent yourself; the tool schemas and setup are in the <a href="https://docs.litmus.science" rel="noopener noreferrer">MCP integration guide</a> and the <a href="https://github.com/litmus-science/litmus-mcp" target="_blank" rel="noopener noreferrer">open-source server repo</a>.</p>
+                <p>If you're building a product that other people use — and you want your own users to connect their Litmus account and have your product call these tools on their behalf — that's a different flow: OAuth, not a shared API key. The full walkthrough, including the PKCE authorization flow and token handling, is at <a href="https://platform.litmus.science/docs" target="_blank" rel="noopener noreferrer">platform.litmus.science/docs</a>.</p>
+
+                <h2>The short version</h2>
+                <p>An agent that can only produce a research idea hasn't done anything a lab can act on. One that can call four tools — draft, validate, match, submit — has turned that idea into a tracked, priced, running experiment, and gets a structured result back it can reason over directly. That's the actual distance between "AI for science" as a demo and as something that produces real evidence.</p>
+            </div>
+
+            <div class="article-cta">
+                <h3>Ready to connect an agent?</h3>
+                <p>The MCP server is open-source and free to call against the standard network. Start with a single experiment, or wire it into your own reasoning loop.</p>
+                <a href="https://platform.litmus.science/intake" class="btn btn-primary">Start Your Experiment</a>
+            </div>
+
+            <div class="article-cta">
+                <h3>Building a product on top of Litmus?</h3>
+                <p>Let your own users connect their Litmus account and call these tools on their behalf, through OAuth rather than a shared key.</p>
+                <a href="https://platform.litmus.science/docs" class="btn btn-primary" target="_blank" rel="noopener noreferrer">See the Integration Guide</a>
+            </div>
+
+            <section class="related-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-tag">More from the Blog</span>
+                        <h2 class="section-title">Related reading</h2>
+                    </div>
+                    <div class="related-grid">
+                        <a href="lab-in-the-loop-for-ai-scientists.html" class="related-card">
+                            <span class="related-card-name">Platform</span>
+                            <span class="related-card-turnaround">6 min read</span>
+                            <span class="related-card-desc">Lab-in-the-Loop: The Execution Layer for AI-Driven Research</span>
+                        </a>
+                        <a href="choosing-an-elisa-cro.html" class="related-card">
+                            <span class="related-card-name">CRO Guide</span>
+                            <span class="related-card-turnaround">6 min read</span>
+                            <span class="related-card-desc">How to Choose a CRO for ELISA Testing: A Buyer's Guide</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../" class="logo">
+                        <span class="logo-mark"></span>
+                        <span class="logo-text"><span class="logo-text-main">Litmus</span> <span class="logo-text-sub">Science</span></span>
+                    </a>
+                    <p>Lab execution for AI-driven science.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Platform</h5>
+                    <a href="../#how-it-works">How It Works</a>
+                    <a href="../#for-founders">For Founders &amp; PIs</a>
+                    <a href="../#ip-control">IP &amp; Privacy</a>
+                    <a href="https://litmus.science/join-network/">Become a CRO provider</a>
+                    <a href="../pricing/">Pricing</a>
+                    <a href="/blog/">Blog</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Developers</h5>
+                    <a href="https://docs.litmus.science" rel="noopener noreferrer">Documentation</a>
+                    <a href="https://github.com/litmus-science/litmus-mcp" rel="noopener noreferrer">MCP Server</a>
+                    <a href="https://github.com/litmus-science" rel="noopener noreferrer">GitHub</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Legal</h5>
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Litmus Science. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>
