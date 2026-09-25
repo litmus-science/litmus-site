@@ -116,6 +116,25 @@
     max-width: 680px;
 }
 
+.article-byline {
+    font-size: 0.9rem;
+    color: var(--gray-300);
+    margin-top: var(--space-md);
+}
+
+/* Wide header image between the article hero and body */
+.article-figure {
+    padding: 0 0 var(--space-xl);
+}
+
+.article-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid var(--gray-100);
+}
+
 .article-body {
     max-width: 680px;
     margin: 0 auto;
@@ -250,6 +269,51 @@
 /* Inline code-block example within article prose */
 .article-body .code-block {
     margin: var(--space-lg) 0 var(--space-2xl);
+}
+
+/* Data tables within article prose. Wrap in .table-scroll so wide tables
+   scroll inside the article instead of the page on narrow screens. */
+.article-body .table-scroll {
+    overflow-x: auto;
+    margin: var(--space-lg) 0 var(--space-2xl);
+    border: 1px solid var(--gray-100);
+    border-radius: 12px;
+}
+
+.article-body table {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.article-body th {
+    background: var(--base-blue);
+    color: var(--white);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: var(--space-md) var(--space-lg);
+}
+
+.article-body td {
+    padding: var(--space-md) var(--space-lg);
+    color: var(--gray-500);
+    line-height: 1.5;
+    vertical-align: top;
+    border-top: 1px solid var(--gray-100);
+}
+
+.article-body td ul {
+    margin: 0;
+    padding-left: var(--space-lg);
+}
+
+.article-body td li {
+    margin-bottom: var(--space-xs);
 }
 
 /* Inline code snippets within article prose (not a full code-block) */
