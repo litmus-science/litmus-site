@@ -307,6 +307,14 @@
     border-top: 1px solid var(--gray-100);
 }
 
+/* Small caption directly under a table */
+.article-body .table-note {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--gray-300);
+    margin: calc(-1 * var(--space-xl)) 0 var(--space-2xl);
+}
+
 .article-body td ul {
     margin: 0;
     padding-left: var(--space-lg);
