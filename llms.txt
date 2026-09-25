@@ -35,7 +35,7 @@ Standard assays for fast, fixed-scope quotes, plus custom studies scoped and sou
 - **Cellular** — Cell viability, reporter-gene assays, and hERG safety
 - **Custom studies** — Describe what you need; Litmus scientists review the request, find the right lab, and scope the work, from structural biology to specialized assays
 
-Compare quotes from labs including Gingko Cloud Lab, Sword Bio, and iHisto.
+Compare quotes from labs including Ginkgo Cloud Lab, Sword Bio, and iHisto.
 
 ## Assay Menu
 
