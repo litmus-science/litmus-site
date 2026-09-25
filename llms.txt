@@ -29,13 +29,13 @@ Litmus turns scientific questions into executable research programs. Describe a 
 
 ## Vetted Lab Network
 
-One point of contact across all preclinical assay types:
-- **In Vivo** — Efficacy, PK/PD, and translational studies
-- **Structural Biology** — Crystallography and specialized characterization
-- **Protein Science** — Expression, purification, and analytics
-- **Molecular & Bioanalytical** — qPCR, ELISA, LC-MS, and related assays
+Standard assays for fast, fixed-scope quotes, plus custom studies scoped and sourced by Litmus scientists:
+- **Small molecules** — Biochemical potency (enzyme and kinase IC50) and ADME triage: solubility, metabolic stability, CYP inhibition, protein binding, and permeability
+- **Peptides and protein binders** — Expression and QC from sequence, then binding and kinetics by BLI or SPR
+- **Cellular** — Cell viability, reporter-gene assays, and hERG safety
+- **Custom studies** — Describe what you need; Litmus scientists review the request, find the right lab, and scope the work, from structural biology to specialized assays
 
-Compare quotes from labs including Gingko Cloud Lab, Sword Bio, and iHisto.
+Compare quotes from labs including Ginkgo Cloud Lab, Sword Bio, and iHisto.
 
 ## Assay Menu
 
@@ -114,4 +114,4 @@ Litmus does not store, sell, or share research data. Protocols, results, and IP 
 
 ---
 
-Last updated: 2026-09-09
+Last updated: 2026-09-25
