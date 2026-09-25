@@ -136,7 +136,8 @@
 }
 
 .article-body {
-    max-width: 680px;
+    /* Same width as .container, so the text lines up with the title and header image */
+    max-width: 1200px;
     margin: 0 auto;
     padding: var(--space-xl) var(--space-lg) var(--space-4xl);
 }
@@ -188,7 +189,8 @@
 }
 
 .article-cta {
-    max-width: 680px;
+    width: calc(100% - 2 * var(--space-lg));
+    max-width: calc(1200px - 2 * var(--space-lg));
     margin: 0 auto var(--space-4xl);
     padding: var(--space-xl);
     background: var(--off-white);
