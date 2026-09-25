@@ -86,6 +86,38 @@
     color: var(--gray-300);
 }
 
+/* Post card with a header image */
+.post-card-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.post-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    height: 100%;
+}
+
+/* Featured card: spans the full grid width, image beside the text */
+.post-card.featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+}
+
+.post-card.featured .post-card-title {
+    font-size: 2rem;
+}
+
+.post-card.featured .post-card-desc {
+    font-size: 1.05rem;
+}
+
 /* Article (post) page */
 .article-hero {
     padding: calc(80px + var(--space-2xl)) 0 var(--space-xl);
@@ -339,6 +371,11 @@
 @media (max-width: 768px) {
     .post-grid {
         grid-template-columns: 1fr;
+    }
+
+    .post-card.featured {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
     }
 
     .article-body h2.step-heading {
