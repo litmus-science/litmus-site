@@ -55,7 +55,7 @@ No monthly fee and no annual contract. Litmus charges a 3% fee on each experimen
 
 | Option | Price | For |
 |--------|-------|-----|
-| Per experiment | 3% of each experiment | Computational chemists, AI biotechs, and academic teams — MCP Server & Python SDK access, unlimited active experiments, standard execution via the pre-approved CRO umbrella network, single unified umbrella MSA & consolidated billing, agent guardrails & spend controls |
+| Per experiment | 3% of each experiment | Computational chemists, AI biotechs, and academic teams — MCP Server & Python SDK access, unlimited active experiments, single unified umbrella MSA & consolidated billing |
 | Grant Package | $999 one-time | Researchers writing a grant who need a defensible wet-lab budget — vendor comparison, line-item budget, and written vendor justification, delivered in about a week. Credited toward the execution fee if the project is placed within 12 months |
 
 Full details: https://litmus.science/pricing/
