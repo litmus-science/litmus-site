@@ -1,0 +1,99 @@
+/* Suppliers page — built on styles.css and assay.css tokens */
+
+.suppliers-hero-cta {
+    margin-top: var(--space-xl);
+}
+
+.suppliers-section {
+    padding: var(--space-4xl) 0;
+}
+
+.suppliers-section.shaded {
+    background: var(--off-white);
+}
+
+.suppliers-benefits {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.suppliers-benefits .problem-card p {
+    margin-bottom: 0;
+}
+
+.suppliers-steps {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+    padding: 0;
+    margin: 0;
+}
+
+.suppliers-steps li {
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    border-radius: 12px;
+    padding: var(--space-xl);
+}
+
+.suppliers-step-number {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2.25rem;
+    color: var(--base-teal);
+    margin-bottom: var(--space-sm);
+}
+
+.suppliers-steps h3 {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+
+.suppliers-steps p {
+    font-size: 0.95rem;
+    color: var(--gray-400);
+}
+
+/* Closing CTA — same full-bleed dark band as the grant page. */
+.suppliers-cta-band {
+    background: linear-gradient(135deg, var(--base-blue) 0%, #1a3a47 100%);
+    text-align: center;
+}
+
+.suppliers-cta-band h2 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: var(--space-sm);
+}
+
+.suppliers-cta-band p {
+    color: var(--gray-200);
+    margin: 0 auto var(--space-lg);
+}
+
+.suppliers-cta-band p a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.suppliers-hero-cta .btn-primary,
+.suppliers-cta-band .btn-primary {
+    background: var(--base-teal);
+    color: var(--white);
+}
+
+.suppliers-hero-cta .btn-primary:hover,
+.suppliers-cta-band .btn-primary:hover {
+    background: var(--acid-orange);
+    color: var(--black);
+}
+
+@media (max-width: 900px) {
+    .suppliers-benefits,
+    .suppliers-steps {
+        grid-template-columns: 1fr;
+    }
+}
