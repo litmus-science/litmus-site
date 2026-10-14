@@ -267,7 +267,7 @@ button, input, select, textarea {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: var(--space-4xl);
+    padding-top: calc(80px + var(--space-4xl));
     padding-right: var(--space-3xl);
     padding-bottom: var(--space-4xl);
     /* Matches .container's left content edge (max-width: 1200px + var(--space-lg) padding) so hero text lines up with section headings below it. */
@@ -542,48 +542,6 @@ button, input, select, textarea {
 .section-title {
     font-size: clamp(2rem, 5vw, 3rem);
     letter-spacing: -0.02em;
-}
-
-/* ============================================
-   Grant Banner
-   ============================================ */
-
-.grant-banner {
-    margin-top: 72px;
-    background: var(--base-teal);
-}
-
-.grant-banner-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-md);
-    flex-wrap: wrap;
-    text-align: center;
-    padding: var(--space-sm) var(--space-lg);
-    transition: background 0.2s ease;
-}
-
-.grant-banner-link:hover {
-    background: rgba(0, 0, 0, 0.08);
-}
-
-.grant-banner-text {
-    font-size: 0.9rem;
-    color: var(--white);
-}
-
-.grant-banner-text strong {
-    color: var(--white);
-}
-
-.grant-banner-cta {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--white);
-    text-decoration: underline;
-    white-space: nowrap;
 }
 
 /* ============================================
@@ -1290,12 +1248,6 @@ button, input, select, textarea {
 
     .step-number {
         font-size: 2.5rem;
-    }
-
-    /* Below ~480px the nav logo text wraps to two lines, growing the
-       fixed nav's height — match that here so the banner stays flush. */
-    .grant-banner {
-        margin-top: 110px;
     }
 }
 
