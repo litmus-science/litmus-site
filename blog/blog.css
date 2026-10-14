@@ -382,3 +382,50 @@
         align-items: flex-start;
     }
 }
+
+/* Fellow headshots (Hypothesis-to-Evidence fellows post) */
+.fellow-profiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+    margin: var(--space-md) 0 var(--space-lg);
+}
+
+.fellow-profile {
+    width: 180px;
+    margin: 0;
+}
+
+.fellow-profile img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--gray-100);
+}
+
+.fellow-profile figcaption {
+    margin-top: var(--space-sm);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.fellow-profile figcaption span {
+    display: block;
+    color: var(--gray-400);
+}
+
+.fellow-project-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--base-teal);
+    margin-bottom: 0;
+}
+
+.fellow-project-label + h3 {
+    margin-top: var(--space-xs);
+}
