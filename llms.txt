@@ -99,13 +99,13 @@ Litmus does not store, sell, or share research data. Protocols, results, and IP 
 - `/blog/lab-in-the-loop-for-ai-scientists.html` — Litmus as the execution layer for AI-driven research
 - `/request/spr-assay-quote.html` — Scoped SPR assay quote request
 - `/request/bli-vs-spr-vhh.html` — BLI vs SPR comparison for VHH/nanobody binding kinetics
-- `/join-network/` — Lab partner network application
+- `/suppliers/` — For labs and CROs: capture AI drug discovery demand — scoped requests by email, one-click accept or plain-language quotes, Litmus invoices the buyer and pays the lab
 - `/privacy.html` — Privacy Policy
 - `/terms.html` — Terms of Service
 
 ## Technology
 
-- Frontend: HTML, CSS, JavaScript (static site); `/join-network/` is a separate bundled JS app
+- Frontend: HTML, CSS, JavaScript (static site)
 - Typography: Instrument Serif (display), DM Sans (body), DM Mono (code)
 
 ## Legal
