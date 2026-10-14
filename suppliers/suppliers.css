@@ -99,6 +99,55 @@
     color: var(--black);
 }
 
+/* Supplier application form — reuses .waitlist-form from styles.css. */
+.suppliers-form {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.suppliers-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    flex: 1;
+}
+
+.suppliers-field span {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--gray-200);
+}
+
+.suppliers-field em {
+    font-style: normal;
+    color: var(--gray-300);
+}
+
+.suppliers-form input,
+.suppliers-form textarea {
+    width: 100%;
+    padding: var(--space-md) var(--space-lg);
+}
+
+.suppliers-form textarea {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    font: inherit;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.suppliers-form textarea::placeholder {
+    color: var(--gray-300);
+}
+
+.suppliers-form .success-message {
+    text-align: center;
+}
+
 @media (max-width: 900px) {
     .suppliers-benefits,
     .suppliers-steps {

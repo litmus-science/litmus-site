@@ -79,7 +79,7 @@
                 <h1 class="assay-page-title">Capture AI-driven drug discovery demand.</h1>
                 <p class="assay-page-subtitle">AI drug discovery teams generate hypotheses faster than they can test them. Litmus routes that wet-lab work to your lab, scoped and priced.</p>
                 <div class="suppliers-hero-cta">
-                    <a href="../join-network/" class="btn btn-primary">Join the Network</a>
+                    <a href="#join" class="btn btn-primary">Join the Network</a>
                 </div>
             </div>
         </section>
@@ -138,11 +138,47 @@
             </div>
         </section>
 
-        <section class="suppliers-section suppliers-cta-band">
+        <section id="join" class="suppliers-section suppliers-cta-band">
             <div class="container">
                 <h2>Become AI-ready.</h2>
-                <p>Let&rsquo;s talk about driving demand to your services from AI drug discovery platforms. Email <a href="mailto:hello@litmus.science">hello@litmus.science</a>.</p>
-                <a href="../join-network/" class="btn btn-primary">Join the Network</a>
+                <p>Tell us about your lab and the services you offer. We&rsquo;ll follow up to get your first assays set up.</p>
+                <form class="waitlist-form suppliers-form" id="suppliers-form" action="https://formspree.io/f/mkjoqyob" method="POST">
+                    <input type="hidden" name="_subject" value="New supplier application">
+                    <div class="form-row">
+                        <label class="suppliers-field">
+                            <span>Name</span>
+                            <input type="text" name="name" autocomplete="name" required>
+                        </label>
+                        <label class="suppliers-field">
+                            <span>Work email</span>
+                            <input type="email" name="email" autocomplete="email" required>
+                        </label>
+                    </div>
+                    <div class="form-row">
+                        <label class="suppliers-field">
+                            <span>Lab or company name</span>
+                            <input type="text" name="lab_name" autocomplete="organization" required>
+                        </label>
+                        <label class="suppliers-field">
+                            <span>Website <em>(optional)</em></span>
+                            <input type="url" name="website" placeholder="https://" autocomplete="url">
+                        </label>
+                    </div>
+                    <label class="suppliers-field">
+                        <span>Location <em>(optional)</em></span>
+                        <input type="text" name="location" placeholder="City, country">
+                    </label>
+                    <label class="suppliers-field">
+                        <span>Services you offer</span>
+                        <textarea name="services" rows="4" required placeholder="e.g. SPR/BLI binding kinetics, ADME panels, compound synthesis, bioanalysis"></textarea>
+                    </label>
+                    <label class="suppliers-field">
+                        <span>Anything else? <em>(optional)</em></span>
+                        <textarea name="message" rows="3" placeholder="Capacity, turnaround, certifications, questions"></textarea>
+                    </label>
+                    <button type="submit" class="btn btn-primary btn-large">Join the Network</button>
+                </form>
+                <p class="waitlist-note">Prefer email? Write to <a href="mailto:hello@litmus.science">hello@litmus.science</a>.</p>
             </div>
         </section>
     </main>
@@ -185,5 +221,6 @@
     </footer>
 
     <script src="../main.js"></script>
+    <script src="suppliers.js"></script>
 </body>
 </html>
