@@ -51,12 +51,12 @@ All assays return structured JSON/CSV output built for computational modeling.
 
 ## Pricing
 
-Monthly SaaS subscription, no annual contract, cancel anytime.
+No monthly fee and no annual contract. Litmus charges a 3% fee on each experiment you run.
 
-| Plan | Price | For |
-|------|-------|-----|
-| Free | $0/mo | Individuals exploring the platform — MCP Server & Python SDK access, 1 active experiment at a time, standard execution via the pre-approved CRO umbrella network |
-| Developer / Starter | $299/mo | Individual computational chemists, small AI biotechs, academic spinoffs — MCP Server & Python SDK access, unlimited active experiments, standard execution via the pre-approved CRO umbrella network, single unified umbrella MSA & consolidated billing, agent guardrails & spend controls |
+| Option | Price | For |
+|--------|-------|-----|
+| Per experiment | 3% of each experiment | Computational chemists, AI biotechs, and academic teams — MCP Server access, unlimited active experiments, single unified umbrella MSA & consolidated billing |
+| Grant Package | $999 one-time | Researchers writing a grant who need a defensible wet-lab budget — vendor comparison, line-item budget, and written vendor justification, delivered in about a week. Credited toward the execution fee if the project is placed within 12 months |
 
 Full details: https://litmus.science/pricing/
 
@@ -83,7 +83,7 @@ Litmus does not store, sell, or share research data. Protocols, results, and IP 
 - `/#for-founders` — Audience segmentation (virtual biotechs, academic researchers, program managers, AI agents)
 - `/#ip-control` — Data privacy and IP control
 - `/#contact` — Get a quote / waitlist
-- `/pricing/` — Pricing: Free ($0/mo) and Developer/Starter ($299/mo) plans
+- `/pricing/` — Pricing: 3% fee per experiment (no monthly fee) and a $999 Grant Package
 - `/hypothesis-to-evidence-grant/` — Grant program built with K-Dense: up to $5,000 in funded wet-lab execution for researchers taking a computational prediction to a wet-lab result
 - `/assays/` — Assay menu overview
 - `/assays/elisa.html` — ELISA protein quantification
@@ -115,4 +115,4 @@ Litmus does not store, sell, or share research data. Protocols, results, and IP 
 
 ---
 
-Last updated: 2026-09-28
+Last updated: 2026-10-02
