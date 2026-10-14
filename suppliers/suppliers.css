@@ -4,6 +4,14 @@
     margin-top: var(--space-xl);
 }
 
+.suppliers-lead {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.35rem;
+    color: var(--base-teal);
+    margin-top: var(--space-sm);
+}
+
 .suppliers-section {
     padding: var(--space-4xl) 0;
 }
