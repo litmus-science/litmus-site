@@ -39,26 +39,18 @@ Compare quotes from labs including Ginkgo Cloud Lab, Sword Bio, and iHisto.
 
 ## Catalog
 
-Litmus covers drug discovery one stage at a time. All results return structured JSON/CSV output built for computational modeling. Full catalog: https://litmus.science/assays/
+Litmus covers drug discovery one stage at a time. All results come back ML-ready. Full catalog: https://litmus.science/assays/
 
-**Hit finding (live)** — screening + binding
-- Arrayed binding — published rate (see Pricing)
-- Pooled discovery (mRNA display, yeast display) — published rate (see Pricing)
-- SPR / BLI kinetics, biochemical HTS, ITC, thermal shift — quoted (lab quote + 5–15%)
+**Core catalog — hit finding**
+- Arrayed binding (expression + BLI/SPR, Triage or Validation) — 2–4 weeks
+- Pooled discovery (mRNA display for peptides, yeast display for minibinders) — 8–12 weeks
+- SPR / BLI kinetics, biochemical HTS, ITC, thermal shift
 
-**Coming next**
-- Hit-to-lead: cell-based potency — target engagement, cellular IC50, selectivity panels
-- Lead optimization: ADME / Tox — microsomal stability, permeability, CYP, hERG, cytotox
-- Biologics + in vivo: developability + PK — expression, stability, aggregation, rodent PK
-
-**Other assays (custom, lab quote + 5–15%)**
-
-| Assay | Output |
-|-------|--------|
-| ELISA (Protein Quantification) | 4PL curve fitting, raw + processed JSON/CSV |
-| qPCR (Gene Expression) | 384-well, ΔΔCt method, full Cq raw data |
-| CTG (Cell Viability) | Automated dose-response fitting, IC50 with 95% CI |
-| Cell-Based (Phenotypic & Imaging) | High-content imaging, multiplexed endpoint readouts |
+**Other assays — custom quote**
+- Cell-based potency: target engagement, cellular IC50, selectivity panels
+- ADME / Tox: microsomal stability, permeability, CYP, hERG, cytotox
+- Developability + PK: expression, stability, aggregation, rodent PK
+- ELISA, qPCR, cell viability (CTG), phenotypic & imaging assays
 
 ## Pricing
 
@@ -107,7 +99,7 @@ Litmus does not store, sell, or share research data. Protocols, results, and IP 
 - `/#contact` — Get a quote / waitlist
 - `/pricing/` — Pricing: published binding validation rates (arrayed from ~$130/design, pooled from ~$10,000/target) and custom work at lab quote + 5–15%
 - `/hypothesis-to-evidence-grant/` — Grant program built with K-Dense: up to $5,000 in funded wet-lab execution for researchers taking a computational prediction to a wet-lab result
-- `/assays/` — Catalog: hit finding (live), roadmap stages, and other custom assays
+- `/assays/` — Catalog: hit finding available now, plus custom-quote assays
 - `/assays/elisa.html` — ELISA protein quantification
 - `/assays/qpcr.html` — qPCR gene expression
 - `/assays/ctg.html` — CTG cell viability

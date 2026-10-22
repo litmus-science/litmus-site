@@ -500,60 +500,29 @@
     background: var(--off-white);
 }
 
-.catalog-live {
-    display: inline-block;
-    padding: 0 0.5rem;
-    border-radius: 999px;
-    background: var(--base-teal);
-    color: var(--white);
-}
-
 .catalog-card {
     text-decoration: none;
 }
 
-.catalog-roadmap {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-xl);
+.catalog-card-title {
+    text-decoration: none;
 }
 
-.catalog-stage {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-xs);
-    padding: var(--space-xl);
-    border: 1.5px dashed var(--base-teal);
-    border-radius: 12px;
-    background: var(--white);
-}
-
-.catalog-stage-when {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--gray-300);
-}
-
-.catalog-stage-tag {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
+.catalog-card-title:hover {
     color: var(--base-teal);
-    margin-top: var(--space-sm);
 }
 
-.catalog-stage-name {
-    font-family: var(--font-display);
-    font-size: 1.75rem;
-    color: var(--primary);
+.catalog-card-link {
+    margin-top: auto;
+    padding-top: var(--space-md);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--base-teal);
+    text-decoration: none;
 }
 
-.catalog-stage-desc {
-    font-size: 0.95rem;
-    color: var(--gray-400);
+.catalog-card-link:hover {
+    text-decoration: underline;
 }
 
 .catalog-note {
@@ -564,10 +533,4 @@
 .catalog-note a {
     color: var(--base-teal);
     text-decoration: underline;
-}
-
-@media (max-width: 900px) {
-    .catalog-roadmap {
-        grid-template-columns: 1fr;
-    }
 }
