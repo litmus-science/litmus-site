@@ -37,26 +37,48 @@ Standard assays for fast, fixed-scope quotes, plus custom studies scoped and sou
 
 Compare quotes from labs including Ginkgo Cloud Lab, Sword Bio, and iHisto.
 
-## Assay Menu
+## Catalog
 
-All assays return structured JSON/CSV output built for computational modeling.
+Litmus covers drug discovery one stage at a time. All results return structured JSON/CSV output built for computational modeling. Full catalog: https://litmus.science/assays/
 
-| Assay | Turnaround | Output |
-|-------|------------|--------|
-| ELISA (Protein Quantification) | 3–5 days | 4PL curve fitting, raw + processed JSON/CSV |
-| qPCR (Gene Expression) | 2–5 days | 384-well, ΔΔCt method, full Cq raw data |
-| CTG (Cell Viability) | 3–5 days | Automated dose-response fitting, IC50 with 95% CI |
-| SPR (Binding Kinetics) | 5–7 days | Label-free kon/koff/KD, sensorgram + kinetic fit CSV |
-| Cell-Based (Phenotypic & Imaging) | Custom | High-content imaging, multiplexed endpoint readouts |
+**Hit finding (live)** — screening + binding
+- Arrayed binding — published rate (see Pricing)
+- Pooled discovery (mRNA display, yeast display) — published rate (see Pricing)
+- SPR / BLI kinetics, biochemical HTS, ITC, thermal shift — quoted (lab quote + 5–15%)
+
+**Coming next**
+- Hit-to-lead: cell-based potency — target engagement, cellular IC50, selectivity panels
+- Lead optimization: ADME / Tox — microsomal stability, permeability, CYP, hERG, cytotox
+- Biologics + in vivo: developability + PK — expression, stability, aggregation, rodent PK
+
+**Other assays (custom, lab quote + 5–15%)**
+
+| Assay | Output |
+|-------|--------|
+| ELISA (Protein Quantification) | 4PL curve fitting, raw + processed JSON/CSV |
+| qPCR (Gene Expression) | 384-well, ΔΔCt method, full Cq raw data |
+| CTG (Cell Viability) | Automated dose-response fitting, IC50 with 95% CI |
+| Cell-Based (Phenotypic & Imaging) | High-content imaging, multiplexed endpoint readouts |
 
 ## Pricing
 
-No monthly fee and no annual contract. Litmus charges a 3–10% fee on each experiment you run, depending on the experiment's complexity. The intake assistant at https://platform.litmus.science/intake shows the exact rate before you commit.
+Binding validation, priced upfront: published rates, not a quote wall. Rates are indicative; final pricing is confirmed after a short design review.
 
-| Option | Price | For |
-|--------|-------|-----|
-| Per experiment | 3–10% of each experiment, by complexity | Computational chemists, AI biotechs, and academic teams — MCP Server access, unlimited active experiments, single unified umbrella MSA & consolidated billing |
-| Grant Package | $999 one-time | Researchers writing a grant who need a defensible wet-lab budget — vendor comparison, line-item budget, and written vendor justification, delivered in about a week. Credited toward the execution fee if the project is placed within 12 months |
+**Arrayed binding** — per design; expression + BLI/SPR binding assay with raw traces; binder/non-binder call + affinity ranking; minimum 48 designs; ~2–4 weeks
+| Tier | Price |
+|------|-------|
+| Triage (n=1) — narrow a large set, re-test winners | ~$130 / design |
+| Validation (n=2) — model-grade calls + ranking | ~$165 / design |
+Antigen: you supply it, or Litmus sources it from ~$2,000 / target. Full KD, kon/koff kinetics: quoted. Example: 96 designs ≈ $12,500 triage or $15,800 validation, plus antigen.
+
+**Pooled discovery** — per target; library synthesis → display & selection → NGS → ranked hits; scales with DNA library size; 8–12 weeks
+| Display | Price |
+|---------|-------|
+| mRNA display — peptides, large libraries | ~$10,000 / target |
+| Yeast display — proteins, minibinders | ~$45,500 / target |
+Antigen: you supply it, or Litmus sources it at cost. Add-on functional readout (cell line + assay) from ~$19,000.
+
+**Custom experiments** — everything else is the lab's quote plus a 5–15% Litmus fee, shown before you commit. No monthly fee or annual contract; MCP Server access; single umbrella MSA & consolidated billing.
 
 Full details: https://litmus.science/pricing/
 
@@ -83,9 +105,9 @@ Litmus does not store, sell, or share research data. Protocols, results, and IP 
 - `/#for-founders` — Audience segmentation (virtual biotechs, academic researchers, program managers, AI agents)
 - `/#ip-control` — Data privacy and IP control
 - `/#contact` — Get a quote / waitlist
-- `/pricing/` — Pricing: 3–10% fee per experiment (no monthly fee) and a $999 Grant Package
+- `/pricing/` — Pricing: published binding validation rates (arrayed from ~$130/design, pooled from ~$10,000/target) and custom work at lab quote + 5–15%
 - `/hypothesis-to-evidence-grant/` — Grant program built with K-Dense: up to $5,000 in funded wet-lab execution for researchers taking a computational prediction to a wet-lab result
-- `/assays/` — Assay menu overview
+- `/assays/` — Catalog: hit finding (live), roadmap stages, and other custom assays
 - `/assays/elisa.html` — ELISA protein quantification
 - `/assays/qpcr.html` — qPCR gene expression
 - `/assays/ctg.html` — CTG cell viability
