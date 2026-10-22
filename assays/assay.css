@@ -504,6 +504,27 @@
     text-decoration: none;
 }
 
+.catalog-card-title {
+    text-decoration: none;
+}
+
+.catalog-card-title:hover {
+    color: var(--base-teal);
+}
+
+.catalog-card-link {
+    margin-top: auto;
+    padding-top: var(--space-md);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--base-teal);
+    text-decoration: none;
+}
+
+.catalog-card-link:hover {
+    text-decoration: underline;
+}
+
 .catalog-note {
     margin-top: var(--space-xl);
     color: var(--gray-400);
