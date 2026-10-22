@@ -41,12 +41,12 @@ Compare quotes from labs including Ginkgo Cloud Lab, Sword Bio, and iHisto.
 
 Litmus covers drug discovery one stage at a time. All results come back ML-ready. Full catalog: https://litmus.science/assays/
 
-**Available now — hit finding**
+**Core catalog — hit finding**
 - Arrayed binding (expression + BLI/SPR, Triage or Validation) — 2–4 weeks
 - Pooled discovery (mRNA display for peptides, yeast display for minibinders) — 8–12 weeks
 - SPR / BLI kinetics, biochemical HTS, ITC, thermal shift
 
-**Custom quote — scoped for your project**
+**Other assays — custom quote**
 - Cell-based potency: target engagement, cellular IC50, selectivity panels
 - ADME / Tox: microsomal stability, permeability, CYP, hERG, cytotox
 - Developability + PK: expression, stability, aggregation, rodent PK

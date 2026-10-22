@@ -509,12 +509,6 @@
     color: var(--gray-400);
 }
 
-.catalog-hero-link {
-    color: var(--white);
-    text-decoration: underline;
-    white-space: nowrap;
-}
-
 .catalog-note a {
     color: var(--base-teal);
     text-decoration: underline;
