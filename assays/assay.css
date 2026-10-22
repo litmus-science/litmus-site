@@ -512,10 +512,6 @@
     text-decoration: none;
 }
 
-.catalog-card .assay-type-tag {
-    margin-bottom: var(--space-sm);
-}
-
 .catalog-roadmap {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
