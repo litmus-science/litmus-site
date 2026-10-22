@@ -7,13 +7,21 @@
 .pricing-title {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     color: var(--primary);
+    margin-bottom: var(--space-sm);
+}
+
+.pricing-intro {
+    font-size: 1.1rem;
+    color: var(--gray-400);
     margin-bottom: var(--space-2xl);
 }
 
+/* Cards share row tracks (subgrid) so descriptions, price rows, and buttons line up */
 .pricing-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-xl);
+    grid-template-rows: auto auto auto auto auto;
+    column-gap: var(--space-xl);
 }
 
 .pricing-card {
@@ -21,8 +29,10 @@
     border: 1px solid var(--gray-100);
     border-radius: 16px;
     padding: var(--space-xl);
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-row: span 5;
+    grid-template-rows: subgrid;
+    row-gap: 0;
     transition: border-color 0.2s var(--ease-out), transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
 }
 
@@ -53,7 +63,6 @@
     color: var(--gray-400);
     line-height: 1.6;
     margin-bottom: var(--space-lg);
-    flex-grow: 1;
 }
 
 .pricing-card-desc a {
@@ -113,6 +122,12 @@
     font-size: 0.9rem;
 }
 
+.pricing-contact {
+    margin-top: var(--space-sm);
+    color: var(--gray-400);
+}
+
+.pricing-contact a,
 .pricing-note a {
     color: var(--base-teal);
     text-decoration: underline;
@@ -121,5 +136,6 @@
 @media (max-width: 900px) {
     .pricing-grid {
         grid-template-columns: 1fr;
+        row-gap: var(--space-xl);
     }
 }
