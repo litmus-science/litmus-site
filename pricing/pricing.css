@@ -130,7 +130,142 @@
     text-decoration: underline;
 }
 
+
+.pricing-section.shaded {
+    background: var(--off-white);
+}
+
+.pricing-section .section-header {
+    max-width: 920px;
+    margin: 0 auto var(--space-2xl);
+}
+
+/* Priced tiers inside a card (Triage / Validation, mRNA / yeast display) */
+.price-tiers {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding-bottom: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.price-tier {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding: 0.75rem 0.9rem;
+    border: 1px solid var(--gray-100);
+    border-radius: 10px;
+}
+
+.price-tier.featured {
+    border-color: var(--base-teal);
+    background: rgba(42, 157, 143, 0.06);
+}
+
+.price-tier > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.price-tier-name {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.price-tier-meta {
+    font-size: 0.8rem;
+    color: var(--gray-400);
+}
+
+.price-tier-price {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--primary);
+    white-space: nowrap;
+}
+
+.price-tier-price span {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    color: var(--gray-300);
+    margin-left: 2px;
+}
+
+/* Key/value detail rows */
+.price-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin: 0 0 var(--space-lg);
+    flex-grow: 1;
+}
+
+.price-details > div {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: var(--space-md);
+    align-items: baseline;
+}
+
+.price-details dt {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--gray-300);
+}
+
+.price-details dd {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--gray-500);
+    line-height: 1.5;
+}
+
+.price-details dd span {
+    color: var(--gray-400);
+}
+
+.price-example {
+    background: rgba(42, 157, 143, 0.08);
+    border-radius: 8px;
+    padding: 0.7rem 0.9rem;
+    font-size: 0.875rem;
+    color: var(--gray-500);
+    margin-bottom: var(--space-lg);
+}
+
+.price-example strong {
+    color: var(--primary);
+}
+
+/* Wide custom-work card */
+.pricing-card-wide {
+    max-width: 920px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: var(--space-2xl);
+    align-items: start;
+}
+
+.pricing-card-wide .pricing-card-audience {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.pricing-wide-side .pricing-card-features {
+    margin-bottom: var(--space-lg);
+}
+
 @media (max-width: 768px) {
+    .pricing-card-wide,
     .pricing-grid {
         grid-template-columns: 1fr;
     }
