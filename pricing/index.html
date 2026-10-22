@@ -68,104 +68,41 @@
     </nav>
 
     <main>
-        <section class="assay-page-hero">
-            <div class="container">
-                <div class="breadcrumb">
-                    <a href="../">Litmus</a>
-                    <span class="breadcrumb-sep">›</span>
-                    <span>Pricing</span>
-                </div>
-                <span class="assay-type-tag">Pricing</span>
-                <h1 class="assay-page-title">Binding validation, priced upfront.</h1>
-                <p class="assay-page-subtitle">A published rate, not a quote wall. You see the price, the tier, and the one line that varies by target — before you talk to anyone.</p>
-            </div>
-        </section>
-
         <section class="pricing-section">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Hit Finding</span>
-                    <h2 class="section-title">Screen and validate binders</h2>
-                </div>
+                <h1 class="pricing-title">Pricing</h1>
                 <div class="pricing-grid">
                     <div class="pricing-card">
-                        <span class="pricing-card-tag">Per design · you pick the confidence</span>
                         <h2 class="pricing-card-name">Arrayed binding</h2>
-                        <div class="price-tiers">
-                            <div class="price-tier">
-                                <div><span class="price-tier-name">Triage</span><span class="price-tier-meta">n=1 · narrow a large set, re-test winners</span></div>
-                                <span class="price-tier-price">~$130<span>/design</span></span>
-                            </div>
-                            <div class="price-tier featured">
-                                <div><span class="price-tier-name">Validation</span><span class="price-tier-meta">n=2 · model-grade calls + ranking</span></div>
-                                <span class="price-tier-price">~$165<span>/design</span></span>
-                            </div>
-                        </div>
-                        <dl class="price-details">
-                            <div><dt>Included</dt><dd>Expression + BLI / SPR binding assay, with raw traces</dd></div>
-                            <div><dt>Deliverable</dt><dd>Binder / non-binder call + affinity ranking. <span>Data only; protein shipped back on request.</span></dd></div>
+                        <p class="pricing-card-desc">Expression plus BLI / SPR binding for each design, with binder calls and affinity ranking.</p>
+                        <dl class="pricing-rows">
+                            <div><dt>Triage <span>n=1</span></dt><dd>~$130 <span>/design</span></dd></div>
+                            <div><dt>Validation <span>n=2</span></dt><dd>~$165 <span>/design</span></dd></div>
                             <div><dt>Minimum</dt><dd>48 designs</dd></div>
-                            <div><dt>Antigen</dt><dd>You supply it, or we source it <span>from ~$2,000 / target</span></dd></div>
-                            <div><dt>Kinetics</dt><dd>Full K<sub>D</sub>, k<sub>on</sub>/k<sub>off</sub> — quoted</dd></div>
-                            <div><dt>Turnaround</dt><dd>~2–4 weeks</dd></div>
+                            <div><dt>Delivery</dt><dd>2–4 weeks</dd></div>
                         </dl>
-                        <p class="price-example">96 designs ≈ <strong>$12,500</strong> triage · <strong>$15,800</strong> validation, plus antigen</p>
-                        <a href="https://platform.litmus.science/intake" class="btn btn-primary">Start a binding request</a>
                     </div>
 
                     <div class="pricing-card">
-                        <span class="pricing-card-tag">Per target · display type by molecule</span>
                         <h2 class="pricing-card-name">Pooled discovery</h2>
-                        <div class="price-tiers">
-                            <div class="price-tier">
-                                <div><span class="price-tier-name">mRNA display</span><span class="price-tier-meta">Peptides · large libraries</span></div>
-                                <span class="price-tier-price">~$10,000<span>/target</span></span>
-                            </div>
-                            <div class="price-tier">
-                                <div><span class="price-tier-name">Yeast display</span><span class="price-tier-meta">Proteins · minibinders</span></div>
-                                <span class="price-tier-price">~$45,500<span>/target</span></span>
-                            </div>
-                        </div>
-                        <dl class="price-details">
-                            <div><dt>Included</dt><dd>Library synthesis → display &amp; selection → NGS → ranked hits</dd></div>
-                            <div><dt>Scales with</dt><dd>DNA library (count × length); screening is fixed</dd></div>
-                            <div><dt>Antigen</dt><dd>You supply it, or we source it at cost</dd></div>
-                            <div><dt>Add-on</dt><dd>Functional readout — cell line + assay <span>from ~$19,000</span></dd></div>
-                            <div><dt>Turnaround</dt><dd>8–12 weeks</dd></div>
+                        <p class="pricing-card-desc">Library synthesis, display selection, and NGS, returning ranked hits for your target.</p>
+                        <dl class="pricing-rows">
+                            <div><dt>mRNA display <span>peptides</span></dt><dd>~$10,000 <span>/target</span></dd></div>
+                            <div><dt>Yeast display <span>proteins</span></dt><dd>~$45,500 <span>/target</span></dd></div>
+                            <div><dt>Delivery</dt><dd>8–12 weeks</dd></div>
                         </dl>
-                        <p class="price-example">Enriched hits → array &amp; rank with arrayed binding</p>
-                        <a href="https://platform.litmus.science/intake" class="btn btn-secondary">Start a discovery request</a>
                     </div>
-                </div>
-                <p class="pricing-note">Rates are indicative; final pricing is confirmed after a short design review.</p>
-            </div>
-        </section>
 
-        <section class="pricing-section shaded">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Everything Else</span>
-                    <h2 class="section-title">Custom experiments</h2>
-                </div>
-                <div class="pricing-card pricing-card-wide">
-                    <div class="pricing-wide-main">
-                        <span class="pricing-card-tag">Lab quote + Litmus fee</span>
-                        <div class="pricing-card-price">
-                            <span class="price-value">5–15%</span>
-                            <span class="price-period">added to the lab&rsquo;s quote</span>
-                        </div>
-                        <p class="pricing-card-audience">For other hit-finding work — biochemical HTS, ITC, thermal shift, full kinetics — and anything outside the published rates: ELISA, qPCR, cell viability, cell-based assays. We scope it, collect quotes from vetted labs, and show the full price, fee included, before you commit.</p>
-                    </div>
-                    <div class="pricing-wide-side">
-                        <ul class="pricing-card-features">
-                            <li><span class="pricing-feature-dot"></span>No monthly fee or annual contract</li>
-                            <li><span class="pricing-feature-dot"></span>MCP Server access for AI agents</li>
-                            <li><span class="pricing-feature-dot"></span>Single umbrella MSA &amp; consolidated billing</li>
-                        </ul>
-                        <a href="https://platform.litmus.science/intake" class="btn btn-secondary">Describe your experiment</a>
+                    <div class="pricing-card">
+                        <h2 class="pricing-card-name">Custom experiments</h2>
+                        <p class="pricing-card-desc">Any other assay in the <a href="../assays/">catalog</a>, scoped and quoted by vetted labs.</p>
+                        <dl class="pricing-rows">
+                            <div><dt>Price</dt><dd>Lab quote + 5–15%</dd></div>
+                            <div><dt>Delivery</dt><dd>Varies by assay</dd></div>
+                        </dl>
                     </div>
                 </div>
-                <p class="pricing-note">See everything we run in the <a href="../assays/">catalog</a>. Running a lab that wants to join the network? <a href="../suppliers/">Become a supplier</a>.</p>
+                <p class="pricing-note">Rates are indicative and confirmed after a short design review. Antigen sourcing, full kinetics, and functional add-ons are quoted separately. <a href="https://platform.litmus.science/intake">Start a request</a>.</p>
             </div>
         </section>
 

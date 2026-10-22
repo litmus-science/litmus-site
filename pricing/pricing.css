@@ -1,126 +1,90 @@
 /* Pricing page — built on styles.css and assay.css tokens */
 
 .pricing-section {
-    padding: var(--space-4xl) 0;
+    padding: calc(80px + var(--space-3xl)) 0 var(--space-4xl);
+}
+
+.pricing-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: var(--primary);
+    margin-bottom: var(--space-2xl);
 }
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-xl);
-    max-width: 920px;
-    margin: 0 auto;
 }
 
 .pricing-card {
     background: var(--white);
     border: 1px solid var(--gray-100);
     border-radius: 16px;
-    padding: var(--space-2xl);
+    padding: var(--space-xl);
     display: flex;
     flex-direction: column;
-}
-
-.pricing-card.featured {
-    border-color: var(--base-teal);
-    box-shadow: 0 12px 40px rgba(42, 157, 143, 0.12);
-    position: relative;
-}
-
-.pricing-card-badge {
-    position: absolute;
-    top: -0.75rem;
-    left: var(--space-2xl);
-    background: var(--base-teal);
-    color: var(--white);
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    padding: 0.25rem 0.75rem;
-    border-radius: 999px;
-}
-
-.pricing-card-tag {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--base-teal);
-    margin-bottom: var(--space-sm);
 }
 
 .pricing-card-name {
     font-family: var(--font-display);
     font-size: 1.75rem;
     color: var(--primary);
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-sm);
 }
 
-.pricing-card-price {
-    display: flex;
-    align-items: baseline;
-    gap: var(--space-xs);
-    margin-bottom: var(--space-xs);
-}
-
-.pricing-card-price .price-value {
-    font-family: var(--font-display);
-    font-size: 2.25rem;
-    color: var(--primary);
-    white-space: nowrap;
-}
-
-.pricing-card-price .price-period {
-    font-size: 0.95rem;
-    color: var(--gray-300);
-}
-
-.pricing-card-audience {
+.pricing-card-desc {
     font-size: 0.95rem;
     color: var(--gray-400);
     line-height: 1.6;
     margin-bottom: var(--space-lg);
-    padding-bottom: var(--space-lg);
-    border-bottom: 1px solid var(--gray-100);
-}
-
-.pricing-card-features {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 var(--space-xl);
     flex-grow: 1;
 }
 
-.pricing-card-features li {
+.pricing-card-desc a {
+    color: var(--base-teal);
+    text-decoration: underline;
+}
+
+.pricing-rows {
+    margin: 0;
+    border-top: 1px solid var(--gray-100);
+}
+
+.pricing-rows > div {
     display: flex;
-    align-items: flex-start;
-    gap: var(--space-sm);
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--space-md);
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.pricing-rows dt {
     font-size: 0.9rem;
     color: var(--gray-400);
-    line-height: 1.5;
-    margin-bottom: var(--space-md);
 }
 
-.pricing-feature-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--base-teal);
-    margin-top: 0.5rem;
-    flex-shrink: 0;
+.pricing-rows dt span {
+    font-size: 0.8rem;
+    color: var(--gray-300);
+    margin-left: 0.25rem;
 }
 
-.pricing-card .btn {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
+.pricing-rows dd {
+    margin: 0;
+    font-weight: 600;
+    color: var(--primary);
+    white-space: nowrap;
+}
+
+.pricing-rows dd span {
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: var(--gray-300);
 }
 
 .pricing-note {
-    max-width: 920px;
-    margin: var(--space-2xl) auto 0;
-    text-align: center;
+    margin-top: var(--space-xl);
     color: var(--gray-300);
     font-size: 0.9rem;
 }
@@ -130,142 +94,7 @@
     text-decoration: underline;
 }
 
-
-.pricing-section.shaded {
-    background: var(--off-white);
-}
-
-.pricing-section .section-header {
-    max-width: 920px;
-    margin: 0 auto var(--space-2xl);
-}
-
-/* Priced tiers inside a card (Triage / Validation, mRNA / yeast display) */
-.price-tiers {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-sm);
-    padding-bottom: var(--space-lg);
-    margin-bottom: var(--space-lg);
-    border-bottom: 1px solid var(--gray-100);
-}
-
-.price-tier {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-md);
-    padding: 0.75rem 0.9rem;
-    border: 1px solid var(--gray-100);
-    border-radius: 10px;
-}
-
-.price-tier.featured {
-    border-color: var(--base-teal);
-    background: rgba(42, 157, 143, 0.06);
-}
-
-.price-tier > div {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    min-width: 0;
-}
-
-.price-tier-name {
-    font-weight: 600;
-    color: var(--primary);
-}
-
-.price-tier-meta {
-    font-size: 0.8rem;
-    color: var(--gray-400);
-}
-
-.price-tier-price {
-    font-family: var(--font-display);
-    font-size: 1.6rem;
-    color: var(--primary);
-    white-space: nowrap;
-}
-
-.price-tier-price span {
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    color: var(--gray-300);
-    margin-left: 2px;
-}
-
-/* Key/value detail rows */
-.price-details {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-sm);
-    margin: 0 0 var(--space-lg);
-    flex-grow: 1;
-}
-
-.price-details > div {
-    display: grid;
-    grid-template-columns: 96px 1fr;
-    gap: var(--space-md);
-    align-items: baseline;
-}
-
-.price-details dt {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--gray-300);
-}
-
-.price-details dd {
-    margin: 0;
-    font-size: 0.9rem;
-    color: var(--gray-500);
-    line-height: 1.5;
-}
-
-.price-details dd span {
-    color: var(--gray-400);
-}
-
-.price-example {
-    background: rgba(42, 157, 143, 0.08);
-    border-radius: 8px;
-    padding: 0.7rem 0.9rem;
-    font-size: 0.875rem;
-    color: var(--gray-500);
-    margin-bottom: var(--space-lg);
-}
-
-.price-example strong {
-    color: var(--primary);
-}
-
-/* Wide custom-work card */
-.pricing-card-wide {
-    max-width: 920px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: var(--space-2xl);
-    align-items: start;
-}
-
-.pricing-card-wide .pricing-card-audience {
-    border-bottom: none;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-
-.pricing-wide-side .pricing-card-features {
-    margin-bottom: var(--space-lg);
-}
-
-@media (max-width: 768px) {
-    .pricing-card-wide,
+@media (max-width: 900px) {
     .pricing-grid {
         grid-template-columns: 1fr;
     }
