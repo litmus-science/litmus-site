@@ -25,8 +25,18 @@
         return Math.min(table.max, Math.max(table.min, Math.round(n) || table.min));
     }
 
-    function render() {
+    function renderBelowMinimum() {
+        totalEl.textContent = 'Quoted';
+        perEl.textContent = `Fewer than ${table.min} designs is quoted per project.`;
+        turnaroundEl.textContent = '';
+    }
+
+    function render(typed) {
         if (!table) return;
+        if (typed !== undefined && typed < table.min) {
+            renderBelowMinimum();
+            return;
+        }
         const n = clamp(Number(slider.value));
         const total = table.supplied[n - table.min] + (sourceTarget ? table.sourcingAddOn : 0);
         const band = table.turnaround.find((b) => n <= b.upTo);
@@ -44,12 +54,14 @@
 
     count.addEventListener('input', () => {
         if (count.value === '') return;
-        slider.value = clamp(Number(count.value));
-        render();
+        const typed = Math.round(Number(count.value));
+        slider.value = clamp(typed);
+        render(typed);
     });
 
     count.addEventListener('change', () => {
-        count.value = slider.value;
+        // Keep a below-minimum entry visible so the "quoted" message makes sense.
+        if (table && Number(count.value) >= table.min) count.value = slider.value;
     });
 
     sourceButtons.forEach((button) => {
@@ -67,6 +79,9 @@
         })
         .then((data) => {
             table = data;
+            slider.min = table.min;
+            slider.max = table.max;
+            count.max = table.max;
             root.classList.add('is-ready');
             render();
         })
