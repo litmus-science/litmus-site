@@ -57,17 +57,18 @@ Full catalog: https://litmus.science/assays/
 
 Full pricing and live estimator: https://litmus.science/pricing/. Rates are indicative; final pricing is confirmed after a short design review.
 
-**Arrayed binding**: per design, price drops with volume. From 1 design up to 768; 1–3 targets per order.
-| Designs (1 target, target supplied, high-throughput) | Estimated total |
+**Arrayed binding**: per design, price drops with volume. From 1 design up to 768; 1–3 targets per order; BLI or SPR readout.
+| Designs (1 target, BLI, target supplied, high-throughput) | Estimated total |
 |------|-------|
 | 48 | ~$5,180 (~$108 / design) |
 | 96 | ~$8,190 (~$85 / design) |
 | 384 | ~$26,240 (~$68 / design) |
-- Synthesis: high-throughput (~2-week turnaround) or fast synthesis (~2-day turnaround, up to 96 designs; e.g. 96 designs ≈ $13,100)
+- Readout: BLI or SPR (e.g. 96 designs with SPR ≈ $13,730)
+- Synthesis: high-throughput (~2-week turnaround) or fast synthesis (~2-day turnaround, BLI, up to 192 designs; e.g. 96 designs ≈ $13,100)
 - Litmus can source the target / antigen for an added fee, shown in the estimator
 - Formats: VHH and minibinders; mAb, Fab, and Fc-fusion quoted
 - Deliverable: binder call + affinity per design; data only, protein shipped back on request
-- Use the estimator on the pricing page for any design count, target count, and synthesis method
+- Use the estimator on the pricing page for any design count, target count, readout, and synthesis method
 
 **Pooled discovery**: per target. mRNA display ~$10,000 / target; yeast display ~$45,500 / target; 8–12 weeks.
 

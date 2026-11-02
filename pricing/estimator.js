@@ -5,9 +5,10 @@
  * private config outside this repo (lab costs and markup never ship to the client).
  * TODO: replace the static table with a server endpoint that returns the estimate.
  *
- * Table layout: prices[targets - 1][fast ? 1 : 0][sourcing ? 1 : 0][designs - min],
- * addOn[targets - 1][fast ? 1 : 0][designs - min] (sourcing add-on included in the total),
- * fast[targets - 1][designs - min] = 1 when fast synthesis is available for that order.
+ * Table layout (values in units of `unit` dollars):
+ * prices[readout][targets - 1][fast ? 1 : 0][sourcing ? 1 : 0][designs - min],
+ * addOn[readout][targets - 1][fast ? 1 : 0][designs - min] (sourcing add-on included in the total),
+ * fast[readout][targets - 1][designs - min] = 1 when fast synthesis is available for that order.
  */
 (function () {
     const root = document.getElementById('arrayed-estimator');
@@ -16,6 +17,7 @@
     const slider = root.querySelector('#estimator-designs');
     const count = root.querySelector('#estimator-count');
     const targetButtons = root.querySelectorAll('[data-targets]');
+    const readoutButtons = root.querySelectorAll('[data-readout]');
     const speedButtons = root.querySelectorAll('[data-speed]');
     const sourceButtons = root.querySelectorAll('[data-source]');
     const totalEl = root.querySelector('[data-estimate-total]');
@@ -25,6 +27,7 @@
     const money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
     let table = null;
     let targets = 1;
+    let readout = 'BLI';
     let fastRequested = false;
     let sourcing = false;
 
@@ -45,15 +48,16 @@
         const n = clamp(Number(slider.value));
         const i = n - table.min;
         const t = targets - 1;
-        const fast = fastRequested && table.fast[t][i] === 1;
-        const total = table.prices[t][fast ? 1 : 0][sourcing ? 1 : 0][i];
+        const r = Math.max(0, table.readouts.indexOf(readout));
+        const fast = fastRequested && table.fast[r][t][i] === 1;
+        const total = table.prices[r][t][fast ? 1 : 0][sourcing ? 1 : 0][i] * table.unit;
 
         totalEl.textContent = money.format(total);
         perEl.textContent = `≈ ${money.format(Math.round(total / n))} / design${targets > 1 ? ` · ${targets} targets` : ''}`;
 
         let lane = fast ? 'Fast synthesis · ~2-day TAT' : 'High-throughput · ~2-week TAT';
-        if (fastRequested && !fast) lane += ' · fast synthesis unavailable at this size';
-        if (sourcing) lane += ` · includes ${money.format(table.addOn[t][fast ? 1 : 0][i])} target sourcing`;
+        if (fastRequested && !fast) lane += ' · fast synthesis unavailable for this selection';
+        if (sourcing) lane += ` · includes ${money.format(table.addOn[r][t][fast ? 1 : 0][i] * table.unit)} target sourcing`;
         laneEl.textContent = lane;
 
         slider.style.setProperty('--fill', `${(i / (table.max - table.min)) * 100}%`);
@@ -70,6 +74,7 @@
     }
 
     bindToggle(targetButtons, (b) => { targets = Number(b.dataset.targets) || 1; });
+    bindToggle(readoutButtons, (b) => { readout = b.dataset.readout; });
     bindToggle(speedButtons, (b) => { fastRequested = b.dataset.speed === 'fast'; });
     bindToggle(sourceButtons, (b) => { sourcing = b.dataset.source === 'litmus'; });
 
