@@ -77,7 +77,7 @@
                         <div class="pricing-feature-info">
                             <span class="pricing-card-tag">Per design · price drops with volume</span>
                             <h2 class="pricing-card-name">Arrayed binding</h2>
-                            <p class="pricing-card-desc">Binder calls and affinity for every design, from 8 designs. Fewer than 8? We&rsquo;ll quote it.</p>
+                            <p class="pricing-card-desc">Binder calls and affinity for every design.</p>
                             <dl class="pricing-rows pricing-rows-text">
                                 <div><dt>Included</dt><dd>Expression + BLI binding with monovalent K<sub>D</sub>, raw traces</dd></div>
                                 <div><dt>Deliverable</dt><dd>Binder call + affinity per design. <span>Data only; protein shipped back on request.</span></dd></div>
@@ -89,27 +89,44 @@
                         <div class="estimator" id="arrayed-estimator">
                             <div class="estimator-field">
                                 <div class="estimator-label-row">
-                                    <label for="estimator-designs" class="estimator-label">Number of designs</label>
+                                    <label for="estimator-designs" class="estimator-label">How many designs?</label>
                                     <input type="number" id="estimator-count" class="estimator-count" min="1" max="768" step="1" value="96" aria-label="Number of designs">
                                 </div>
-                                <input type="range" id="estimator-designs" class="estimator-slider" min="8" max="768" step="1" value="96">
+                                <input type="range" id="estimator-designs" class="estimator-slider" min="1" max="768" step="1" value="96" aria-describedby="estimator-result">
                                 <div class="estimator-ticks" aria-hidden="true">
-                                    <span style="--at: 0%">8</span>
-                                    <span style="--at: 11.58%">96</span>
-                                    <span style="--at: 49.47%">384</span>
+                                    <span style="--at: 0%">1</span>
+                                    <span style="--at: 12.39%">96</span>
+                                    <span style="--at: 49.93%">384</span>
                                     <span style="--at: 100%">768</span>
                                 </div>
                             </div>
 
-                            <div class="estimator-field">
-                                <span class="estimator-label" id="estimator-target-label">Target / antigen</span>
+                            <div class="estimator-option">
+                                <span class="estimator-label" id="estimator-targets-label">Targets</span>
+                                <div class="estimator-toggle estimator-toggle-3" role="group" aria-labelledby="estimator-targets-label">
+                                    <button type="button" data-targets="1" aria-pressed="true">1</button>
+                                    <button type="button" data-targets="2" aria-pressed="false">2</button>
+                                    <button type="button" data-targets="3" aria-pressed="false">3</button>
+                                </div>
+                            </div>
+
+                            <div class="estimator-option">
+                                <span class="estimator-label" id="estimator-speed-label">Synthesis method</span>
+                                <div class="estimator-toggle" role="group" aria-labelledby="estimator-speed-label">
+                                    <button type="button" data-speed="fast" aria-pressed="false">Fast synthesis<small>~2-day TAT</small></button>
+                                    <button type="button" data-speed="standard" aria-pressed="true">High-throughput<small>~2-week TAT</small></button>
+                                </div>
+                            </div>
+
+                            <div class="estimator-option">
+                                <span class="estimator-label" id="estimator-target-label">Target supply</span>
                                 <div class="estimator-toggle" role="group" aria-labelledby="estimator-target-label">
                                     <button type="button" data-source="customer" aria-pressed="true">I&rsquo;ll supply it</button>
                                     <button type="button" data-source="litmus" aria-pressed="false">Source it for me</button>
                                 </div>
                             </div>
 
-                            <div class="estimator-result" aria-live="polite">
+                            <div class="estimator-result" id="estimator-result" aria-live="polite">
                                 <span class="estimator-result-label">Estimated total</span>
                                 <span class="estimator-total" data-estimate-total>—</span>
                                 <span class="estimator-per" data-estimate-per></span>
