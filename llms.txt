@@ -94,6 +94,7 @@ Protocols, results, and IP belong to the customer by default. Litmus does not se
 - `/`: Homepage: what Litmus Science does, how it works, who it's for
 - `/assays/`: Catalog: core catalog (hit finding) and other assays
 - `/pricing/`: Pricing: arrayed binding estimator, pooled discovery, custom experiments
+- `/thesis/`: Our thesis: why AI-generated hypotheses need abundant wet-lab evidence, and where Litmus Science is going
 - `/request/spr-assay-quote.html`: Scoped SPR assay quote request
 - `/request/bli-vs-spr-vhh.html`: BLI vs SPR for VHH / nanobody binding kinetics
 - `/assays/spr.html`: SPR binding kinetics
