@@ -13,7 +13,44 @@
 .pricing-intro {
     font-size: 1.1rem;
     color: var(--gray-400);
+    max-width: 640px;
+    margin-bottom: var(--space-xl);
+}
+
+.pricing-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    list-style: none;
     margin-bottom: var(--space-2xl);
+}
+
+.pricing-highlights li {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: var(--space-sm);
+    border-top: 2px solid var(--base-teal);
+}
+
+.pricing-highlights strong {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+}
+
+.pricing-highlights span {
+    font-size: 0.95rem;
+    color: var(--gray-400);
+}
+
+@media (max-width: 768px) {
+    .pricing-highlights {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Cards share row tracks (subgrid) so descriptions, price rows, and buttons line up */
