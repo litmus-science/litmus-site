@@ -60,11 +60,11 @@ Full pricing and live estimator: https://litmus.science/pricing/. Rates are indi
 **Arrayed binding**: per design, price drops with volume. From 1 design up to 768; 1–3 targets per order; BLI or SPR readout.
 | Designs (1 target, BLI, target supplied, high-throughput) | Estimated total |
 |------|-------|
-| 48 | ~$5,180 (~$108 / design) |
-| 96 | ~$8,190 (~$85 / design) |
-| 384 | ~$26,240 (~$68 / design) |
+| 48 | ~$5,280 (~$110 / design) |
+| 96 | ~$8,760 (~$91 / design) |
+| 384 | ~$27,030 (~$70 / design) |
 - Readout: BLI or SPR (e.g. 96 designs with SPR ≈ $13,730)
-- Synthesis: high-throughput (~2-week turnaround) or fast synthesis (~2-day turnaround, BLI, up to 192 designs; e.g. 96 designs ≈ $13,100)
+- Synthesis: high-throughput (~2-week turnaround) or fast synthesis (~2-day turnaround, BLI, up to 192 designs; e.g. 96 designs ≈ $12,470)
 - Litmus can source the target / antigen for an added fee, shown in the estimator
 - Formats: VHH and minibinders; mAb, Fab, and Fc-fusion quoted
 - Deliverable: binder call + affinity per design; data only, protein shipped back on request
