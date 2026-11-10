@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Give Your AI Agent a Wet Lab | Litmus</title>
+    <title>How to Give Your AI Agent a Wet Lab | Litmus Science</title>
     <meta name="description" content="A practical walkthrough of how an AI agent goes from a research question to a real, running experiment through Litmus's MCP server — the four tool calls between design and data.">
     <meta name="keywords" content="AI agent wet lab, MCP server experiment submission, AI agent lab execution, Claude MCP biology, submit experiment via API, autonomous AI scientist tools">
     <link rel="canonical" href="https://litmus.science/blog/give-your-ai-agent-a-wet-lab.html">
@@ -11,6 +11,7 @@
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://litmus.science/blog/give-your-ai-agent-a-wet-lab.html">
     <meta property="og:title" content="How to Give Your AI Agent a Wet Lab">
+    <meta property="og:site_name" content="Litmus Science">
     <meta property="og:description" content="A practical walkthrough of how an AI agent goes from a research question to a real, running experiment through Litmus's MCP server — the four tool calls between design and data.">
     <meta property="og:image" content="https://litmus.science/blog/images/give-your-ai-agent-a-wet-lab-og.jpg">
     <meta property="og:image:width" content="1200">
@@ -42,7 +43,7 @@
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Litmus", "item": "https://litmus.science/" },
+        { "@type": "ListItem", "position": 1, "name": "Litmus Science", "item": "https://litmus.science/" },
         { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://litmus.science/blog/" },
         { "@type": "ListItem", "position": 3, "name": "Give Your AI Agent a Wet Lab", "item": "https://litmus.science/blog/give-your-ai-agent-a-wet-lab.html" }
       ]
@@ -171,7 +172,7 @@
                 <p>Because the result references the criteria the agent set going in, it can decide on its own whether to approve, dispute, or move straight to the next design round — no human re-reading a PDF to figure out whether the run actually worked.</p>
 
                 <h2 class="step-heading"><span class="step-number">4</span>Two different integration paths</h2>
-                <p>Everything above describes an agent — Claude, ChatGPT, your own reasoning system — calling the MCP server directly with its own credentials. That's the right path if you're building or running the agent yourself; the tool schemas and setup are in the <a href="https://docs.litmus.science" rel="noopener noreferrer">MCP integration guide</a> and the <a href="https://github.com/litmus-science/litmus-mcp" target="_blank" rel="noopener noreferrer">open-source server repo</a>.</p>
+                <p>Everything above describes an agent — Claude, ChatGPT, your own reasoning system — calling the MCP server directly with its own credentials. That's the right path if you're building or running the agent yourself; the tool schemas and setup are in the <a href="https://platform.litmus.science/docs/mcp" rel="noopener noreferrer">MCP integration guide</a> and the <a href="https://github.com/litmus-science/litmus-mcp" target="_blank" rel="noopener noreferrer">open-source server repo</a>.</p>
                 <p>If you're building a product that other people use — and you want your own users to connect their Litmus account and have your product call these tools on their behalf — that's a different flow: OAuth, not a shared API key. The full walkthrough, including the PKCE authorization flow and token handling, is at <a href="https://platform.litmus.science/docs" target="_blank" rel="noopener noreferrer">platform.litmus.science/docs</a>.</p>
 
                 <h2>The short version</h2>
@@ -235,7 +236,7 @@
                 </div>
                 <div class="footer-links">
                     <h5>Developers</h5>
-                    <a href="https://docs.litmus.science" rel="noopener noreferrer">Documentation</a>
+                    <a href="https://platform.litmus.science/docs/mcp" rel="noopener noreferrer">Documentation</a>
                     <a href="https://github.com/litmus-science/litmus-mcp" rel="noopener noreferrer">MCP Server</a>
                     <a href="https://github.com/litmus-science" rel="noopener noreferrer">GitHub</a>
                 </div>
