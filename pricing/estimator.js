@@ -57,7 +57,7 @@
 
         // BLI orders under 16 designs with a supplied target always run on fast synthesis.
         const smallFast = readout === 'BLI' && n < 16 && !sourcing;
-        let lane = fast || smallFast ? 'Fast synthesis · ~2-day TAT' : 'High-throughput · ~2-week TAT';
+        let lane = fast || smallFast ? 'Fast synthesis · 5-day TAT' : 'High-throughput · 2–3 week TAT';
         if (smallFast && !fastRequested) lane += ' · orders under 16 designs run on fast synthesis';
         if (fastRequested && !fast) lane += ' · fast synthesis unavailable for this selection';
         const addOn = table.addOn[r][t][fast ? 1 : 0][i] * table.unit;
