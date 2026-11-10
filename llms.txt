@@ -19,7 +19,7 @@ The open-source Litmus MCP server connects Claude, ChatGPT, and other MCP client
 - Repository and setup: https://github.com/litmus-science/litmus-mcp
 - Install from source: `git clone https://github.com/litmus-science/litmus-mcp.git && cd litmus-mcp && pip install -e .`, then add `{"mcpServers": {"litmus": {"command": "litmus-mcp"}}}` to your MCP client config
 - Walkthrough: https://litmus.science/blog/give-your-ai-agent-a-wet-lab.html
-- Docs: https://docs.litmus.science
+- Docs: https://platform.litmus.science/docs/mcp
 
 Typical agent flow:
 1. `intake.draft_from_text`: turn a plain-language request into a structured experiment intake
@@ -87,7 +87,7 @@ Protocols, results, and IP belong to the customer by default. Litmus does not se
 
 - Website: https://litmus.science
 - Start a request: https://platform.litmus.science/intake
-- Email: arun@fulcrum.science
+- Email: hello@litmus.science
 
 ## Pages
 
