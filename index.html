@@ -120,86 +120,55 @@
             <div class="section-header">
                 <span class="section-tag">How It Works</span>
                 <h2 class="section-title">From question to data in weeks, not months</h2>
+                <p class="section-subtitle">Describe what you want to learn. Litmus picks the assays, finds a vetted lab, handles contracts, payment and shipping, and returns structured results.</p>
             </div>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">01</div>
-                    <div class="step-content">
-                        <h3>Design</h3>
-                        <p>Describe your scientific question. The copilot drafts a rigorous plan — models, endpoints, controls, and powering.</p>
+            <div class="timeline" role="list">
+                <div class="timeline-axis" aria-hidden="true">
+                    <span style="--day: 0">Day 0</span>
+                    <span style="--day: 5">Day 5</span>
+                    <span style="--day: 14">Day 14</span>
+                </div>
+                <div class="timeline-lane" role="listitem">
+                    <div class="timeline-label">
+                        <h3>Arrayed binding</h3>
+                        <p>Sequence to binding data, K<sub>D</sub> per design</p>
                     </div>
-                    <div class="step-visual">
-                        <div class="code-block">
-                            <span class="code-comment"># Your question</span>
-                            <span class="code-line"><span class="code-key">question</span>: "Does compound X inhibit enzyme Y?"</span>
-                            <span class="code-line"><span class="code-key">endpoints</span>: IC50, selectivity panel</span>
-                            <span class="code-line"><span class="code-key">controls</span>: positive, negative, vehicle</span>
+                    <div class="timeline-track">
+                        <div class="timeline-bar" style="--end: 5">
+                            <span class="timeline-step">Synthesis + BLI</span>
                         </div>
+                        <span class="timeline-end" style="--end: 5"><strong>Data</strong> in 5 days</span>
                     </div>
                 </div>
-                <div class="step">
-                    <div class="step-number">02</div>
-                    <div class="step-content">
-                        <h3>Validate</h3>
-                        <p>Pressure-test feasibility, cost, and statistical rigor before anything runs. Catch underpowered designs early.</p>
+                <div class="timeline-lane" role="listitem">
+                    <div class="timeline-label">
+                        <h3>Other catalog assays</h3>
+                        <p>Pooled screens, kinetics, HTS, ITC, thermal shift</p>
                     </div>
-                    <div class="step-visual">
-                        <div class="request-preview">
-                            <div class="request-header">
-                                <span class="request-type">Plan Review</span>
-                                <span class="request-price">Pre-run</span>
-                            </div>
-                            <div class="request-body">
-                                <div class="request-row">
-                                    <span class="request-label">Power</span>
-                                    <span class="request-value">80% at n=6</span>
-                                </div>
-                                <div class="request-row">
-                                    <span class="request-label">Feasibility</span>
-                                    <span class="request-value">Confirmed ✓</span>
-                                </div>
-                            </div>
+                    <div class="timeline-track">
+                        <div class="timeline-bar" style="--end: 14">
+                            <span class="timeline-step">Order placed</span>
+                            <span class="timeline-step">Lab scheduled</span>
                         </div>
+                        <span class="timeline-end" style="--end: 14"><strong>In the lab</strong> by day 14</span>
                     </div>
                 </div>
-                <div class="step">
-                    <div class="step-number">03</div>
-                    <div class="step-content">
-                        <h3>Execute</h3>
-                        <p>Litmus runs the study through the right labs in our vetted network — standardized workflows, full documentation.</p>
+                <div class="timeline-lane" role="listitem">
+                    <div class="timeline-label">
+                        <h3>Custom experiments</h3>
+                        <p>Any other assay, scoped with you</p>
                     </div>
-                    <div class="step-visual">
-                        <div class="result-preview">
-                            <div class="result-status">
-                                <span class="status-indicator"></span>
-                                In Progress
-                            </div>
-                            <div class="result-data">
-                                <span class="result-label">Lab</span>
-                                <span class="result-value">Protein Science</span>
-                            </div>
-                            <div class="result-meta">
-                                Standardized workflows • Full documentation
-                            </div>
+                    <div class="timeline-track">
+                        <div class="timeline-bar timeline-bar-custom" style="--end: 14">
+                            <span class="timeline-step">Scope</span>
+                            <span class="timeline-step">Lab quotes</span>
+                            <span class="timeline-step">Contract</span>
                         </div>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">04</div>
-                    <div class="step-content">
-                        <h3>Interpret</h3>
-                        <p>Results return structured. The copilot analyzes them and proposes the next experiment — closing the loop from data back to hypothesis.</p>
-                    </div>
-                    <div class="step-visual">
-                        <div class="code-block">
-                            <span class="code-comment"># Structured results</span>
-                            <span class="code-line"><span class="code-key">result</span>: IC50 = 2.4 μM</span>
-                            <span class="code-line"><span class="code-key">analysis</span>: potent inhibitor confirmed</span>
-                            <span class="code-line"><span class="code-key">next</span>: selectivity panel recommended</span>
-                        </div>
+                        <span class="timeline-end" style="--end: 14"><strong>In the lab</strong> by day 14</span>
                     </div>
                 </div>
             </div>
+            <p class="timeline-note">Results come back structured, ready for the next design cycle. <a href="/pricing/">See pricing &rarr;</a></p>
         </div>
     </section>
 
@@ -213,23 +182,18 @@
             <div class="problem-grid">
                 <div class="problem-card">
                     <h3>Virtual Biotechs</h3>
-                    <p>Validate platform hypotheses and run many experiments in parallel without building a full biology team. Litmus coordinates execution across specialized labs so you can iterate faster than your headcount suggests.</p>
-                    <span class="problem-tag">Fast iteration, lean team</span>
+                    <p>Test what your models predict without building a wet lab. Send AI-designed binders, peptides or proteins, and Litmus runs them across specialized labs, so each design-test cycle closes in days, not quarters.</p>
+                    <span class="problem-tag">Design-test loops, no wet lab</span>
                 </div>
                 <div class="problem-card">
                     <h3>Academic Researchers</h3>
-                    <p>Grant-friendly workflows built around your funding and publication timeline. Choose Delayed Release or Open Access IP tiers to keep costs down while meeting grant and reporting requirements.</p>
-                    <span class="problem-tag">Grant &amp; publication friendly</span>
-                </div>
-                <div class="problem-card">
-                    <h3>Program Managers</h3>
-                    <p>Run more studies without growing headcount. Litmus centralizes quotes, protocols, and status across every lab, so one person can manage what used to take a team.</p>
-                    <span class="problem-tag">Do more with a leaner team</span>
+                    <p>Take a computational prediction to a wet-lab result. Validate designs from your models on a grant budget, on a timeline that fits your next paper.</p>
+                    <span class="problem-tag">From prediction to publication</span>
                 </div>
                 <!-- AI Agents: may become its own dedicated page later -->
                 <div class="problem-card">
                     <h3>AI Agents</h3>
-                    <p>A lab in the loop. AI agents can design and submit real experiments through Litmus using the open source Litmus MCP server.</p>
+                    <p>Your research agent can order the experiment itself. Through the Litmus MCP server it turns a hypothesis into an order, fills in what the lab needs, and gets structured results back for the next round of predictions.</p>
                     <span class="problem-tag">Lab in the loop</span>
                 </div>
             </div>
